@@ -22,6 +22,8 @@ void print_student_id(void *pvParameters) {
 void poll_button(void *pvParameters) {
     uint8_t debounce_buffer_1 = gpio_get_level(IN_BUTTON_PIN);
     uint8_t debounce_buffer_2;
+    uint8_t valid_buffer;
+    uint8_t valid_buffer_prev;
     uint64_t prev_tick = 0;
     uint64_t curr_tick;
 
@@ -32,8 +34,14 @@ void poll_button(void *pvParameters) {
             debounce_buffer_2 = debounce_buffer_1;
             debounce_buffer_1 = gpio_get_level(IN_BUTTON_PIN);
 
-            if (debounce_buffer_2 == BUTTON_PRESSED && debounce_buffer_1 == BUTTON_RELEASED) { //check if button is released
-                printf("ESP32\n");
+            if (debounce_buffer_2 == debounce_buffer_1 && debounce_buffer_1 == BUTTON_PRESSED) { //valid pressed
+                valid_buffer_prev = valid_buffer;
+                valid_buffer = debounce_buffer_1;
+
+                //print 'ESP32' only then button is released
+                if (valid_buffer == BUTTON_RELEASED && valid_buffer_prev == BUTTON_PRESSED) {
+                    printf("ESP32\n");
+                }
             }
 
             prev_tick = curr_tick;
