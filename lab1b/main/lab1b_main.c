@@ -34,7 +34,7 @@ void poll_button(void *pvParameters) {
             debounce_buffer_2 = debounce_buffer_1;
             debounce_buffer_1 = gpio_get_level(IN_BUTTON_PIN);
 
-            if (debounce_buffer_2 == debounce_buffer_1 && debounce_buffer_1 == BUTTON_PRESSED) { //valid pressed
+            if (debounce_buffer_2 == debounce_buffer_1) { //valid pressed
                 valid_buffer_prev = valid_buffer;
                 valid_buffer = debounce_buffer_1;
 
