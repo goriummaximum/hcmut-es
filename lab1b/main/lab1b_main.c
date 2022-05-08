@@ -4,7 +4,7 @@
 #include "driver/gpio.h"
 
 #define IN_BUTTON_PIN       GPIO_NUM_21
-#define DEBOUNCE_INTERVAL   5
+#define DEBOUNCE_INTERVAL   2
 #define BUTTON_PRESSED      0   //value when reading
 #define BUTTON_RELEASED     1   //value when reading
 
