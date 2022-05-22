@@ -34,11 +34,11 @@ void poll_button(void *pvParameters) {
             debounce_buffer_2 = debounce_buffer_1;
             debounce_buffer_1 = gpio_get_level(IN_BUTTON_PIN);
 
-            if (debounce_buffer_2 == debounce_buffer_1) { //valid pressed
+            if (debounce_buffer_2 == debounce_buffer_1) { //valid pressed, not noise
                 valid_buffer_prev = valid_buffer;
                 valid_buffer = debounce_buffer_1;
 
-                //print 'ESP32' only then button is released
+                //print 'ESP32' only then button is first released after pressing
                 if (valid_buffer == BUTTON_RELEASED && valid_buffer_prev == BUTTON_PRESSED) {
                     printf("ESP32\n");
                 }
