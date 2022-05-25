@@ -3,6 +3,23 @@
 #include "freertos/task.h"
 #include "driver/gpio.h"
 
+/*
+code description:
+There are 3 tasks (priority): Task1 (15) - Task2 (14) - Task3 (13)
+Task3 run for 50 ticks, Task2 delay for 20 ticks, Task1 delay for 30 ticks
+-> Then task1 run for 20 ticks
+-> Then task2 run for 30 ticks
+
+freeRTOSconfig.h:
+#define configUSE_PREEMPTION                            0
+#define configUSE_TIME_SLICING                          0
+#define configIDLE_SHOULD_YIELD                         0
+
+sdkconfig:
+- run only on first core
+- support legacy FreeRTOS API
+*/
+
 void vTask1(void *pvParameters) {
     vTaskDelay(30);
 

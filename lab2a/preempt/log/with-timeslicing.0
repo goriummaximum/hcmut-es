@@ -1,0 +1,214 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6980
+load:0x40078000,len:15088
+ho 0 tail 12 room 4
+load:0x40080400,len:3616
+entry 0x40080664
+[0;32mI (29) boot: ESP-IDF v5.0-dev-2586-ga82e6e63d9 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time 23:54:11[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (33) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (104) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=06ae8h ( 27368) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=00016b10 vaddr=3ffb0000 size=01af8h (  6904) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=00018610 vaddr=40080000 size=07a08h ( 31240) load[0m
+[0;32mI (142) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=10774h ( 67444) map[0m
+[0;32mI (167) esp_image: segment 4: paddr=0003079c vaddr=40087a08 size=02be4h ( 11236) load[0m
+[0;32mI (172) esp_image: segment 5: paddr=00033388 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (178) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (179) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Pro cpu up.[0m
+[0;32mI (196) cpu_start: Single core mode[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) cpu_start: Application information:[0m
+[0;32mI (209) cpu_start: Project name:     lab2a[0m
+[0;32mI (214) cpu_start: App version:      74dd28e-dirty[0m
+[0;32mI (219) cpu_start: Compile time:     May 25 2022 23:54:04[0m
+[0;32mI (225) cpu_start: ELF file SHA256:  9413e789099b4196...[0m
+[0;32mI (231) cpu_start: ESP-IDF:          v5.0-dev-2586-ga82e6e63d9[0m
+[0;32mI (238) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (251) heap_init: At 3FFB22E8 len 0002DD18 (183 KiB): DRAM[0m
+[0;32mI (257) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (264) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (270) heap_init: At 4008A5EC len 00015A14 (86 KiB): IRAM[0m
+[0;32mI (276) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (284) spi_flash: detected chip: generic[0m
+[0;32mI (287) spi_flash: flash io: dio[0m
+[0;33mW (291) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (304) cpu_start: Starting scheduler on PRO CPU.[0m
+0:   vTask1 start, 0:   vTask1 end
+0:   TaskIdle end (print from vTask2), 1:   vTask2 start, 1:   vTask2 end
+0:   TaskIdle end (print from vTask2), 1:   vTask2 start, 1:   vTask2 end
+0:   TaskIdle end (print from vTask2), 1:   vTask2 start, 1:   vTask2 end
+2:   TaskIdle end (print from vTask2), 3:   vTask2 start, 3:   vTask2 end
+2:   TaskIdle end (print from vTask2), 3:   vTask2 start, 3:   vTask2 end
+2:   TaskIdle end (print from vTask2), 3:   vTask2 start, 3:   vTask2 end
+4:   TaskIdle end (print from vTask2), 5:   vTask2 start, 5:   vTask2 end
+4:   TaskIdle end (print from vTask2), 5:   vTask2 start, 5:   vTask2 end
+4:   TaskIdle end (print from vTask2), 5:   vTask2 start, 5:   vTask2 end
+6:   TaskIdle end (print from vTask2), 7:   vTask2 start, 7:   vTask2 end
+6:   TaskIdle end (print from vTask2), 7:   vTask2 start, 7:   vTask2 end
+6:   TaskIdle end (print from vTask2), 7:   vTask2 start, 7:   vTask2 end
+8:   TaskIdle end (print from vTask2), 9:   vTask2 start, 9:   vTask2 end
+8:   TaskIdle end (print from vTask2), 9:   vTask2 start, 9:   vTask2 end
+8:   TaskIdle end (print from vTask2), 9:   vTask2 start, 9:   vTask2 end
+10:   TaskIdle end (print from vTask2), 11:   vTask2 start, 11:   vTask2 end
+10:   TaskIdle end (print from vTask2), 11:   vTask2 start, 11:   vTask2 end
+10:   TaskIdle end (print from vTask2), 11:   vTask2 start, 11:   vTask2 end
+12:   TaskIdle end (print from vTask2), 13:   vTask2 start, 13:   vTask2 end
+12:   TaskIdle end (print from vTask2), 13:   vTask2 start, 13:   vTask2 end
+12:   TaskIdle end (print from vTask2), 13:   vTask2 start, 13:   vTask2 end
+14:   TaskIdle end (print from vTask2), 15:   vTask2 start, 15:   vTask2 end
+14:   TaskIdle end (print from vTask2), 15:   vTask2 start, 15:   vTask2 end
+14:   TaskIdle end (print from vTask2), 15:   vTask2 start, 15:   vTask2 end
+16:   TaskIdle end (print from vTask2), 17:   vTask2 start, 17:   vTask2 end
+16:   TaskIdle end (print from vTask2), 17:   vTask2 start, 17:   vTask2 end
+16:   TaskIdle end (print from vTask2), 17:   vTask2 start, 17:   vTask2 end
+18:   TaskIdle end (print from vTask2), 19:   vTask2 start, 19:   vTask2 end
+18:   TaskIdle end (print from vTask2), 19:   vTask2 start, 19:   vTask2 end
+18:   TaskIdle end (print from vTask2), 19:   vTask2 start, 19:   vTask2 end
+20:   TaskIdle end (print from vTask2), 21:   vTask2 start, 21:   vTask2 end
+20:   TaskIdle end (print from vTask2), 21:   vTask2 start, 21:   vTask2 end
+20:   TaskIdle end (print from vTask2), 21:   vTask2 start, 21:   vTask2 end
+22:   TaskIdle end (print from vTask2), 23:   vTask2 start, 23:   vTask2 end
+22:   TaskIdle end (print from vTask2), 23:   vTask2 start, 23:   vTask2 end
+22:   TaskIdle end (print from vTask2), 23:   vTask2 start, 23:   vTask2 end
+24:   TaskIdle end (print from vTask2), 25:   vTask2 start, 25:   vTask2 end
+24:   TaskIdle end (print from vTask2), 25:   vTask2 start, 25:   vTask2 end
+24:   TaskIdle end (print from vTask2), 25:   vTask2 start, 25:   vTask2 end
+26:   TaskIdle end (print from vTask2), 27:   vTask2 start, 27:   vTask2 end
+26:   TaskIdle end (print from vTask2), 27:   vTask2 start, 27:   vTask2 end
+26:   TaskIdle end (print from vTask2), 27:   vTask2 start, 27:   vTask2 end
+28:   TaskIdle end (print from vTask2), 29:   vTask2 start, 29:   vTask2 end
+28:   TaskIdle end (print from vTask2), 29:   vTask2 start, 29:   vTask2 end
+28:   TaskIdle end (print from vTask2), 29:   vTask2 start, 29:   vTask2 end
+30:   TaskIdle end (print from vTask2), 31:   vTask2 start, 31:   vTask2 end
+30:   TaskIdle end (print from vTask2), 31:   vTask2 start, 31:   vTask2 end
+30:   TaskIdle end (print from vTask2), 31:   vTask2 start, 31:   vTask2 end
+32:   TaskIdle end (print from vTask2), 33:   vTask2 start, 33:   vTask2 end
+32:   TaskIdle end (print from vTask2), 33:   vTask2 start, 33:   vTask2 end
+32:   TaskIdle end (print from vTask2), 33:   vTask2 start, 33:   vTask2 end
+34:   TaskIdle end (print from vTask2), 35:   vTask2 start, 35:   vTask2 end
+34:   TaskIdle end (print from vTask2), 35:   vTask2 start, 35:   vTask2 end
+34:   TaskIdle end (print from vTask2), 35:   vTask2 start, 35:   vTask2 end
+36:   TaskIdle end (print from vTask2), 37:   vTask2 start, 37:   vTask2 end
+36:   TaskIdle end (print from vTask2), 37:   vTask2 start, 37:   vTask2 end
+36:   TaskIdle end (print from vTask2), 37:   vTask2 start, 37:   vTask2 end
+38:   TaskIdle end (print from vTask2), 39:   vTask2 start, 39:   vTask2 end
+38:   TaskIdle end (print from vTask2), 39:   vTask2 start, 39:   vTask2 end
+38:   TaskIdle end (print from vTask2), 39:   vTask2 start, 39:   vTask2 end
+40:   TaskIdle end (print from vTask2), 41:   vTask2 start, 41:   vTask2 end
+40:   TaskIdle end (print from vTask2), 41:   vTask2 start, 41:   vTask2 end
+40:   TaskIdle end (print from vTask2), 41:   vTask2 start, 41:   vTask2 end
+42:   TaskIdle end (print from vTask2), 43:   vTask2 start, 43:   vTask2 end
+42:   TaskIdle end (print from vTask2), 43:   vTask2 start, 43:   vTask2 end
+42:   TaskIdle end (print from vTask2), 43:   vTask2 start, 43:   vTask2 end
+44:   TaskIdle end (print from vTask2), 45:   vTask2 start, 45:   vTask2 end
+44:   TaskIdle end (print from vTask2), 45:   vTask2 start, 45:   vTask2 end
+44:   TaskIdle end (print from vTask2), 45:   vTask2 start, 45:   vTask2 end
+46:   TaskIdle end (print from vTask2), 47:   vTask2 start, 47:   vTask2 end
+46:   TaskIdle end (print from vTask2), 47:   vTask2 start, 47:   vTask2 end
+46:   TaskIdle end (print from vTask2), 47:   vTask2 start, 47:   vTask2 end
+48:   TaskIdle end (print from vTask2), 49:   vTask2 start, 49:   vTask2 end
+48:   TaskIdle end (print from vTask2), 49:   vTask2 start, 49:   vTask2 end
+50:   vTask1 start, 50:   vTask1 end
+50:   TaskIdle end (print from vTask2), 51:   vTask2 start, 51:   vTask2 end
+50:   TaskIdle end (print from vTask2), 51:   vTask2 start, 51:   vTask2 end
+50:   TaskIdle end (print from vTask2), 51:   vTask2 start, 51:   vTask2 end
+52:   TaskIdle end (print from vTask2), 53:   vTask2 start, 53:   vTask2 end
+52:   TaskIdle end (print from vTask2), 53:   vTask2 start, 53:   vTask2 end
+52:   TaskIdle end (print from vTask2), 53:   vTask2 start, 53:   vTask2 end
+54:   TaskIdle end (print from vTask2), 55:   vTask2 start, 55:   vTask2 end
+54:   TaskIdle end (print from vTask2), 55:   vTask2 start, 55:   vTask2 end
+54:   TaskIdle end (print from vTask2), 55:   vTask2 start, 55:   vTask2 end
+56:   TaskIdle end (print from vTask2), 57:   vTask2 start, 57:   vTask2 end
+56:   TaskIdle end (print from vTask2), 57:   vTask2 start, 57:   vTask2 end
+56:   TaskIdle end (print from vTask2), 57:   vTask2 start, 57:   vTask2 end
+58:   TaskIdle end (print from vTask2), 59:   vTask2 start, 59:   vTask2 end
+58:   TaskIdle end (print from vTask2), 59:   vTask2 start, 59:   vTask2 end
+58:   TaskIdle end (print from vTask2), 59:   vTask2 start, 59:   vTask2 end
+60:   TaskIdle end (print from vTask2), 61:   vTask2 start, 61:   vTask2 end
+60:   TaskIdle end (print from vTask2), 61:   vTask2 start, 61:   vTask2 end
+60:   TaskIdle end (print from vTask2), 61:   vTask2 start, 61:   vTask2 end
+62:   TaskIdle end (print from vTask2), 63:   vTask2 start, 63:   vTask2 end
+62:   TaskIdle end (print from vTask2), 63:   vTask2 start, 63:   vTask2 end
+62:   TaskIdle end (print from vTask2), 63:   vTask2 start, 63:   vTask2 end
+64:   TaskIdle end (print from vTask2), 65:   vTask2 start, 65:   vTask2 end
+64:   TaskIdle end (print from vTask2), 65:   vTask2 start, 65:   vTask2 end
+64:   TaskIdle end (print from vTask2), 65:   vTask2 start, 65:   vTask2 end
+66:   TaskIdle end (print from vTask2), 67:   vTask2 start, 67:   vTask2 end
+66:   TaskIdle end (print from vTask2), 67:   vTask2 start, 67:   vTask2 end
+66:   TaskIdle end (print from vTask2), 67:   vTask2 start, 67:   vTask2 end
+68:   TaskIdle end (print from vTask2), 69:   vTask2 start, 69:   vTask2 end
+68:   TaskIdle end (print from vTask2), 69:   vTask2 start, 69:   vTask2 end
+68:   TaskIdle end (print from vTask2), 69:   vTask2 start, 69:   vTask2 end
+70:   TaskIdle end (print from vTask2), 71:   vTask2 start, 71:   vTask2 end
+70:   TaskIdle end (print from vTask2), 71:   vTask2 start, 71:   vTask2 end
+72:   TaskIdle end (print from vTask2), 73:   vTask2 start, 73:   vTask2 end
+72:   TaskIdle end (print from vTask2), 73:   vTask2 start, 73:   vTask2 end
+72:   TaskIdle end (print from vTask2), 73:   vTask2 start, 73:   vTask2 end
+74:   TaskIdle end (print from vTask2), 75:   vTask2 start, 75:   vTask2 end
+74:   TaskIdle end (print from vTask2), 75:   vTask2 start, 75:   vTask2 end
+74:   TaskIdle end (print from vTask2), 75:   vTask2 start, 75:   vTask2 end
+76:   TaskIdle end (print from vTask2), 77:   vTask2 start, 77:   vTask2 end
+76:   TaskIdle end (print from vTask2), 77:   vTask2 start, 77:   vTask2 end
+76:   TaskIdle end (print from vTask2), 77:   vTask2 start, 77:   vTask2 end
+78:   TaskIdle end (print from vTask2), 79:   vTask2 start, 79:   vTask2 end
+78:   TaskIdle end (print from vTask2), 79:   vTask2 start, 79:   vTask2 end
+78:   TaskIdle end (print from vTask2), 79:   vTask2 start, 79:   vTask2 end
+80:   TaskIdle end (print from vTask2), 81:   vTask2 start, 81:   vTask2 end
+80:   TaskIdle end (print from vTask2), 81:   vTask2 start, 81:   vTask2 end
+80:   TaskIdle end (print from vTask2), 81:   vTask2 start, 81:   vTask2 end
+82:   TaskIdle end (print from vTask2), 83:   vTask2 start, 83:   vTask2 end
+82:   TaskIdle end (print from vTask2), 83:   vTask2 start, 83:   vTask2 end
+82:   TaskIdle end (print from vTask2), 83:   vTask2 start, 83:   vTask2 end
+84:   TaskIdle end (print from vTask2), 85:   vTask2 start, 85:   vTask2 end
+84:   TaskIdle end (print from vTask2), 85:   vTask2 start, 85:   vTask2 end
+84:   TaskIdle end (print from vTask2), 85:   vTask2 start, 85:   vTask2 end
+86:   TaskIdle end (print from vTask2), 87:   vTask2 start, 87:   vTask2 end
+86:   TaskIdle end (print from vTask2), 87:   vTask2 start, 87:   vTask2 end
+86:   TaskIdle end (print from vTask2), 87:   vTask2 start, 87:   vTask2 end
+88:   TaskIdle end (print from vTask2), 89:   vTask2 start, 89:   vTask2 end
+88:   TaskIdle end (print from vTask2), 89:   vTask2 start, 89:   vTask2 end
+88:   TaskIdle end (print from vTask2), 89:   vTask2 start, 89:   vTask2 end
+90:   TaskIdle end (print from vTask2), 91:   vTask2 start, 91:   vTask2 end
+90:   TaskIdle end (print from vTask2), 91:   vTask2 start, 91:   vTask2 end
+90:   TaskIdle end (print from vTask2), 91:   vTask2 start, 91:   vTask2 end
+92:   TaskIdle end (print from vTask2), 93:   vTask2 start, 93:   vTask2 end
+92:   TaskIdle end (print from vTask2), 93:   vTask2 start, 93:   vTask2 end
+92:   TaskIdle end (print from vTask2), 93:   vTask2 start, 93:   vTask2 end
+94:   TaskIdle end (print from vTask2), 95:   vTask2 start, 95:   vTask2 end
+94:   TaskIdle end (print from vTask2), 95:   vTask2 start, 95:   vTask2 end
+94:   TaskIdle end (print from vTask2), 95:   vTask2 start, 95:   vTask2 end
+96:   TaskIdle end (print from vTask2), 97:   vTask2 start, 97:   vTask2 end
+96:   TaskIdle end (print from vTask2), 97:   vTask2 start, 97:   vTask2 end
+96:   TaskIdle end (print from vTask2), 97:   vTask2 start, 97:   vTask2 end
+98:   TaskIdle end (print from vTask2), 99:   vTask2 start, 99:   vTask2 end
+98:   TaskIdle end (print from vTask2), 99:   vTask2 start, 99:   vTask2 end
+98:   TaskIdle end (print from vTask2), 99:   vTask2 start, 99:   vTask2 end
+100:   vTask1 start, 100:   vTask1 end
+100:   TaskIdle end (print from vTask2), 101:   vTask2 start, 101:   vTask2 end
+100:   TaskIdle end (print from vTask2), 101:   vTask2 start, 101:   vTask2 end
+102:   TaskIdle end (print from vTask2), 103:   vTask2 start, 103:   vTask2 end
+102:   TaskIdle end (print from vTask2), 103:   vTask2 start, 103:   vTask2 end
+102:   TaskIdle end (print from vTask2), 103:   vTask2 start, 103:   vTask2 end
+104:   TaskIdle end (print from vTask2), 105:   vTask2 start, 105:   vTask2 end
+104:   TaskIdle end (print from vTask2), 105:   vTask2 start, 105:   vTask2 end
+104:   TaskIdle end (print from vTask2), 105:   vTask2 start, 105: �
