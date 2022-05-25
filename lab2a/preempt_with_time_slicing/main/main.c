@@ -3,11 +3,8 @@
 #include "freertos/task.h"
 #include "driver/gpio.h"
 
-void vApplicationIdleHook(void) {
-    
-}
-
 void app_main(void)
 {
-
+    
+   
 }
