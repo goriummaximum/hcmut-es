@@ -202,17 +202,46 @@ void app_main(void)
     //createQueue
     cmd_q = xQueueCreate(CMD_QUEUE_MAX_LENGTH, sizeof(cmd_t));
     if (cmd_q == 0) {
-        printf("[MAIN] cmd_q created failed! program stop!\n");
+        printf("[MAIN] cmd_q created failed!\n");
         return;
     }
 
     xQueueReset(cmd_q);
     printf("[MAIN] cmd_q created successfully!\n");
 
-    //create tasks
-    xTaskCreate(&cmd_reception_handler, "cmd_reception_handler", 1024 * 2, NULL, 10, NULL);
-    xTaskCreate(&camera_quality_handler, "camera_quality_handler", 1024 * 2, NULL, 9, NULL);
-    xTaskCreate(&camera_flash_handler, "camera_flash_handler", 1024 * 2, NULL, 9, NULL);
-    xTaskCreate(&camera_reset_handler, "camera_reset_handler", 1024 * 2, NULL, 9, NULL);
-    xTaskCreate(&q_garbage_collector, "q_garbage_collector", 1024 * 2, NULL, 9, NULL);
+    /*
+    create tasks
+    camera_quality_handler -> camera_flash_handler -> camera_reset_handler -> q_garbage_collector -> cmd_reception_handler
+    cmd_reception_handler is created last because when start first and start to send pkt to the queue, other tasks cannot
+    start anymore (have not know why yet, but this start order works!)
+    */
+    if (xTaskCreate(&camera_quality_handler, "camera_quality_handler", 1024 * 2, NULL, 9, NULL) != pdPASS){
+        printf("[MAIN] camera_quality_handler created failed!\n");
+        return;
+    }
+    printf("[MAIN] camera_quality_handler created successfully!\n");
+
+    if (xTaskCreate(&camera_flash_handler, "camera_flash_handler", 1024 * 2, NULL, 9, NULL) != pdPASS) {
+        printf("[MAIN] camera_flash_handler created failed!\n");
+        return;
+    }
+    printf("[MAIN] camera_flash_handler created successfully!\n");
+
+    if (xTaskCreate(&camera_reset_handler, "camera_reset_handler", 1024 * 2, NULL, 9, NULL) != pdPASS) {
+        printf("[MAIN] camera_reset_handler created failed!\n");
+        return;
+    }
+    printf("[MAIN] camera_reset_handler created successfully!\n");
+
+    if (xTaskCreate(&q_garbage_collector, "q_garbage_collector", 1024 * 2, NULL, 9, NULL) != pdPASS) {
+        printf("[MAIN] q_garbage_collector created failed!\n");
+        return;
+    }
+    printf("[MAIN] q_garbage_collector created successfully!\n");
+
+    if (xTaskCreate(&cmd_reception_handler, "cmd_reception_handler", 1024 * 2, NULL, 10, NULL) != pdPASS) {
+        printf("[MAIN] cmd_reception_handler created failed!\n");
+        return;
+    }
+    printf("[MAIN] cmd_reception_handler created successfully!\n");
 }
