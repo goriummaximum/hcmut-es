@@ -17,6 +17,7 @@ freeRTOSconfig.h:
 
 sdkconfig:
 - run only on first core
+    + turn off FreeRTOS optimization
 - support legacy FreeRTOS API
 */
 

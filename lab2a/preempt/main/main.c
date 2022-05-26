@@ -11,6 +11,7 @@ Task2 and Idle have the same priority and run continuously.
 
 sdkconfig:
 - run only on first core
+    + turn off FreeRTOS optimization
 - support legacy FreeRTOS API
 - use FreeRTOS Idle hook
 
@@ -39,11 +40,7 @@ void vApplicationIdleHook(void) {
 
 void vTask1(void *pvParameters) {
     for (;;) {
-        printf("%d:   vTask1 start, ", xTaskGetTickCount());
-        /*  assume doing sth here start  */
-
-        /*  assume doing sth here end  */
-        printf("%d:   vTask1 end\n", xTaskGetTickCount());
+        printf("%d:   vTask1 running\n", xTaskGetTickCount());
         vTaskDelay(50);
     }
 
@@ -53,11 +50,7 @@ void vTask1(void *pvParameters) {
 void vTask2(void *pvParameters) {
     for (;;) {
         //because IdleHook cannot print, so delay to vTask2 to print the tick count of Idle Task.
-        printf("%d:   TaskIdle end (print from vTask2), %d:   vTask2 start, ", IdleTaskTick, xTaskGetTickCount());
-        /*  assume doing sth here start  */
-
-        /*  assume doing sth here end  */
-        printf("%d:   vTask2 end\n", xTaskGetTickCount());
+        printf("%d:   TaskIdle running (print from vTask2), %d:   vTask2 running\n", IdleTaskTick, xTaskGetTickCount());
     }
 
     vTaskDelete(NULL);
