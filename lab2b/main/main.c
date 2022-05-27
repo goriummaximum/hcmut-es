@@ -98,11 +98,11 @@ void camera_quality_handler(void *pvParameters) {
         //peek to see if the pkt is for this task, not removed from the queue yet
         if (xQueuePeek(cmd_q, (void *)&recv_cmd_pkt, portMAX_DELAY) != pdPASS) continue;
         //check if the pkt is for this task
-        if (recv_cmd_pkt.id != (uint8_t)0) continue;
+        if (recv_cmd_pkt.id != camera_quality_handler_ID) continue;
         //this pkt is for this task, recv completely and pop this cmd out of the queue
         if (xQueueReceive(cmd_q, (void *)&recv_cmd_pkt, portMAX_DELAY) != pdPASS) continue;
         //do sth
-        printf("[camera_quality_handler[0]] #%d: q_length: %d/%d, recv cmd {id:%d,cmd:%x} successfully\n",
+        printf("[camera_quality_handler (0)] #%d: q_length: %d/%d, recv cmd {id:%d,cmd:%x} successfully\n",
             xTaskGetTickCount(),
             (int)uxQueueMessagesWaiting(cmd_q),
             (int)CMD_QUEUE_MAX_LENGTH,
@@ -125,11 +125,11 @@ void camera_flash_handler(void *pvParameters) {
         //peek to see if the pkt is for this task, not removed from the queue yet
         if (xQueuePeek(cmd_q, (void *)&recv_cmd_pkt, portMAX_DELAY) != pdPASS) continue;
         //check if the pkt is for this task
-        if (recv_cmd_pkt.id != (uint8_t)1) continue;
+        if (recv_cmd_pkt.id != camera_flash_handler_ID) continue;
         //this pkt is for this task, recv completely and pop this cmd out of the queue
         if (xQueueReceive(cmd_q, (void *)&recv_cmd_pkt, portMAX_DELAY) != pdPASS) continue;
         //do sth
-        printf("[camera_flash_handler[1]] #%d: q_length: %d/%d, recv cmd {id:%d,cmd:%x} successfully\n",
+        printf("[camera_flash_handler (1)] #%d: q_length: %d/%d, recv cmd {id:%d,cmd:%x} successfully\n",
             xTaskGetTickCount(),
             (int)uxQueueMessagesWaiting(cmd_q),
             (int)CMD_QUEUE_MAX_LENGTH,
@@ -152,11 +152,11 @@ void camera_reset_handler(void *pvParameters) {
         //peek to see if the pkt is for this task, not removed from the queue yet
         if (xQueuePeek(cmd_q, (void *)&recv_cmd_pkt, portMAX_DELAY) != pdPASS) continue;
         //check if the pkt is for this task
-        if (recv_cmd_pkt.id != (uint8_t)2) continue;
+        if (recv_cmd_pkt.id != camera_reset_handler_ID) continue;
         //this pkt is for this task, recv completely and pop this cmd out of the queue
         if (xQueueReceive(cmd_q, (void *)&recv_cmd_pkt, portMAX_DELAY) != pdPASS) continue;
         //do sth
-        printf("[camera_reset_handler[2]] #%d: q_length: %d/%d, recv cmd {id:%d,cmd:%x} successfully\n",
+        printf("[camera_reset_handler (2)] #%d: q_length: %d/%d, recv cmd {id:%d,cmd:%x} successfully\n",
             xTaskGetTickCount(),
             (int)uxQueueMessagesWaiting(cmd_q),
             (int)CMD_QUEUE_MAX_LENGTH,
@@ -179,7 +179,9 @@ void q_garbage_collector(void *pvParameters) {
         //peek to see if the pkt is for this task, not removed from the queue yet
         if (xQueuePeek(cmd_q, (void *)&recv_cmd_pkt, portMAX_DELAY) != pdPASS) continue;
         //check if the pkt is not for other functional tasks
-        if (recv_cmd_pkt.id < 3) continue;
+        if (recv_cmd_pkt.id == camera_reset_handler_ID
+        || recv_cmd_pkt.id == camera_flash_handler_ID
+        || recv_cmd_pkt.id == camera_quality_handler_ID) continue;
         //this pkt is for this task, recv completely and pop this cmd out of the queue
         if (xQueueReceive(cmd_q, (void *)&recv_cmd_pkt, portMAX_DELAY) != pdPASS) continue;
         //do sth
@@ -191,7 +193,7 @@ void q_garbage_collector(void *pvParameters) {
             recv_cmd_pkt.cmd
         );
         
-        //vTaskDelay(10); //check for garbage for every 10 ticks
+        vTaskDelay(20); //check for garbage for every 20 ticks
     }
 
     vTaskDelete(NULL);
@@ -199,6 +201,10 @@ void q_garbage_collector(void *pvParameters) {
 
 void app_main(void)
 {
+    //set priority for app_main to be highest among other tasks to avoid others task block app_main after initializaion
+    //after that kill app_main for not blocking other tasks
+    vTaskPrioritySet(NULL, 15);
+
     //createQueue
     cmd_q = xQueueCreate(CMD_QUEUE_MAX_LENGTH, sizeof(cmd_t));
     if (cmd_q == 0) {
@@ -209,12 +215,13 @@ void app_main(void)
     xQueueReset(cmd_q);
     printf("[MAIN] cmd_q created successfully!\n");
 
-    /*
-    create tasks
-    camera_quality_handler -> camera_flash_handler -> camera_reset_handler -> q_garbage_collector -> cmd_reception_handler
-    cmd_reception_handler is created last because when start first and start to send pkt to the queue, other tasks cannot
-    start anymore (have not know why yet, but this start order works!)
-    */
+    //createTask
+    if (xTaskCreate(&cmd_reception_handler, "cmd_reception_handler", 1024 * 2, NULL, 10, NULL) != pdPASS) {
+        printf("[MAIN] cmd_reception_handler created failed!\n");
+        return;
+    }
+    printf("[MAIN] cmd_reception_handler created successfully!\n");
+
     if (xTaskCreate(&camera_quality_handler, "camera_quality_handler", 1024 * 2, NULL, 9, NULL) != pdPASS){
         printf("[MAIN] camera_quality_handler created failed!\n");
         return;
@@ -238,10 +245,4 @@ void app_main(void)
         return;
     }
     printf("[MAIN] q_garbage_collector created successfully!\n");
-
-    if (xTaskCreate(&cmd_reception_handler, "cmd_reception_handler", 1024 * 2, NULL, 10, NULL) != pdPASS) {
-        printf("[MAIN] cmd_reception_handler created failed!\n");
-        return;
-    }
-    printf("[MAIN] cmd_reception_handler created successfully!\n");
 }

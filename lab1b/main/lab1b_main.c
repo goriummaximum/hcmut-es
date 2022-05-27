@@ -58,9 +58,15 @@ void init() {
 
 void app_main(void)
 {
+    //set priority for app_main to be highest among other tasks to avoid others task block app_main after initializaion
+    //after that kill app_main for not blocking other tasks
+    vTaskPrioritySet(NULL, 15);
+    
     init();
 
-    xTaskCreate(&print_student_id, "print_student_id", 2048, NULL, 0, NULL);
-    xTaskCreate(&poll_button, "poll_button", 2048, NULL, 0, NULL);
+    if (xTaskCreate(&print_student_id, "print_student_id", 2048, NULL, 0, NULL) == pdPASS) printf("print_student_id created successfully\n");
+    if (xTaskCreate(&poll_button, "poll_button", 2048, NULL, 0, NULL) == pdPASS) printf("poll_button created successfully\n");
+    
+    vTaskPrioritySet(NULL, 1);
    
 }

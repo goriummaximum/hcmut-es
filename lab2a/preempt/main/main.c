@@ -58,6 +58,12 @@ void vTask2(void *pvParameters) {
 
 void app_main(void)
 {
-    xTaskCreate(&vTask1, "vTask1", 2048, NULL, 10, NULL);
-    xTaskCreate(&vTask2, "vTask2", 2048, NULL, 0, NULL);
+    //set priority for app_main to be highest among other tasks to avoid others task block app_main after initializaion
+    vTaskPrioritySet(NULL, 15);
+    
+    if (xTaskCreate(&vTask1, "vTask1", 2048, NULL, 10, NULL) == pdPASS) printf("vTask1 created successfully\n");
+    if (xTaskCreate(&vTask2, "vTask2", 2048, NULL, 0, NULL) == pdPASS) printf("vTask2 created successfully\n");
+    
+    //set back to original priority for app_main task for not blocking other running tasks
+    vTaskPrioritySet(NULL, 1);
 }

@@ -38,5 +38,11 @@ void print_cpu_stat(void *pvParameters) {
 
 void app_main(void)
 {
-    xTaskCreate(&print_cpu_stat, "print_cpu_stat", 2048, NULL, 1, NULL);
+    //set priority for app_main to be highest among other tasks to avoid others task block app_main after initializaion
+    //after that kill app_main fr not blocking othe tasks
+    vTaskPrioritySet(NULL, 15);
+    
+    if (xTaskCreate(&print_cpu_stat, "print_cpu_stat", 2048, NULL, 1, NULL) == pdPASS) printf("print_cpu_stat created successfully\n");
+    
+    vTaskPrioritySet(NULL, 1);
 }
