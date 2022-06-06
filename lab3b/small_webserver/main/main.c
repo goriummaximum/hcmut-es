@@ -1,24 +1,3 @@
-/*
- *                            default handler              user handler
- *  -------------             ---------------             ---------------
- *  |           |   event     |             | callback or |             |
- *  |   tcpip   | --------->  |    event    | ----------> | application |
- *  |   stack   |             |     task    |  event      |    task     |
- *  |-----------|             |-------------|             |-------------|
- *                                  /|\                          |
- *                                   |                           |
- *                            event  |                           |
- *                                   |                           |
- *                                   |                           |
- *                             ---------------                   |
- *                             |             |                   |
- *                             | WiFi Driver |/__________________|
- *                             |             |\     API call
- *                             |             |
- *                             |-------------|
-*/
-
-
 #include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
@@ -49,6 +28,7 @@ static const char *HTTP_TAG = "HTTP_SERVER";
 static const char *QUEUE_TAG = "QUEUE";
 static const char *LED_TAG = "LED_HANDLER";
 static const char *PRINT_TAG = "PRINT_HANDLER";
+static const char *GARBAGE_COLLECTOR_TAG = "GARBAGE_COLLECTOR";
 
 /*================= GPIO DEF =================*/
 #define BUILTIN_LED_PIN     GPIO_NUM_2
@@ -59,6 +39,11 @@ uint8_t led_st = 1;
 #define QUEUE_MAX_LEN    5
 
 QueueHandle_t q;
+
+/*================= TASKS DEF =================*/
+#define NOT_LED_TASK_BIT      BIT0
+#define NOT_PRINT_TASK_BIT    BIT1
+static EventGroupHandle_t tasks_event_group;
 
 /*================= WIFI AP DEF =================*/
 #define WIFI_SSID       "esp32"
@@ -83,7 +68,7 @@ httpd_handle_t simple_server;
 /*================= GPIO =================*/
 void gpio_init(void) {
     gpio_set_direction(BUILTIN_LED_PIN, GPIO_MODE_OUTPUT);
-    gpio_set_pull_mode(BUILTIN_LED_PIN, GPIO_PULLUP_ONLY);
+    //gpio_set_pull_mode(BUILTIN_LED_PIN, GPIO_PULLUP_ONLY);
     gpio_set_level(BUILTIN_LED_PIN, led_st);
 }
 
@@ -91,6 +76,7 @@ void gpio_init(void) {
 void toggle_led(void) {
     led_st = !led_st;
     gpio_set_level(BUILTIN_LED_PIN, led_st);
+    ESP_LOGI(LED_TAG, "LED state %s", led_st == 0 ? "ON" : "OFF");
 }
 
 void led_handler(void *pvParameters) {
@@ -102,11 +88,15 @@ void led_handler(void *pvParameters) {
         //wake up only there is a cmd pkt in the queue, else waiting forever
         //peek to see if the pkt is for this task, not removed from the queue yet
         if (xQueuePeek(q, (void *)&recv_pkt, portMAX_DELAY) != pdPASS) continue;
-        //check if the pkt is for this task
-        ESP_LOGI(LED_TAG, "key = %s, val = %s", recv_pkt.key, recv_pkt.value);
-        if (strcmp(recv_pkt.key, "toggle") != 0) continue;
+        //check if the pkt is not for this task
+        if (strcmp(recv_pkt.key, "toggle") != 0) {
+            xEventGroupSetBits(tasks_event_group, NOT_LED_TASK_BIT);
+            continue;
+        }
         //this pkt is for this task, recv completely and pop this cmd out of the queue
         if (xQueueReceive(q, (void *)&recv_pkt, portMAX_DELAY) != pdPASS) continue;
+        //clear all set bit if the pkt is for this task, return every bit to initial state
+        xEventGroupClearBits(tasks_event_group, NOT_LED_TASK_BIT | NOT_PRINT_TASK_BIT);
         //do sth
         toggle_led();
     }
@@ -127,10 +117,15 @@ void print_handler(void *pvParameters) {
         //wake up only there is a cmd pkt in the queue, else waiting forever
         //peek to see if the pkt is for this task, not removed from the queue yet
         if (xQueuePeek(q, (void *)&recv_pkt, portMAX_DELAY) != pdPASS) continue;
-        //check if the pkt is for this task
-        if (strcmp(recv_pkt.key, "str") != 0) continue;
+        //check if the pkt is not for this task
+        if (strcmp(recv_pkt.key, "str") != 0) {
+            xEventGroupSetBits(tasks_event_group, NOT_PRINT_TASK_BIT);
+            continue;
+        }
         //this pkt is for this task, recv completely and pop this cmd out of the queue
         if (xQueueReceive(q, (void *)&recv_pkt, portMAX_DELAY) != pdPASS) continue;
+        //clear all set bit if the pkt is for this task, return every bit to initial state
+        xEventGroupClearBits(tasks_event_group, NOT_LED_TASK_BIT | NOT_PRINT_TASK_BIT);
         //do sth
         print_str(recv_pkt.value);
     }
@@ -138,18 +133,37 @@ void print_handler(void *pvParameters) {
     vTaskDelete(NULL);
 }
 
+void garbage_collector(void *pvParameters) {
+    key_value_t recv_pkt;
+
+    for (;;) {
+        //if the pkt is not for other functional tasks
+        xEventGroupWaitBits(tasks_event_group, NOT_LED_TASK_BIT | NOT_PRINT_TASK_BIT, pdTRUE, pdTRUE, portMAX_DELAY);
+        xQueueReceive(q, (void *)&recv_pkt, portMAX_DELAY);
+        ESP_LOGI(GARBAGE_COLLECTOR_TAG, "garbage collected");
+    }
+
+    vTaskDelete(NULL);
+}
+
 void tasks_init(void) {
+    tasks_event_group = xEventGroupCreate();
+
     if (xTaskCreate(&led_handler, "led_handler", 1024 * 2, NULL, 0, NULL) == pdPASS) {
         ESP_LOGI(LED_TAG, "led_handler created success");
     }
     if (xTaskCreate(&print_handler, "print_handler", 1024 * 2, NULL, 0, NULL) == pdPASS) {
         ESP_LOGI(PRINT_TAG, "print_handler created success");
     }
+    if (xTaskCreate(&garbage_collector, "garbage_collector", 1024 * 2, NULL, 0, NULL) == pdPASS) {
+        ESP_LOGI(GARBAGE_COLLECTOR_TAG, "garbage_collector created success");
+    }
 }
 
 /*================= QUEUE =================*/
 void queue_init(void) {
     q = xQueueCreate(QUEUE_MAX_LEN, sizeof(key_value_t));
+    ESP_LOGI(QUEUE_TAG, "data size = %d", sizeof(key_value_t));
     while (q == 0) {
         ESP_LOGI(QUEUE_TAG, "q created failed");
         q = xQueueCreate(QUEUE_MAX_LEN, sizeof(key_value_t));
@@ -247,7 +261,8 @@ key_value_t extract_content(char *buf, int buf_len) {
     //extract value
     int key_len = i;
     for (; i < buf_len; i++) {
-        ret.value[i - key_len] = buf[i];
+        if (buf[i] == '+') ret.value[i - key_len] = ' ';
+        else ret.value[i - key_len] = buf[i];
     }
     ret.value[i - key_len] = '\0';
 
@@ -308,7 +323,7 @@ esp_err_t cmd_post_handler(httpd_req_t *req) {
     
     //push recv pkt to the queue
     if (q != 0) {
-        if (xQueueSendToBack(q, (void *)&extract_content, (TickType_t)10) == pdPASS) { //if send successfully
+        if (xQueueSendToBack(q, (void *)&extracted_content, (TickType_t)10) == pdPASS) { //if send successfully
             ESP_LOGI(HTTP_TAG, "send pkt to queue success");
         } //can we set a timeout in this http server task?
     }
