@@ -144,9 +144,7 @@ void camera_quality_handler(void *pvParameters) {
             recv_cmd_pkt.id, 
             recv_cmd_pkt.cmd
         );
-        
-        ESP_LOGI(LOG_TAG_QUALITY, "event bits = %x", xEventGroupGetBits(tasks_event_group));
-        
+
         //check if the pkt is not for this task
         if (recv_cmd_pkt.id != camera_quality_handler_ID) {
             xEventGroupSetBits(tasks_event_group, NOT_CAMERA_QUALITY_BIT);
@@ -186,8 +184,6 @@ void camera_flash_handler(void *pvParameters) {
             recv_cmd_pkt.cmd
         );
         
-        ESP_LOGI(LOG_TAG_FLASH, "event bits = %x", xEventGroupGetBits(tasks_event_group));
-
         //check if the pkt is not for this task
         if (recv_cmd_pkt.id != camera_flash_handler_ID) {
             xEventGroupSetBits(tasks_event_group, NOT_CAMERA_FLASH_BIT);
@@ -227,8 +223,6 @@ void camera_reset_handler(void *pvParameters) {
             recv_cmd_pkt.cmd
         );
         
-        ESP_LOGI(LOG_TAG_RESET, "event bits = %x", xEventGroupGetBits(tasks_event_group));
-
         //check if the pkt is not for this task
         if (recv_cmd_pkt.id != camera_reset_handler_ID) {
             xEventGroupSetBits(tasks_event_group, NOT_CAMERA_RESET_BIT);
@@ -255,8 +249,6 @@ void q_garbage_collector(void *pvParameters) {
     cmd_t recv_cmd_pkt;
 
     for (;;) {
-        ESP_LOGI(LOG_TAG_GARBAGE_COLLECTOR, "event bits = %x", xEventGroupGetBits(tasks_event_group));
-
         //if the pkt is not for other functional tasks
         xEventGroupWaitBits(tasks_event_group, NOT_CAMERA_QUALITY_BIT | NOT_CAMERA_FLASH_BIT | NOT_CAMERA_RESET_BIT, pdTRUE, pdTRUE, portMAX_DELAY);
         if (xQueueReceive(cmd_q, (void *)&recv_cmd_pkt, portMAX_DELAY) != pdPASS) continue;
