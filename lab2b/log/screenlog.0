@@ -4,342 +4,168 @@ rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
 configsip: 0, SPIWP:0xee
 clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
 mode:DIO, clock div:2
-load:0x3fff0030,len:6604
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
 ho 0 tail 12 room 4
-load:0x40078000,len:14792
-ho 0 tail 12 room 4
-load:0x40080400,len:3584
-entry 0x40080660
-[0;32mI (31) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
-[0;32mI (31) boot: compile time 22:38:46[0m
-[0;32mI (31) boot: chip revision: 1[0m
-[0;32mI (34) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
-[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (54) boot: Enabling RNG early entropy source...[0m
-[0;32mI (60) boot: Partition Table:[0m
-[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (93) boot: End of partition table[0m
-[0;32mI (97) boot_comm: chip revision: 1, min. application chip revision: 0[0m
-[0;32mI (104) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=07210h ( 29200) map[0m
-[0;32mI (123) esp_image: segment 1: paddr=00017238 vaddr=3ffb0000 size=01a18h (  6680) load[0m
-[0;32mI (126) esp_image: segment 2: paddr=00018c58 vaddr=40080000 size=073c0h ( 29632) load[0m
-[0;32mI (142) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=10d7ch ( 68988) map[0m
-[0;32mI (167) esp_image: segment 4: paddr=00030da4 vaddr=400873c0 size=03b08h ( 15112) load[0m
-[0;32mI (174) esp_image: segment 5: paddr=000348b4 vaddr=50000000 size=00010h (    16) load[0m
-[0;32mI (179) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (179) boot: Disabling RNG early entropy source...[0m
-[0;32mI (196) cpu_start: Pro cpu up.[0m
-[0;32mI (196) cpu_start: Single core mode[0m
-[0;32mI (204) cpu_start: Pro cpu start user code[0m
-[0;32mI (204) cpu_start: cpu freq: 160000000[0m
-[0;32mI (204) cpu_start: Application information:[0m
-[0;32mI (209) cpu_start: Project name:     lab2a[0m
-[0;32mI (214) cpu_start: App version:      4833184-dirty[0m
-[0;32mI (219) cpu_start: Compile time:     Jun  6 2022 22:38:43[0m
-[0;32mI (225) cpu_start: ELF file SHA256:  d8675448256e8fd1...[0m
-[0;32mI (231) cpu_start: ESP-IDF:          v4.4.1[0m
-[0;32mI (236) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (243) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (249) heap_init: At 3FFB2218 len 0002DDE8 (183 KiB): DRAM[0m
-[0;32mI (256) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
-[0;32mI (262) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
-[0;32mI (268) heap_init: At 4008AEC8 len 00015138 (84 KiB): IRAM[0m
-[0;32mI (274) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
-[0;32mI (282) spi_flash: detected chip: generic[0m
-[0;32mI (285) spi_flash: flash io: dio[0m
-[0;33mW (289) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (303) cpu_start: Starting scheduler on PRO CPU.[0m
-[0;32mI (308) MAIN: cmd_q created successfully![0m
-[0;32mI (308) MAIN: cmd_reception_handler created successfully![0m
-[0;32mI (318) MAIN: camera_quality_handler created successfully![0m
-[0;32mI (318) MAIN: camera_flash_handler created successfully![0m
-[0;32mI (328) MAIN: camera_reset_handle created successfully![0m
-[0;32mI (328) MAIN: q_garbage_collector created successfully![0m
-[0;32mI (338) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:b14f4193} successfully[0m
-[0;32mI (358) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (358) CAMERA_QUALITY_HANDLER: event bits = 0[0m
-[0;32mI (358) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (388) CAMERA_QUALITY_HANDLER: event bits = 1[0m
-[0;32mI (368) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (398) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (398) CAMERA_QUALITY_HANDLER: event bits = 1[0m
-[0;32mI (398) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (428) CAMERA_QUALITY_HANDLER: event bits = 1[0m
-[0;32mI (368) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (438) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (438) CAMERA_QUALITY_HANDLER: event bits = 1[0m
-[0;32mI (438) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (448) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:b3a2ab36} successfully[0m
-[0;32mI (408) CAMERA_FLASH_HANDLER: event bits = 1[0m
-[0;32mI (458) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (488) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (468) CAMERA_RESET_HANDLER: event bits = 3[0m
-[0;32mI (498) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (498) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (498) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (528) CAMERA_FLASH_HANDLER: event bits = 7[0m
-[0;32mI (368) GARBAGE_COLLECTOR: event bits = 1[0m
-[0;32mI (538) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (538) CAMERA_FLASH_HANDLER: event bits = 7[0m
-[0;32mI (538) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (558) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:682c3572} successfully[0m
-[0;32mI (568) CAMERA_FLASH_HANDLER: event bits = 0[0m
-[0;32mI (508) CAMERA_RESET_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:b14f4193}[0m
-[0;32mI (578) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:2,cmd:b3a2ab36}[0m
-[0;32mI (578) CAMERA_FLASH_HANDLER: event bits = 2[0m
-[0;32mI (578) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:2,cmd:b3a2ab36}[0m
-[0;32mI (608) CAMERA_FLASH_HANDLER: event bits = 2[0m
-[0;32mI (548) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:b14f4193} collected[0m
-[0;32mI (618) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:2,cmd:b3a2ab36}[0m
-[0;32mI (618) CAMERA_FLASH_HANDLER: event bits = 2[0m
-[0;32mI (618) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:2,cmd:b3a2ab36}[0m
-[0;32mI (648) CAMERA_FLASH_HANDLER: event bits = 2[0m
-[0;32mI (588) CAMERA_RESET_HANDLER: event bits = 2[0m
-[0;32mI (658) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:0,cmd:3a019327} successfully[0m
-[0;32mI (658) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:b3a2ab36}[0m
-[0;32mI (658) CAMERA_FLASH_HANDLER: event bits = 2[0m
-[0;32mI (688) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:b3a2ab36}[0m
-[0;32mI (628) GARBAGE_COLLECTOR: event bits = 2[0m
-[0;32mI (698) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (698) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:b3a2ab36}[0m
-[0;32mI (698) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (698) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:b3a2ab36}[0m
-[0;32mI (728) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (668) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:b3a2ab36}[0m
-[0;32mI (728) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (728) CAMERA_RESET_HANDLER: q_length: 2/5, recv cmd {id:2,cmd:b3a2ab36} successfully[0m
-[0;32mI (758) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:2,cmd:2c33a497} successfully[0m
-[0;32mI (758) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:1,cmd:682c3572}[0m
-[0;32mI (758) CAMERA_RESET_HANDLER: event bits = 2[0m
-[0;32mI (788) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:1,cmd:682c3572}[0m
-[0;32mI (748) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:1,cmd:682c3572}[0m
-[0;32mI (788) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (788) CAMERA_FLASH_HANDLER: q_length: 2/5, recv cmd {id:1,cmd:682c3572} successfully[0m
-[0;32mI (818) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:0,cmd:3a019327}[0m
-[0;32mI (808) CAMERA_RESET_HANDLER: event bits = 0[0m
-[0;32mI (818) CAMERA_RESET_HANDLER: q_length: 2/5, peek cmd {id:0,cmd:3a019327}[0m
-[0;32mI (818) CAMERA_RESET_HANDLER: event bits = 4[0m
-[0;32mI (848) CAMERA_RESET_HANDLER: q_length: 2/5, peek cmd {id:0,cmd:3a019327}[0m
-[0;32mI (838) CAMERA_FLASH_HANDLER: event bits = 4[0m
-[0;32mI (848) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:0,cmd:3a019327}[0m
-[0;32mI (848) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (858) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:0,cmd:1ca3c218} successfully[0m
-[0;32mI (878) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (878) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:3a019327}[0m
-[0;32mI (878) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (878) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:3a019327}[0m
-[0;32mI (908) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (478) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (908) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:3a019327}[0m
-[0;32mI (908) CAMERA_QUALITY_HANDLER: event bits = 0[0m
-[0;32mI (928) GARBAGE_COLLECTOR: q_length: 2/5, garbage cmd {id:0,cmd:3a019327} collected[0m
-[0;32mI (938) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:2,cmd:2c33a497} successfully[0m
-[0;32mI (938) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:0,cmd:1ca3c218}[0m
-[0;32mI (938) CAMERA_QUALITY_HANDLER: event bits = 0[0m
-[0;32mI (968) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:3,cmd:5c5851e4} successfully[0m
-[0;32mI (968) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:0,cmd:1ca3c218} successfully[0m
-[0;32mI (928) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:3a019327}[0m
-[0;32mI (998) CAMERA_RESET_HANDLER: event bits = 0[0m
-[0;32mI (948) GARBAGE_COLLECTOR: event bits = 0[0m
-[0;32mI (1008) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1008) CAMERA_RESET_HANDLER: event bits = 4[0m
-[0;32mI (1008) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1038) CAMERA_RESET_HANDLER: event bits = 4[0m
-[0;32mI (988) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1038) CAMERA_QUALITY_HANDLER: event bits = 4[0m
-[0;32mI (1038) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1068) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:41e9b7d0} successfully[0m
-[0;32mI (1068) CAMERA_QUALITY_HANDLER: event bits = 5[0m
-[0;32mI (1068) CAMERA_QUALITY_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1098) CAMERA_QUALITY_HANDLER: event bits = 5[0m
-[0;32mI (1058) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1098) CAMERA_RESET_HANDLER: event bits = 5[0m
-[0;32mI (1098) CAMERA_RESET_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1128) CAMERA_RESET_HANDLER: event bits = 5[0m
-[0;32mI (1118) CAMERA_QUALITY_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1128) CAMERA_QUALITY_HANDLER: event bits = 5[0m
-[0;32mI (1128) CAMERA_QUALITY_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1158) CAMERA_QUALITY_HANDLER: event bits = 5[0m
-[0;32mI (1148) CAMERA_RESET_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1158) CAMERA_RESET_HANDLER: event bits = 5[0m
-[0;32mI (1158) CAMERA_RESET_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1168) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:0,cmd:8027e49e} successfully[0m
-[0;32mI (1188) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1188) CAMERA_QUALITY_HANDLER: event bits = 5[0m
-[0;32mI (1188) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1218) CAMERA_QUALITY_HANDLER: event bits = 5[0m
-[0;32mI (888) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:3a019327}[0m
-[0;32mI (1218) CAMERA_FLASH_HANDLER: event bits = 5[0m
-[0;32mI (1218) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1238) GARBAGE_COLLECTOR: q_length: 2/5, garbage cmd {id:3,cmd:5c5851e4} collected[0m
-[0;32mI (1248) CAMERA_FLASH_HANDLER: event bits = 1[0m
-[0;32mI (1248) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1248) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (1278) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:3,cmd:b770f640} successfully[0m
-[0;32mI (1278) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1238) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:3,cmd:5c5851e4}[0m
-[0;32mI (1308) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (1258) GARBAGE_COLLECTOR: event bits = 3[0m
-[0;32mI (1318) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1318) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (1318) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1348) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (1298) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (1348) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1348) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (1378) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:f09b3a5a} successfully[0m
-[0;32mI (1378) CAMERA_FLASH_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1378) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (1408) CAMERA_FLASH_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1368) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1408) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (1408) CAMERA_QUALITY_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1438) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (1428) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (1438) CAMERA_FLASH_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1438) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (1468) CAMERA_FLASH_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1458) CAMERA_QUALITY_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1468) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (1468) CAMERA_QUALITY_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1478) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:7bb528dd} successfully[0m
-[0;32mI (1498) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (1498) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1498) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (1528) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1198) CAMERA_RESET_HANDLER: event bits = 5[0m
-[0;32mI (1528) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:41e9b7d0}[0m
-[0;32mI (1528) CAMERA_RESET_HANDLER: event bits = 0[0m
-[0;32mI (1548) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:2,cmd:41e9b7d0} collected[0m
-[0;32mI (1558) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:8027e49e} successfully[0m
-[0;32mI (1558) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1558) CAMERA_RESET_HANDLER: event bits = 0[0m
-[0;32mI (1588) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:4ef736a6} successfully[0m
-[0;32mI (1588) CAMERA_RESET_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1548) CAMERA_FLASH_HANDLER: event bits = 0[0m
-[0;32mI (1618) CAMERA_FLASH_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1568) GARBAGE_COLLECTOR: event bits = 0[0m
-[0;32mI (1628) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (1628) CAMERA_FLASH_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1628) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (1628) CAMERA_FLASH_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1658) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (1608) CAMERA_RESET_HANDLER: event bits = 4[0m
-[0;32mI (1658) CAMERA_RESET_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1658) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (1688) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:b1e6ad66} successfully[0m
-[0;32mI (1688) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1688) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (1718) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1678) CAMERA_FLASH_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1718) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (1718) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1748) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (1738) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (1748) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1748) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (1778) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1768) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1778) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (1778) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1808) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (1798) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (1808) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1808) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (1838) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1828) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1838) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (1838) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1868) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (1858) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (1868) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1868) CAMERA_RESET_HANDLER: event bits = 6[0m
-[0;32mI (1888) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:f561e477} failed[0m
-[0;32mI (1888) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1888) CAMERA_FLASH_HANDLER: event bits = 6[0m
-[0;32mI (1918) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1508) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (1918) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (1918) CAMERA_QUALITY_HANDLER: event bits = 0[0m
-[0;32mI (1938) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:b770f640} collected[0m
-[0;32mI (1948) CAMERA_QUALITY_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (1948) CAMERA_QUALITY_HANDLER: event bits = 1[0m
-[0;32mI (1948) CAMERA_QUALITY_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (1978) CAMERA_QUALITY_HANDLER: event bits = 1[0m
-[0;32mI (1938) CAMERA_FLASH_HANDLER: event bits = 0[0m
-[0;32mI (1988) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:bce69169} successfully[0m
-[0;32mI (1988) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (1988) CAMERA_QUALITY_HANDLER: event bits = 1[0m
-[0;32mI (2018) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (1958) GARBAGE_COLLECTOR: event bits = 1[0m
-[0;32mI (2028) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (2028) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2028) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (2028) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2058) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (1998) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2058) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (2058) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2088) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (2078) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2088) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (2088) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2118) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (2108) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2118) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (2118) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2148) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (2138) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2148) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (2148) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2178) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (2168) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2178) CAMERA_FLASH_HANDLER: event bits = 3[0m
-[0;32mI (2178) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2188) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:b9dc2944} failed[0m
-[0;32mI (2208) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2208) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (2208) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2238) CAMERA_QUALITY_HANDLER: event bits = 3[0m
-[0;32mI (1908) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b770f640}[0m
-[0;32mI (2238) CAMERA_RESET_HANDLER: event bits = 3[0m
-[0;32mI (2238) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2258) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:2,cmd:f09b3a5a} collected[0m
-[0;32mI (2268) CAMERA_RESET_HANDLER: event bits = 1[0m
-[0;32mI (2268) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:7bb528dd} successfully[0m
-[0;32mI (2268) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:2,cmd:4ef736a6}[0m
-[0;32mI (2298) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:b14a35fb} successfully[0m
-[0;32mI (2298) CAMERA_RESET_HANDLER: event bits = 0[0m
-[0;32mI (2258) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:f09b3a5a}[0m
-[0;32mI (2328) CAMERA_QUALITY_HANDLER: event bits = 0[0m
-[0;32mI (2278) GARBAGE_COLLECTOR: event bits = 0[0m
-[0;32mI (2338) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2338) CAMERA_QUALITY_HANDLER: event bits = 1[0m
-[0;32mI (2338) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2368) CAMERA_QUALITY_HANDLER: event bits = 1[0m
-[0;32mI (2318) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:4ef736a6} successfully[0m
-[0;32mI (2368) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2398) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:bee64aa9} successfully[0m
-[0;32mI (2398) CAMERA_RESET_HANDLER: event bits = 1[0m
-[0;32mI (2398) CAMERA_RESET_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2428) CAMERA_RESET_HANDLER: event bits = 5[0m
-[0;32mI (2388) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2428) CAMERA_QUALITY_HANDLER: event bits = 5[0m
-[0;32mI (2428) CAMERA_QUALITY_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2458) CAMERA_QUALITY_HANDLER: event bits = 5[0m
-[0;32mI (2448) CAMERA_RESET_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2458) CAMERA_RESET_HANDLER: event bits = 5[0m
-[0;32mI (2458) CAMERA_RESET_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2488) CAMERA_RESET_HANDLER: event bits = 5[0m
-[0;32mI (2478) CAMERA_QUALITY_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2488) CAMERA_QUALITY_HANDLER: event bits = 5[0m
-[0;32mI (2488) CAMERA_QUALITY_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2498) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:809c501f} successfully[0m
-[0;32mI (2518) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b1e6ad66}[0m
-[0;32mI (2518) CAMERA_RESET_HANDLER: event bits = 5[0m
-[0;32mI (2518) CAMERA_RESET_HANDLER: q_length: 5/5, pee
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (29) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time 19:43:54[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=07f24h ( 32548) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=00017f4c vaddr=3ffb0000 size=02358h (  9048) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001a2ac vaddr=40080000 size=05d6ch ( 23916) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14d3ch ( 85308) map[0m
+[0;32mI (171) esp_image: segment 4: paddr=00034d64 vaddr=40085d6c size=05cb8h ( 23736) load[0m
+[0;32mI (181) esp_image: segment 5: paddr=0003aa24 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (187) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (187) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Pro cpu up.[0m
+[0;32mI (202) cpu_start: Starting app cpu, entry point is 0x40081060[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000[0m
+[0;32mI (216) cpu_start: Application information:[0m
+[0;32mI (221) cpu_start: Project name:     lab2a[0m
+[0;32mI (226) cpu_start: App version:      7755468-dirty[0m
+[0;32mI (231) cpu_start: Compile time:     Jun  7 2022 19:43:48[0m
+[0;32mI (237) cpu_start: ELF file SHA256:  a6f099bc8d714197...[0m
+[0;32mI (243) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 3FFB2C50 len 0002D3B0 (180 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (274) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 4008BA24 len 000145DC (81 KiB): IRAM[0m
+[0;32mI (288) spi_flash: detected chip: generic[0m
+[0;32mI (291) spi_flash: flash io: dio[0m
+[0;33mW (295) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (309) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (319) MAIN: cmd_q created successfully![0m
+[0;32mI (319) MAIN: cmd_reception_handler created successfully![0m
+[0;32mI (319) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:a1fee617} successfully[0m
+[0;32mI (329) MAIN: camera_quality_handler created successfully![0m
+[0;32mI (349) MAIN: camera_flash_handler created successfully![0m
+[0;32mI (349) MAIN: camera_reset_handle created successfully![0m
+[0;32mI (359) MAIN: q_garbage_collector created successfully![0m
+[0;32mI (369) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:a1fee617}[0m
+[0;32mI (339) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:a1fee617}[0m
+[0;32mI (359) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:a1fee617}[0m
+[0;32mI (409) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:a1fee617} collected[0m
+[0;32mI (439) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:7f0b0659} successfully[0m
+[0;32mI (459) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:7f0b0659}[0m
+[0;32mI (469) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:7f0b0659}[0m
+[0;32mI (469) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:7f0b0659}[0m
+[0;32mI (479) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:1,cmd:7f0b0659} collected[0m
+[0;32mI (489) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:7f0b0659} successfully[0m
+[0;32mI (489) CAMERA_FLASH_HANDLER: toggle flash[0m
+[0;32mI (539) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:3ea47947} successfully[0m
+[0;32mI (559) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:3ea47947}[0m
+[0;32mI (569) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:3ea47947}[0m
+[0;32mI (569) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:3ea47947}[0m
+[0;32mI (579) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:2,cmd:3ea47947} collected[0m
+[0;32mI (589) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:3ea47947} successfully[0m
+[0;32mI (589) CAMERA_FLASH_HANDLER: reset[0m
+[0;32mI (639) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:2949ba7c} successfully[0m
+[0;32mI (659) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:2949ba7c}[0m
+[0;32mI (669) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:2949ba7c}[0m
+[0;32mI (669) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:2949ba7c}[0m
+[0;32mI (679) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:1,cmd:2949ba7c} collected[0m
+[0;32mI (689) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:2949ba7c} successfully[0m
+[0;32mI (689) CAMERA_FLASH_HANDLER: toggle flash[0m
+[0;32mI (739) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:bff18405} successfully[0m
+[0;32mI (759) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:bff18405}[0m
+[0;32mI (769) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:bff18405}[0m
+[0;32mI (769) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:bff18405}[0m
+[0;32mI (779) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:bff18405} collected[0m
+[0;32mI (839) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:3fb5a0f4} successfully[0m
+[0;32mI (859) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:3fb5a0f4}[0m
+[0;32mI (869) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:3fb5a0f4}[0m
+[0;32mI (869) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:3fb5a0f4}[0m
+[0;32mI (879) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:3fb5a0f4} collected[0m
+[0;32mI (939) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:1e828d39} successfully[0m
+[0;32mI (959) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:1e828d39}[0m
+[0;32mI (969) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:1e828d39}[0m
+[0;32mI (969) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:1e828d39}[0m
+[0;32mI (979) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:2,cmd:1e828d39} collected[0m
+[0;32mI (989) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:1e828d39} successfully[0m
+[0;32mI (989) CAMERA_FLASH_HANDLER: reset[0m
+[0;32mI (1039) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:a33c18c7} successfully[0m
+[0;32mI (1059) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:a33c18c7}[0m
+[0;32mI (1069) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:a33c18c7}[0m
+[0;32mI (1069) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:a33c18c7}[0m
+[0;32mI (1079) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:1,cmd:a33c18c7} collected[0m
+[0;32mI (1089) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:a33c18c7} successfully[0m
+[0;32mI (1089) CAMERA_FLASH_HANDLER: toggle flash[0m
+[0;32mI (1139) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:cb848fb5} successfully[0m
+[0;32mI (1159) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:cb848fb5}[0m
+[0;32mI (1169) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:cb848fb5}[0m
+[0;32mI (1169) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:cb848fb5}[0m
+[0;32mI (1179) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:1,cmd:cb848fb5} collected[0m
+[0;32mI (1189) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:cb848fb5} successfully[0m
+[0;32mI (1189) CAMERA_FLASH_HANDLER: toggle flash[0m
+[0;32mI (1239) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:50a13f43} successfully[0m
+[0;32mI (1259) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:50a13f43}[0m
+[0;32mI (1269) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:50a13f43}[0m
+[0;32mI (1269) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:50a13f43}[0m
+[0;32mI (1279) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:2,cmd:50a13f43} collected[0m
+[0;32mI (1289) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:50a13f43} successfully[0m
+[0;32mI (1289) CAMERA_FLASH_HANDLER: reset[0m
+[0;32mI (1339) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:723b83b3} successfully[0m
+[0;32mI (1359) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:0,cmd:723b83b3}[0m
+[0;32mI (1369) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:0,cmd:723b83b3}[0m
+[0;32mI (1369) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:0,cmd:723b83b3}[0m
+[0;32mI (1379) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:0,cmd:723b83b3} collected[0m
+[0;32mI (1389) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:723b83b3} successfully[0m
+[0;32mI (1389) CAMERA_QUALITY_HANDLER: change quality[0m
+[0;32mI (1439) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:9713311a} successfully[0m
+[0;32mI (1459) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:9713311a}[0m
+[0;32mI (1469) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:9713311a}[0m
+[0;32mI (1469) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:9713311a}[0m
+[0;32mI (1479) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:9713311a} collected[0m
+[0;32mI (1539) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:1dc3cdd4} successfully[0m
+[0;32mI (1559) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:1dc3cdd4}[0m
+[0;32mI (1569) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:1dc3cdd4}[0m
+[0;32mI (1569) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:1dc3cdd4}[0m
+[0;32mI (1579) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:1dc3cdd4} collected[0m
+[0;32mI (1639) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:ee568bed} successfully[0m
+[0;32mI (1659) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:ee568bed}[0m
+[0;32mI (1669) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:ee568bed}[0m
+[0;32mI (1669) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:ee568bed}[0m
+[0;32mI (1679) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:2,cmd:ee568bed} collected[0m
+[0;32mI (1689) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:ee568bed} successfully[0m
+[0;32mI (1689) CAMERA_FLASH_HANDLER: reset[0m
+[0;32mI (1739) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:205bd052} successfully[0m
+[0;32mI (1759) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:205bd052}[0m
+[0;32mI (1769) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:205bd052}[0m
+[0;32mI (1769) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:205bd052}[0m
+[0;32mI (1779) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:205bd052} collected[0m
+[0;32mI (1839) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:5d8e2761} successfully[0m
+[0;32mI (1859) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:5d8e2761}[0m
+[0;32mI (1869) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:5d8e2761}[0m
+[0;32mI (1869) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:5d8e2761}[0m
+[0;32mI (1879) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:2,cmd:5d8e2761} collected[0m
+[0;32mI (1889) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:5d8e2761} successfully[0m
+[0;32mI (1889) CAMERA_FLASH_HANDLER: reset[0m
+[0;32mI (1939) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:297a2925} successfully[0m
+[0;32mI (1959) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:297a2925}[0m
+[0;32mI (1969) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:297a2925}[0m
+[0;32mI (1969) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:297a2925}[0m
+[0;32mI (1979) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:297a2925} collected[0m
+[0;32mI (2039) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:ef5bf56b} successfully[0m
+[0;32mI (2059) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:ef5bf56b}[0m
+[0;32mI (2069) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:ef5bf56b}[0m
+[0;32mI (2069) CAMERA_RESET_HANDLER: q_

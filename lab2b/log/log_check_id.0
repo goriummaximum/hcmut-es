@@ -1,0 +1,120 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (29) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time 19:43:54[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=07cdch ( 31964) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=00017d04 vaddr=3ffb0000 size=02358h (  9048) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001a064 vaddr=40080000 size=05fb4h ( 24500) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14c48h ( 85064) map[0m
+[0;32mI (171) esp_image: segment 4: paddr=00034c70 vaddr=40085fb4 size=05568h ( 21864) load[0m
+[0;32mI (181) esp_image: segment 5: paddr=0003a1e0 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (187) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Pro cpu up.[0m
+[0;32mI (202) cpu_start: Starting app cpu, entry point is 0x40081010[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000[0m
+[0;32mI (217) cpu_start: Application information:[0m
+[0;32mI (221) cpu_start: Project name:     lab2a[0m
+[0;32mI (226) cpu_start: App version:      7755468-dirty[0m
+[0;32mI (231) cpu_start: Compile time:     Jun  7 2022 19:43:48[0m
+[0;32mI (237) cpu_start: ELF file SHA256:  d0e2b8ac5d8e3d9c...[0m
+[0;32mI (243) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 3FFB2C48 len 0002D3B8 (180 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (274) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 4008B51C len 00014AE4 (82 KiB): IRAM[0m
+[0;32mI (288) spi_flash: detected chip: generic[0m
+[0;32mI (291) spi_flash: flash io: dio[0m
+[0;33mW (295) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (309) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+[0;32mI (319) MAIN: cmd_q created successfully![0m
+[0;32mI (319) MAIN: cmd_reception_handler created successfully![0m
+[0;32mI (319) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:a843158} successfully[0m
+[0;32mI (329) MAIN: camera_quality_handler created successfully![0m
+[0;32mI (329) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:a843158} successfully[0m
+[0;32mI (349) MAIN: camera_flash_handler created successfully![0m
+[0;32mI (359) MAIN: camera_reset_handle created successfully![0m
+[0;32mI (369) MAIN: q_garbage_collector created successfully![0m
+[0;32mI (439) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:edec4891} successfully[0m
+[0;32mI (439) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:edec4891} successfully[0m
+[0;32mI (539) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:41f77cd6} successfully[0m
+[0;32mI (539) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:41f77cd6} successfully[0m
+[0;32mI (639) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:e8ce5a8d} successfully[0m
+[0;32mI (639) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:e8ce5a8d} successfully[0m
+[0;32mI (739) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:595bb225} successfully[0m
+[0;32mI (749) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:595bb225} successfully[0m
+[0;32mI (839) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:c36ab5b1} successfully[0m
+[0;32mI (839) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:c36ab5b1} collected[0m
+[0;32mI (939) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:7c47c453} successfully[0m
+[0;32mI (1039) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:0,cmd:9ff46d20} successfully[0m
+[0;32mI (1049) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:7c47c453} collected[0m
+[0;32mI (1059) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:9ff46d20} successfully[0m
+[0;32mI (1139) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:982267c3} successfully[0m
+[0;32mI (1139) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:982267c3} successfully[0m
+[0;32mI (1239) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:eac15a98} successfully[0m
+[0;32mI (1259) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:eac15a98} collected[0m
+[0;32mI (1339) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:3d16230b} successfully[0m
+[0;32mI (1339) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:3d16230b} successfully[0m
+[0;32mI (1439) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:619dafe2} successfully[0m
+[0;32mI (1439) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:619dafe2} successfully[0m
+[0;32mI (1539) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:b162f8a5} successfully[0m
+[0;32mI (1539) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:b162f8a5} successfully[0m
+[0;32mI (1639) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:a3098b10} successfully[0m
+[0;32mI (1639) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:a3098b10} collected[0m
+[0;32mI (1739) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:5f427b53} successfully[0m
+[0;32mI (1839) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:e96b87ca} successfully[0m
+[0;32mI (1849) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:5f427b53} collected[0m
+[0;32mI (1849) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:e96b87ca} successfully[0m
+[0;32mI (1939) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:6890f848} successfully[0m
+[0;32mI (1939) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:6890f848} successfully[0m
+[0;32mI (2039) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:d45a0bfb} successfully[0m
+[0;32mI (2039) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:d45a0bfb} successfully[0m
+[0;32mI (2139) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:95374525} successfully[0m
+[0;32mI (2139) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:95374525} successfully[0m
+[0;32mI (2239) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:7f143b0a} successfully[0m
+[0;32mI (2239) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:7f143b0a} collected[0m
+[0;32mI (2339) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:62fc0a5a} successfully[0m
+[0;32mI (2339) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:62fc0a5a} successfully[0m
+[0;32mI (2439) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:4d187590} successfully[0m
+[0;32mI (2439) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:4d187590} successfully[0m
+[0;32mI (2539) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:3ec134bf} successfully[0m
+[0;32mI (2549) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:3ec134bf} successfully[0m
+[0;32mI (2639) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:933d85b6} successfully[0m
+[0;32mI (2639) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:933d85b6} collected[0m
+[0;32mI (2739) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:a2ea13a2} successfully[0m
+[0;32mI (2739) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:a2ea13a2} successfully[0m
+[0;32mI (2839) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:18f85fed} successfully[0m
+[0;32mI (2839) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:18f85fed} successfully[0m
+[0;32mI (2939) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:996413e5} successfully[0m
+[0;32mI (2939) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:996413e5} collected[0m
+[0;32mI (3039) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:489fddac} successfully[0m
+[0;32mI (3039) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:489fddac} successfully[0m
+[0;32mI (3139) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:15a4ceb7} successfully[0m
+[0;32mI (3149) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:15a4ceb7} successfully[0m
