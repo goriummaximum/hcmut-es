@@ -41,8 +41,9 @@ uint8_t led_st = 1;
 QueueHandle_t q;
 
 /*================= TASKS DEF =================*/
-#define NOT_LED_TASK_BIT      BIT0
-#define NOT_PRINT_TASK_BIT    BIT1
+#define PEEK_LED_TASK_BIT       BIT0
+#define PEEK_PRINT_TASK_BIT     BIT1
+#define ALL_TASKS_CONTINUE      BIT2
 static EventGroupHandle_t tasks_event_group;
 
 /*================= WIFI AP DEF =================*/
@@ -88,15 +89,16 @@ void led_handler(void *pvParameters) {
         //wake up only there is a cmd pkt in the queue, else waiting forever
         //peek to see if the pkt is for this task, not removed from the queue yet
         if (xQueuePeek(q, (void *)&recv_pkt, portMAX_DELAY) != pdPASS) continue;
+
+        //sync point
+        xEventGroupSync(tasks_event_group, PEEK_LED_TASK_BIT, ALL_TASKS_CONTINUE, portMAX_DELAY);
+        xEventGroupClearBits(tasks_event_group, ALL_TASKS_CONTINUE);
+
         //check if the pkt is not for this task
         if (strcmp(recv_pkt.key, "toggle") != 0) {
-            xEventGroupSetBits(tasks_event_group, NOT_LED_TASK_BIT);
             continue;
         }
-        //this pkt is for this task, recv completely and pop this cmd out of the queue
-        if (xQueueReceive(q, (void *)&recv_pkt, portMAX_DELAY) != pdPASS) continue;
-        //clear all set bit if the pkt is for this task, return every bit to initial state
-        xEventGroupClearBits(tasks_event_group, NOT_LED_TASK_BIT | NOT_PRINT_TASK_BIT);
+
         //do sth
         toggle_led();
     }
@@ -117,15 +119,16 @@ void print_handler(void *pvParameters) {
         //wake up only there is a cmd pkt in the queue, else waiting forever
         //peek to see if the pkt is for this task, not removed from the queue yet
         if (xQueuePeek(q, (void *)&recv_pkt, portMAX_DELAY) != pdPASS) continue;
+
+        //sync point
+        xEventGroupSync(tasks_event_group, PEEK_PRINT_TASK_BIT, ALL_TASKS_CONTINUE, portMAX_DELAY);
+        xEventGroupClearBits(tasks_event_group, ALL_TASKS_CONTINUE);
+
         //check if the pkt is not for this task
         if (strcmp(recv_pkt.key, "str") != 0) {
-            xEventGroupSetBits(tasks_event_group, NOT_PRINT_TASK_BIT);
             continue;
         }
-        //this pkt is for this task, recv completely and pop this cmd out of the queue
-        if (xQueueReceive(q, (void *)&recv_pkt, portMAX_DELAY) != pdPASS) continue;
-        //clear all set bit if the pkt is for this task, return every bit to initial state
-        xEventGroupClearBits(tasks_event_group, NOT_LED_TASK_BIT | NOT_PRINT_TASK_BIT);
+
         //do sth
         print_str(recv_pkt.value);
     }
@@ -138,9 +141,10 @@ void garbage_collector(void *pvParameters) {
 
     for (;;) {
         //if the pkt is not for other functional tasks
-        xEventGroupWaitBits(tasks_event_group, NOT_LED_TASK_BIT | NOT_PRINT_TASK_BIT, pdTRUE, pdTRUE, portMAX_DELAY);
+        xEventGroupWaitBits(tasks_event_group, PEEK_LED_TASK_BIT | PEEK_PRINT_TASK_BIT, pdTRUE, pdTRUE, portMAX_DELAY);
         xQueueReceive(q, (void *)&recv_pkt, portMAX_DELAY);
         ESP_LOGI(GARBAGE_COLLECTOR_TAG, "garbage collected");
+        xEventGroupSetBits(tasks_event_group, ALL_TASKS_CONTINUE);
     }
 
     vTaskDelete(NULL);
