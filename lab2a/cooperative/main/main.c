@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "esp_log.h"
 #include "driver/gpio.h"
 
 /*
@@ -21,14 +22,19 @@ sdkconfig:
 - support legacy FreeRTOS API
 */
 
+const char *LOG_TAG_MAIN = "MAIN";
+const char *LOG_TAG_VTASK1 = "VTASK1";
+const char *LOG_TAG_VTASK2 = "VTASK2";
+const char *LOG_TAG_VTASK3 = "VTASK3";
+
 void vTask1(void *pvParameters) {
     vTaskDelay(30);
 
     uint32_t curr_tick;
-    printf("%d:   vTask1 start\n", xTaskGetTickCount());
+    ESP_LOGI(LOG_TAG_VTASK1, "#%d, vTask1 start", xTaskGetTickCount());
     curr_tick = xTaskGetTickCount();
     while (xTaskGetTickCount() - curr_tick < 20) {}
-    printf("%d:   vTask1 end\n\n", xTaskGetTickCount());
+    ESP_LOGI(LOG_TAG_VTASK1, "#%d, vTask1 end", xTaskGetTickCount());
     taskYIELD();
 
     vTaskDelete(NULL);
@@ -38,10 +44,10 @@ void vTask2(void *pvParameters) {
     vTaskDelay(20);
 
     uint32_t curr_tick;
-    printf("%d:   vTask2 start\n", xTaskGetTickCount());
+    ESP_LOGI(LOG_TAG_VTASK2, "#%d, vTask2 start", xTaskGetTickCount());
     curr_tick = xTaskGetTickCount();
     while (xTaskGetTickCount() - curr_tick < 30) {}
-    printf("%d:   vTask2 end\n\n", xTaskGetTickCount());
+    ESP_LOGI(LOG_TAG_VTASK2, "#%d, vTask2 end", xTaskGetTickCount());
     taskYIELD();
 
     vTaskDelete(NULL);
@@ -51,10 +57,10 @@ void vTask3(void *pvParameters) {
     uint32_t curr_tick;
 
     for (;;) {
-        printf("%d:   vTask3 start\n", xTaskGetTickCount());
+        ESP_LOGI(LOG_TAG_VTASK3, "#%d, vTask3 start", xTaskGetTickCount());
         curr_tick = xTaskGetTickCount();
         while (xTaskGetTickCount() - curr_tick < 50) {}
-        printf("%d:   vTask3 end\n\n", xTaskGetTickCount());
+        ESP_LOGI(LOG_TAG_VTASK3, "#%d, vTask3 end", xTaskGetTickCount());
         taskYIELD();
     }
 
@@ -67,9 +73,9 @@ void app_main(void)
     //after that kill app_main fr not blocking othe tasks
     vTaskPrioritySet(NULL, 15);
     
-    if (xTaskCreate(&vTask1, "vTask1", 2048, NULL, 10, NULL) == pdPASS) printf("vTask1 created successfully\n");
-    if (xTaskCreate(&vTask2, "vTask2", 2048, NULL, 9, NULL) == pdPASS) printf("vTask2 created successfully\n");
-    if (xTaskCreate(&vTask3, "vTask3", 2048, NULL, 8, NULL) == pdPASS) printf("vTask3 created successfully\n");
+    if (xTaskCreate(&vTask1, "vTask1", 2048, NULL, 10, NULL) == pdPASS) ESP_LOGI(LOG_TAG_MAIN, "vTask1 created successfully");
+    if (xTaskCreate(&vTask2, "vTask2", 2048, NULL, 9, NULL) == pdPASS) ESP_LOGI(LOG_TAG_MAIN, "vTask2 created successfully");
+    if (xTaskCreate(&vTask3, "vTask3", 2048, NULL, 8, NULL) == pdPASS) ESP_LOGI(LOG_TAG_MAIN, "vTask3 created successfully");
     
     //set back to original priority for app_main task for not blocking other running tasks
     vTaskPrioritySet(NULL, 1);
