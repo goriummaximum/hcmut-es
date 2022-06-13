@@ -1,0 +1,169 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7420
+ho 0 tail 12 room 4
+load:0x40078000,len:14912
+load:0x40080400,len:3688
+entry 0x4008067c
+[0;32mI (29) boot: ESP-IDF v4.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time 01:46:45[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (103) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=06b58h ( 27480) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=00016b80 vaddr=3ffb0000 size=0292ch ( 10540) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=000194b4 vaddr=40080000 size=06b64h ( 27492) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=13538h ( 79160) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00033560 vaddr=40086b64 size=04af0h ( 19184) load[0m
+[0;32mI (177) esp_image: segment 5: paddr=00038058 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (183) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (183) boot: Disabling RNG early entropy source...[0m
+[0;32mI (197) cpu_start: Pro cpu up.[0m
+[0;32mI (197) cpu_start: Starting app cpu, entry point is 0x40081058[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000[0m
+[0;32mI (212) cpu_start: Application information:[0m
+[0;32mI (216) cpu_start: Project name:     lab2a[0m
+[0;32mI (221) cpu_start: App version:      9cc0641-dirty[0m
+[0;32mI (226) cpu_start: Compile time:     Jun 14 2022 01:53:51[0m
+[0;32mI (233) cpu_start: ELF file SHA256:  5160077ac045f96b...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v4.3.2-dirty[0m
+[0;32mI (244) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (251) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (257) heap_init: At 3FFB3610 len 0002C9F0 (178 KiB): DRAM[0m
+[0;32mI (263) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (270) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008B654 len 000149AC (82 KiB): IRAM[0m
+[0;32mI (284) spi_flash: detected chip: generic[0m
+[0;32mI (287) spi_flash: flash io: dio[0m
+[0;33mW (291) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (305) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+print_cpu_stat created successfully
+Collected at: 0 (ticks)
+print_cpu_stat 	120		<1%
+IDLE           	1619		4%
+IDLE           	3096		8%
+ipc0           	26753		72%
+esp_timer      	27		<1%
+%
+ipc0        
+Collected at: 202 (ticks)
+IDLE           	1994243		97%
+IDLE           	2001620		98%
+print_cpu_stat 	15659		<1%
+ipc1           	31785		1%
+ipc0           	26753		1%
+esp_timer      	27		<1%
+
+Collected at: 402 (ticks)
+IDLE           	3994243		98%
+IDLE           	3995074		98%
+print_cpu_stat 	22205		<1%
+ipc0           	26753		<1%
+esp_timer      	27		<1%
+ipc1           	31785		<1%
+
+Collected at: 602 (ticks)
+IDLE           	5994243		99%
+IDLE           	5988430		99%
+print_cpu_stat 	28849		<1%
+esp_timer      	27		<1%
+ipc1           	31785		<1%
+ipc0           	26753		<1%
+
+Collected at: 802 (ticks)
+IDLE           	7994243		99%
+IDLE           	7981786		99%
+print_cpu_stat 	35493		<1%
+ipc1           	31785		<1%
+ipc0           	26753		<1%
+esp_timer      	27		<1%
+
+Collected at: 1002 (ticks)
+IDLE           	9994243		99%
+IDLE           	9975142		99%
+print_cpu_stat 	42137		<1%
+ipc0           	26753		<1%
+esp_timer      	27		<1%
+ipc1           	31785		<1%
+
+Collected at: 1202 (ticks)
+IDLE           	11994243		99%
+IDLE           	11968410		99%
+print_cpu_stat 	48869		<1%
+esp_timer      	27		<1%
+ipc1           	31785		<1%
+ipc0           	26753		<1%
+
+Collected at: 1402 (ticks)
+IDLE           	13994243		99%
+IDLE           	13961505		99%
+print_cpu_stat 	55774		<1%
+ipc1           	31785		<1%
+ipc0           	26753		<1%
+esp_timer      	27		<1%
+
+Collected at: 1602 (ticks)
+IDLE           	15994243		99%
+IDLE           	15954600		99%
+print_cpu_stat 	62679		<1%
+ipc0           	26753		<1%
+esp_timer      	27		<1%
+ipc1           	31785		<1%
+
+Collected at: 1802 (ticks)
+IDLE           	17994243		99%
+IDLE           	17947695		99%
+print_cpu_stat 	69584		<1%
+esp_timer      	27		<1%
+ipc1           	31785		<1%
+ipc0           	26753		<1%
+
+Collected at: 2002 (ticks)
+IDLE           	19994243		99%
+IDLE           	19940790		99%
+print_cpu_stat 	76489		<1%
+ipc1           	31785		<1%
+ipc0           	26753		<1%
+esp_timer      	27		<1%
+
+Collected at: 2202 (ticks)
+IDLE           	21994243		99%
+IDLE           	21933885		99%
+print_cpu_stat 	83394		<1%
+ipc0           	26753		<1%
+esp_timer      	27		<1%
+ipc1           	31785		<1%
+
+Collected at: 2402 (ticks)
+IDLE           	23994243		99%
+IDLE           	23926980		99%
+print_cpu_stat 	90299		<1%
+esp_timer      	27		<1%
+ipc1           	31785		<1%
+ipc0           	26753		<1%
+
+Collected at: 2602 (ticks)
+IDLE           	25994243		99%
+IDLE           	25920075		99%
+print_cpu_stat 	97204		<1%
+ipc1           	31785		<1%
+ipc0           	26753		<1%
+esp_timer      	27		<1%
+

@@ -13,6 +13,10 @@ esp_timer       30              <1%
 ipc1            32222           <1%
 
 Total CPU time spending for certain tasks (in running state).
+
+menuconfig:
+- enable FreeRTOS legacy hook
+- Enable FreeRTOS to collect run time stats
 */
 
 #include <stdio.h>
@@ -20,7 +24,8 @@ Total CPU time spending for certain tasks (in running state).
 #include "freertos/task.h"
 #include "driver/gpio.h"
 
-char cpu_stat[1000];
+#define CPU_STAT_BUFFER_SIZE    1000
+char cpu_stat[CPU_STAT_BUFFER_SIZE];
 
 void vApplicationIdleHook(void) {
     vTaskGetRunTimeStats(cpu_stat);
@@ -30,7 +35,7 @@ void print_cpu_stat(void *pvParameters) {
     for (;;) {
         printf("Collected at: %d (ticks)\n", xTaskGetTickCount());
         printf("%s\n", cpu_stat);
-        vTaskDelay(2000 / portTICK_PERIOD_MS);
+        vTaskDelay(pdMS_TO_TICKS(2000));
     }
 
     vTaskDelete(NULL);
