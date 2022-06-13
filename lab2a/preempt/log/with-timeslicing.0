@@ -9,629 +9,629 @@ ho 0 tail 12 room 4
 load:0x40078000,len:14912
 load:0x40080400,len:3688
 entry 0x4008067c
-[0;32mI (29) boot: ESP-IDF v4.3.2-dirty 2nd stage bootloader[0m
-[0;32mI (29) boot: compile time 10:26:55[0m
-[0;32mI (29) boot: chip revision: 1[0m
-[0;32mI (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
-[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (53) boot: Enabling RNG early entropy source...[0m
-[0;32mI (58) boot: Partition Table:[0m
-[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (92) boot: End of partition table[0m
-[0;32mI (96) boot_comm: chip revision: 1, min. application chip revision: 0[0m
-[0;32mI (103) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=06214h ( 25108) map[0m
-[0;32mI (121) esp_image: segment 1: paddr=0001623c vaddr=3ffb0000 size=0211ch (  8476) load[0m
-[0;32mI (124) esp_image: segment 2: paddr=00018360 vaddr=40080000 size=07cb8h ( 31928) load[0m
-[0;32mI (142) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0fab8h ( 64184) map[0m
-[0;32mI (165) esp_image: segment 4: paddr=0002fae0 vaddr=40087cb8 size=02a90h ( 10896) load[0m
-[0;32mI (170) esp_image: segment 5: paddr=00032578 vaddr=50000000 size=00010h (    16) load[0m
-[0;32mI (176) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (177) boot: Disabling RNG early entropy source...[0m
-[0;32mI (194) cpu_start: Pro cpu up.[0m
-[0;32mI (194) cpu_start: Single core mode[0m
-[0;32mI (202) cpu_start: Pro cpu start user code[0m
-[0;32mI (202) cpu_start: cpu freq: 160000000[0m
-[0;32mI (202) cpu_start: Application information:[0m
-[0;32mI (207) cpu_start: Project name:     lab2a[0m
-[0;32mI (212) cpu_start: App version:      7c9d124-dirty[0m
-[0;32mI (217) cpu_start: Compile time:     Jun 11 2022 10:26:53[0m
-[0;32mI (223) cpu_start: ELF file SHA256:  770af9511fba9aae...[0m
-[0;32mI (229) cpu_start: ESP-IDF:          v4.3.2-dirty[0m
-[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (242) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
-[0;32mI (248) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (254) heap_init: At 3FFB2900 len 0002D700 (181 KiB): DRAM[0m
-[0;32mI (260) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
-[0;32mI (267) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
-[0;32mI (273) heap_init: At 4008A748 len 000158B8 (86 KiB): IRAM[0m
-[0;32mI (280) spi_flash: detected chip: generic[0m
-[0;32mI (284) spi_flash: flash io: dio[0m
-[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (301) cpu_start: Starting scheduler on PRO CPU.[0m
-[0;32mI (306) MAIN: vTask1 created successfully[0m
-[0;32mI (306) MAIN: vTask2 created successfully[0m
-[0;32mI (306) MAIN: vTask2 created successfully[0m
-[0;32mI (316) VTASK1: #1, vTask1 running[0m
-[0;32mI (316) VTASK3: #1, vTask3 running[0m
-[0;32mI (326) VTASK2: #2, vTask2 running[0m
-[0;32mI (326) VTASK2: #2, vTask2 running[0m
-[0;32mI (336) VTASK3: #3, vTask3 running[0m
-[0;32mI (336) VTASK3: #3, vTask3 running[0m
-[0;32mI (336) VTASK3: #3, vTask3 running[0m
-[0;32mI (346) VTASK2: #4, vTask2 running[0m
-[0;32mI (346) VTASK2: #4, vTask2 running[0m
-[0;32mI (356) VTASK3: #5, vTask3 running[0m
-[0;32mI (356) VTASK3: #5, vTask3 running[0m
-[0;32mI (356) VTASK3: #5, vTask3 running[0m
-[0;32mI (366) VTASK2: #6, vTask2 running[0m
-[0;32mI (366) VTASK2: #6, vTask2 running[0m
-[0;32mI (376) VTASK3: #7, vTask3 running[0m
-[0;32mI (376) VTASK3: #7, vTask3 running[0m
-[0;32mI (376) VTASK3: #7, vTask3 running[0m
-[0;32mI (386) VTASK2: #8, vTask2 running[0m
-[0;32mI (386) VTASK2: #8, vTask2 running[0m
-[0;32mI (396) VTASK3: #9, vTask3 running[0m
-[0;32mI (396) VTASK3: #9, vTask3 running[0m
-[0;32mI (396) VTASK3: #9, vTask3 running[0m
-[0;32mI (406) VTASK2: #10, vTask2 running[0m
-[0;32mI (406) VTASK2: #10, vTask2 running[0m
-[0;32mI (416) VTASK3: #11, vTask3 running[0m
-[0;32mI (416) VTASK3: #11, vTask3 running[0m
-[0;32mI (426) VTASK2: #12, vTask2 running[0m
-[0;32mI (426) VTASK2: #12, vTask2 running[0m
-[0;32mI (426) VTASK2: #12, vTask2 running[0m
-[0;32mI (436) VTASK3: #13, vTask3 running[0m
-[0;32mI (436) VTASK3: #13, vTask3 running[0m
-[0;32mI (446) VTASK2: #14, vTask2 running[0m
-[0;32mI (446) VTASK2: #14, vTask2 running[0m
-[0;32mI (446) VTASK2: #14, vTask2 running[0m
-[0;32mI (456) VTASK3: #15, vTask3 running[0m
-[0;32mI (456) VTASK3: #15, vTask3 running[0m
-[0;32mI (466) VTASK2: #16, vTask2 running[0m
-[0;32mI (466) VTASK2: #16, vTask2 running[0m
-[0;32mI (476) VTASK3: #17, vTask3 running[0m
-[0;32mI (476) VTASK3: #17, vTask3 running[0m
-[0;32mI (476) VTASK3: #17, vTask3 running[0m
-[0;32mI (486) VTASK2: #18, vTask2 running[0m
-[0;32mI (486) VTASK2: #18, vTask2 running[0m
-[0;32mI (496) VTASK3: #19, vTask3 running[0m
-[0;32mI (496) VTASK3: #19, vTask3 running[0m
-[0;32mI (496) VTASK3: #19, vTask3 running[0m
-[0;32mI (506) VTASK2: #20, vTask2 running[0m
-[0;32mI (506) VTASK2: #20, vTask2 running[0m
-[0;32mI (516) VTASK3: #21, vTask3 running[0m
-[0;32mI (516) VTASK3: #21, vTask3 running[0m
-[0;32mI (526) VTASK2: #22, vTask2 running[0m
-[0;32mI (526) VTASK2: #22, vTask2 running[0m
-[0;32mI (526) VTASK2: #22, vTask2 running[0m
-[0;32mI (536) VTASK3: #23, vTask3 running[0m
-[0;32mI (536) VTASK3: #23, vTask3 running[0m
-[0;32mI (546) VTASK2: #24, vTask2 running[0m
-[0;32mI (546) VTASK2: #24, vTask2 running[0m
-[0;32mI (546) VTASK2: #24, vTask2 running[0m
-[0;32mI (556) VTASK3: #25, vTask3 running[0m
-[0;32mI (556) VTASK3: #25, vTask3 running[0m
-[0;32mI (566) VTASK2: #26, vTask2 running[0m
-[0;32mI (566) VTASK2: #26, vTask2 running[0m
-[0;32mI (576) VTASK3: #27, vTask3 running[0m
-[0;32mI (576) VTASK3: #27, vTask3 running[0m
-[0;32mI (576) VTASK3: #27, vTask3 running[0m
-[0;32mI (586) VTASK2: #28, vTask2 running[0m
-[0;32mI (586) VTASK2: #28, vTask2 running[0m
-[0;32mI (596) VTASK3: #29, vTask3 running[0m
-[0;32mI (596) VTASK3: #29, vTask3 running[0m
-[0;32mI (596) VTASK3: #29, vTask3 running[0m
-[0;32mI (606) VTASK2: #30, vTask2 running[0m
-[0;32mI (606) VTASK2: #30, vTask2 running[0m
-[0;32mI (616) VTASK3: #31, vTask3 running[0m
-[0;32mI (616) VTASK3: #31, vTask3 running[0m
-[0;32mI (626) VTASK2: #32, vTask2 running[0m
-[0;32mI (626) VTASK2: #32, vTask2 running[0m
-[0;32mI (626) VTASK2: #32, vTask2 running[0m
-[0;32mI (636) VTASK3: #33, vTask3 running[0m
-[0;32mI (636) VTASK3: #33, vTask3 running[0m
-[0;32mI (646) VTASK2: #34, vTask2 running[0m
-[0;32mI (646) VTASK2: #34, vTask2 running[0m
-[0;32mI (646) VTASK2: #34, vTask2 running[0m
-[0;32mI (656) VTASK3: #35, vTask3 running[0m
-[0;32mI (656) VTASK3: #35, vTask3 running[0m
-[0;32mI (666) VTASK2: #36, vTask2 running[0m
-[0;32mI (666) VTASK2: #36, vTask2 running[0m
-[0;32mI (676) VTASK3: #37, vTask3 running[0m
-[0;32mI (676) VTASK3: #37, vTask3 running[0m
-[0;32mI (676) VTASK3: #37, vTask3 running[0m
-[0;32mI (686) VTASK2: #38, vTask2 running[0m
-[0;32mI (686) VTASK2: #38, vTask2 running[0m
-[0;32mI (696) VTASK3: #39, vTask3 running[0m
-[0;32mI (696) VTASK3: #39, vTask3 running[0m
-[0;32mI (696) VTASK3: #39, vTask3 running[0m
-[0;32mI (706) VTASK2: #40, vTask2 running[0m
-[0;32mI (706) VTASK2: #40, vTask2 running[0m
-[0;32mI (716) VTASK3: #41, vTask3 running[0m
-[0;32mI (716) VTASK3: #41, vTask3 running[0m
-[0;32mI (726) VTASK2: #42, vTask2 running[0m
-[0;32mI (726) VTASK2: #42, vTask2 running[0m
-[0;32mI (726) VTASK2: #42, vTask2 running[0m
-[0;32mI (736) VTASK3: #43, vTask3 running[0m
-[0;32mI (736) VTASK3: #43, vTask3 running[0m
-[0;32mI (746) VTASK2: #44, vTask2 running[0m
-[0;32mI (746) VTASK2: #44, vTask2 running[0m
-[0;32mI (746) VTASK2: #44, vTask2 running[0m
-[0;32mI (756) VTASK3: #45, vTask3 running[0m
-[0;32mI (756) VTASK3: #45, vTask3 running[0m
-[0;32mI (766) VTASK2: #46, vTask2 running[0m
-[0;32mI (766) VTASK2: #46, vTask2 running[0m
-[0;32mI (776) VTASK3: #47, vTask3 running[0m
-[0;32mI (776) VTASK3: #47, vTask3 running[0m
-[0;32mI (776) VTASK3: #47, vTask3 running[0m
-[0;32mI (786) VTASK2: #48, vTask2 running[0m
-[0;32mI (786) VTASK2: #48, vTask2 running[0m
-[0;32mI (796) VTASK3: #49, vTask3 running[0m
-[0;32mI (796) VTASK3: #49, vTask3 running[0m
-[0;32mI (796) VTASK3: #49, vTask3 running[0m
-[0;32mI (806) VTASK2: #50, vTask2 running[0m
-[0;32mI (806) VTASK2: #50, vTask2 running[0m
-[0;32mI (816) VTASK1: #51, vTask1 running[0m
-[0;32mI (816) VTASK2: #51, vTask2 running[0m
-[0;32mI (826) VTASK3: #52, vTask3 running[0m
-[0;32mI (826) VTASK3: #52, vTask3 running[0m
-[0;32mI (826) VTASK3: #52, vTask3 running[0m
-[0;32mI (836) VTASK2: #53, vTask2 running[0m
-[0;32mI (836) VTASK2: #53, vTask2 running[0m
-[0;32mI (846) VTASK3: #54, vTask3 running[0m
-[0;32mI (846) VTASK3: #54, vTask3 running[0m
-[0;32mI (846) VTASK3: #54, vTask3 running[0m
-[0;32mI (856) VTASK2: #55, vTask2 running[0m
-[0;32mI (856) VTASK2: #55, vTask2 running[0m
-[0;32mI (866) VTASK3: #56, vTask3 running[0m
-[0;32mI (866) VTASK3: #56, vTask3 running[0m
-[0;32mI (876) VTASK2: #57, vTask2 running[0m
-[0;32mI (876) VTASK2: #57, vTask2 running[0m
-[0;32mI (876) VTASK2: #57, vTask2 running[0m
-[0;32mI (886) VTASK3: #58, vTask3 running[0m
-[0;32mI (886) VTASK3: #58, vTask3 running[0m
-[0;32mI (896) VTASK2: #59, vTask2 running[0m
-[0;32mI (896) VTASK2: #59, vTask2 running[0m
-[0;32mI (896) VTASK2: #59, vTask2 running[0m
-[0;32mI (906) VTASK3: #60, vTask3 running[0m
-[0;32mI (906) VTASK3: #60, vTask3 running[0m
-[0;32mI (916) VTASK2: #61, vTask2 running[0m
-[0;32mI (916) VTASK2: #61, vTask2 running[0m
-[0;32mI (926) VTASK3: #62, vTask3 running[0m
-[0;32mI (926) VTASK3: #62, vTask3 running[0m
-[0;32mI (926) VTASK3: #62, vTask3 running[0m
-[0;32mI (936) VTASK2: #63, vTask2 running[0m
-[0;32mI (936) VTASK2: #63, vTask2 running[0m
-[0;32mI (946) VTASK3: #64, vTask3 running[0m
-[0;32mI (946) VTASK3: #64, vTask3 running[0m
-[0;32mI (946) VTASK3: #64, vTask3 running[0m
-[0;32mI (956) VTASK2: #65, vTask2 running[0m
-[0;32mI (956) VTASK2: #65, vTask2 running[0m
-[0;32mI (966) VTASK3: #66, vTask3 running[0m
-[0;32mI (966) VTASK3: #66, vTask3 running[0m
-[0;32mI (976) VTASK2: #67, vTask2 running[0m
-[0;32mI (976) VTASK2: #67, vTask2 running[0m
-[0;32mI (976) VTASK2: #67, vTask2 running[0m
-[0;32mI (986) VTASK3: #68, vTask3 running[0m
-[0;32mI (986) VTASK3: #68, vTask3 running[0m
-[0;32mI (996) VTASK2: #69, vTask2 running[0m
-[0;32mI (996) VTASK2: #69, vTask2 running[0m
-[0;32mI (996) VTASK2: #69, vTask2 running[0m
-[0;32mI (1006) VTASK3: #70, vTask3 running[0m
-[0;32mI (1006) VTASK3: #70, vTask3 running[0m
-[0;32mI (1016) VTASK2: #71, vTask2 running[0m
-[0;32mI (1016) VTASK2: #71, vTask2 running[0m
-[0;32mI (1026) VTASK3: #72, vTask3 running[0m
-[0;32mI (1026) VTASK3: #72, vTask3 running[0m
-[0;32mI (1026) VTASK3: #72, vTask3 running[0m
-[0;32mI (1036) VTASK2: #73, vTask2 running[0m
-[0;32mI (1036) VTASK2: #73, vTask2 running[0m
-[0;32mI (1046) VTASK3: #74, vTask3 running[0m
-[0;32mI (1046) VTASK3: #74, vTask3 running[0m
-[0;32mI (1056) VTASK2: #75, vTask2 running[0m
-[0;32mI (1056) VTASK2: #75, vTask2 running[0m
-[0;32mI (1056) VTASK2: #75, vTask2 running[0m
-[0;32mI (1066) VTASK3: #76, vTask3 running[0m
-[0;32mI (1066) VTASK3: #76, vTask3 running[0m
-[0;32mI (1076) VTASK2: #77, vTask2 running[0m
-[0;32mI (1076) VTASK2: #77, vTask2 running[0m
-[0;32mI (1086) VTASK3: #78, vTask3 running[0m
-[0;32mI (1086) VTASK3: #78, vTask3 running[0m
-[0;32mI (1086) VTASK3: #78, vTask3 running[0m
-[0;32mI (1096) VTASK2: #79, vTask2 running[0m
-[0;32mI (1096) VTASK2: #79, vTask2 running[0m
-[0;32mI (1106) VTASK3: #80, vTask3 running[0m
-[0;32mI (1106) VTASK3: #80, vTask3 running[0m
-[0;32mI (1116) VTASK2: #81, vTask2 running[0m
-[0;32mI (1116) VTASK2: #81, vTask2 running[0m
-[0;32mI (1116) VTASK2: #81, vTask2 running[0m
-[0;32mI (1126) VTASK3: #82, vTask3 running[0m
-[0;32mI (1126) VTASK3: #82, vTask3 running[0m
-[0;32mI (1136) VTASK2: #83, vTask2 running[0m
-[0;32mI (1136) VTASK2: #83, vTask2 running[0m
-[0;32mI (1136) VTASK2: #83, vTask2 running[0m
-[0;32mI (1146) VTASK3: #84, vTask3 running[0m
-[0;32mI (1146) VTASK3: #84, vTask3 running[0m
-[0;32mI (1156) VTASK2: #85, vTask2 running[0m
-[0;32mI (1156) VTASK2: #85, vTask2 running[0m
-[0;32mI (1166) VTASK3: #86, vTask3 running[0m
-[0;32mI (1166) VTASK3: #86, vTask3 running[0m
-[0;32mI (1166) VTASK3: #86, vTask3 running[0m
-[0;32mI (1176) VTASK2: #87, vTask2 running[0m
-[0;32mI (1176) VTASK2: #87, vTask2 running[0m
-[0;32mI (1186) VTASK3: #88, vTask3 running[0m
-[0;32mI (1186) VTASK3: #88, vTask3 running[0m
-[0;32mI (1196) VTASK2: #89, vTask2 running[0m
-[0;32mI (1196) VTASK2: #89, vTask2 running[0m
-[0;32mI (1196) VTASK2: #89, vTask2 running[0m
-[0;32mI (1206) VTASK3: #90, vTask3 running[0m
-[0;32mI (1206) VTASK3: #90, vTask3 running[0m
-[0;32mI (1216) VTASK2: #91, vTask2 running[0m
-[0;32mI (1216) VTASK2: #91, vTask2 running[0m
-[0;32mI (1226) VTASK3: #92, vTask3 running[0m
-[0;32mI (1226) VTASK3: #92, vTask3 running[0m
-[0;32mI (1226) VTASK3: #92, vTask3 running[0m
-[0;32mI (1236) VTASK2: #93, vTask2 running[0m
-[0;32mI (1236) VTASK2: #93, vTask2 running[0m
-[0;32mI (1246) VTASK3: #94, vTask3 running[0m
-[0;32mI (1246) VTASK3: #94, vTask3 running[0m
-[0;32mI (1256) VTASK2: #95, vTask2 running[0m
-[0;32mI (1256) VTASK2: #95, vTask2 running[0m
-[0;32mI (1256) VTASK2: #95, vTask2 running[0m
-[0;32mI (1266) VTASK3: #96, vTask3 running[0m
-[0;32mI (1266) VTASK3: #96, vTask3 running[0m
-[0;32mI (1276) VTASK2: #97, vTask2 running[0m
-[0;32mI (1276) VTASK2: #97, vTask2 running[0m
-[0;32mI (1286) VTASK3: #98, vTask3 running[0m
-[0;32mI (1286) VTASK3: #98, vTask3 running[0m
-[0;32mI (1286) VTASK3: #98, vTask3 running[0m
-[0;32mI (1296) VTASK2: #99, vTask2 running[0m
-[0;32mI (1296) VTASK2: #99, vTask2 running[0m
-[0;32mI (1306) VTASK3: #100, vTask3 running[0m
-[0;32mI (1306) VTASK3: #100, vTask3 running[0m
-[0;32mI (1316) VTASK1: #101, vTask1 running[0m
-[0;32mI (1316) VTASK3: #101, vTask3 running[0m
-[0;32mI (1316) VTASK3: #101, vTask3 running[0m
-[0;32mI (1326) VTASK2: #102, vTask2 running[0m
-[0;32mI (1326) VTASK2: #102, vTask2 running[0m
-[0;32mI (1336) VTASK3: #103, vTask3 running[0m
-[0;32mI (1336) VTASK3: #103, vTask3 running[0m
-[0;32mI (1346) VTASK2: #104, vTask2 running[0m
-[0;32mI (1346) VTASK2: #104, vTask2 running[0m
-[0;32mI (1346) VTASK2: #104, vTask2 running[0m
-[0;32mI (1356) VTASK3: #105, vTask3 running[0m
-[0;32mI (1356) VTASK3: #105, vTask3 running[0m
-[0;32mI (1366) VTASK2: #106, vTask2 running[0m
-[0;32mI (1366) VTASK2: #106, vTask2 running[0m
-[0;32mI (1376) VTASK3: #107, vTask3 running[0m
-[0;32mI (1376) VTASK3: #107, vTask3 running[0m
-[0;32mI (1376) VTASK3: #107, vTask3 running[0m
-[0;32mI (1386) VTASK2: #108, vTask2 running[0m
-[0;32mI (1386) VTASK2: #108, vTask2 running[0m
-[0;32mI (1396) VTASK3: #109, vTask3 running[0m
-[0;32mI (1396) VTASK3: #109, vTask3 running[0m
-[0;32mI (1406) VTASK2: #110, vTask2 running[0m
-[0;32mI (1406) VTASK2: #110, vTask2 running[0m
-[0;32mI (1416) VTASK3: #111, vTask3 running[0m
-[0;32mI (1416) VTASK3: #111, vTask3 running[0m
-[0;32mI (1416) VTASK3: #111, vTask3 running[0m
-[0;32mI (1426) VTASK2: #112, vTask2 running[0m
-[0;32mI (1426) VTASK2: #112, vTask2 running[0m
-[0;32mI (1436) VTASK3: #113, vTask3 running[0m
-[0;32mI (1436) VTASK3: #113, vTask3 running[0m
-[0;32mI (1446) VTASK2: #114, vTask2 running[0m
-[0;32mI (1446) VTASK2: #114, vTask2 running[0m
-[0;32mI (1446) VTASK2: #114, vTask2 running[0m
-[0;32mI (1456) VTASK3: #115, vTask3 running[0m
-[0;32mI (1456) VTASK3: #115, vTask3 running[0m
-[0;32mI (1466) VTASK2: #116, vTask2 running[0m
-[0;32mI (1466) VTASK2: #116, vTask2 running[0m
-[0;32mI (1476) VTASK3: #117, vTask3 running[0m
-[0;32mI (1476) VTASK3: #117, vTask3 running[0m
-[0;32mI (1476) VTASK3: #117, vTask3 running[0m
-[0;32mI (1486) VTASK2: #118, vTask2 running[0m
-[0;32mI (1486) VTASK2: #118, vTask2 running[0m
-[0;32mI (1496) VTASK3: #119, vTask3 running[0m
-[0;32mI (1496) VTASK3: #119, vTask3 running[0m
-[0;32mI (1506) VTASK2: #120, vTask2 running[0m
-[0;32mI (1506) VTASK2: #120, vTask2 running[0m
-[0;32mI (1506) VTASK2: #120, vTask2 running[0m
-[0;32mI (1516) VTASK3: #121, vTask3 running[0m
-[0;32mI (1516) VTASK3: #121, vTask3 running[0m
-[0;32mI (1526) VTASK2: #122, vTask2 running[0m
-[0;32mI (1526) VTASK2: #122, vTask2 running[0m
-[0;32mI (1536) VTASK3: #123, vTask3 running[0m
-[0;32mI (1536) VTASK3: #123, vTask3 running[0m
-[0;32mI (1546) VTASK2: #124, vTask2 running[0m
-[0;32mI (1546) VTASK2: #124, vTask2 running[0m
-[0;32mI (1546) VTASK2: #124, vTask2 running[0m
-[0;32mI (1556) VTASK3: #125, vTask3 running[0m
-[0;32mI (1556) VTASK3: #125, vTask3 running[0m
-[0;32mI (1566) VTASK2: #126, vTask2 running[0m
-[0;32mI (1566) VTASK2: #126, vTask2 running[0m
-[0;32mI (1576) VTASK3: #127, vTask3 running[0m
-[0;32mI (1576) VTASK3: #127, vTask3 running[0m
-[0;32mI (1576) VTASK3: #127, vTask3 running[0m
-[0;32mI (1586) VTASK2: #128, vTask2 running[0m
-[0;32mI (1586) VTASK2: #128, vTask2 running[0m
-[0;32mI (1596) VTASK3: #129, vTask3 running[0m
-[0;32mI (1596) VTASK3: #129, vTask3 running[0m
-[0;32mI (1606) VTASK2: #130, vTask2 running[0m
-[0;32mI (1606) VTASK2: #130, vTask2 running[0m
-[0;32mI (1606) VTASK2: #130, vTask2 running[0m
-[0;32mI (1616) VTASK3: #131, vTask3 running[0m
-[0;32mI (1616) VTASK3: #131, vTask3 running[0m
-[0;32mI (1626) VTASK2: #132, vTask2 running[0m
-[0;32mI (1626) VTASK2: #132, vTask2 running[0m
-[0;32mI (1636) VTASK3: #133, vTask3 running[0m
-[0;32mI (1636) VTASK3: #133, vTask3 running[0m
-[0;32mI (1646) VTASK2: #134, vTask2 running[0m
-[0;32mI (1646) VTASK2: #134, vTask2 running[0m
-[0;32mI (1646) VTASK2: #134, vTask2 running[0m
-[0;32mI (1656) VTASK3: #135, vTask3 running[0m
-[0;32mI (1656) VTASK3: #135, vTask3 running[0m
-[0;32mI (1666) VTASK2: #136, vTask2 running[0m
-[0;32mI (1666) VTASK2: #136, vTask2 running[0m
-[0;32mI (1676) VTASK3: #137, vTask3 running[0m
-[0;32mI (1676) VTASK3: #137, vTask3 running[0m
-[0;32mI (1676) VTASK3: #137, vTask3 running[0m
-[0;32mI (1686) VTASK2: #138, vTask2 running[0m
-[0;32mI (1686) VTASK2: #138, vTask2 running[0m
-[0;32mI (1696) VTASK3: #139, vTask3 running[0m
-[0;32mI (1696) VTASK3: #139, vTask3 running[0m
-[0;32mI (1706) VTASK2: #140, vTask2 running[0m
-[0;32mI (1706) VTASK2: #140, vTask2 running[0m
-[0;32mI (1706) VTASK2: #140, vTask2 running[0m
-[0;32mI (1716) VTASK3: #141, vTask3 running[0m
-[0;32mI (1716) VTASK3: #141, vTask3 running[0m
-[0;32mI (1726) VTASK2: #142, vTask2 running[0m
-[0;32mI (1726) VTASK2: #142, vTask2 running[0m
-[0;32mI (1736) VTASK3: #143, vTask3 running[0m
-[0;32mI (1736) VTASK3: #143, vTask3 running[0m
-[0;32mI (1736) VTASK3: #143, vTask3 running[0m
-[0;32mI (1746) VTASK2: #144, vTask2 running[0m
-[0;32mI (1746) VTASK2: #144, vTask2 running[0m
-[0;32mI (1756) VTASK3: #145, vTask3 running[0m
-[0;32mI (1756) VTASK3: #145, vTask3 running[0m
-[0;32mI (1766) VTASK2: #146, vTask2 running[0m
-[0;32mI (1766) VTASK2: #146, vTask2 running[0m
-[0;32mI (1776) VTASK3: #147, vTask3 running[0m
-[0;32mI (1776) VTASK3: #147, vTask3 running[0m
-[0;32mI (1776) VTASK3: #147, vTask3 running[0m
-[0;32mI (1786) VTASK2: #148, vTask2 running[0m
-[0;32mI (1786) VTASK2: #148, vTask2 running[0m
-[0;32mI (1796) VTASK3: #149, vTask3 running[0m
-[0;32mI (1796) VTASK3: #149, vTask3 running[0m
-[0;32mI (1806) VTASK2: #150, vTask2 running[0m
-[0;32mI (1806) VTASK2: #150, vTask2 running[0m
-[0;32mI (1806) VTASK2: #150, vTask2 running[0m
-[0;32mI (1816) VTASK1: #151, vTask1 running[0m
-[0;32mI (1816) VTASK2: #151, vTask2 running[0m
-[0;32mI (1826) VTASK3: #152, vTask3 running[0m
-[0;32mI (1826) VTASK3: #152, vTask3 running[0m
-[0;32mI (1836) VTASK2: #153, vTask2 running[0m
-[0;32mI (1836) VTASK2: #153, vTask2 running[0m
-[0;32mI (1836) VTASK2: #153, vTask2 running[0m
-[0;32mI (1846) VTASK3: #154, vTask3 running[0m
-[0;32mI (1846) VTASK3: #154, vTask3 running[0m
-[0;32mI (1856) VTASK2: #155, vTask2 running[0m
-[0;32mI (1856) VTASK2: #155, vTask2 running[0m
-[0;32mI (1866) VTASK3: #156, vTask3 running[0m
-[0;32mI (1866) VTASK3: #156, vTask3 running[0m
-[0;32mI (1876) VTASK2: #157, vTask2 running[0m
-[0;32mI (1876) VTASK2: #157, vTask2 running[0m
-[0;32mI (1876) VTASK2: #157, vTask2 running[0m
-[0;32mI (1886) VTASK3: #158, vTask3 running[0m
-[0;32mI (1886) VTASK3: #158, vTask3 running[0m
-[0;32mI (1896) VTASK2: #159, vTask2 running[0m
-[0;32mI (1896) VTASK2: #159, vTask2 running[0m
-[0;32mI (1906) VTASK3: #160, vTask3 running[0m
-[0;32mI (1906) VTASK3: #160, vTask3 running[0m
-[0;32mI (1906) VTASK3: #160, vTask3 running[0m
-[0;32mI (1916) VTASK2: #161, vTask2 running[0m
-[0;32mI (1916) VTASK2: #161, vTask2 running[0m
-[0;32mI (1926) VTASK3: #162, vTask3 running[0m
-[0;32mI (1926) VTASK3: #162, vTask3 running[0m
-[0;32mI (1936) VTASK2: #163, vTask2 running[0m
-[0;32mI (1936) VTASK2: #163, vTask2 running[0m
-[0;32mI (1936) VTASK2: #163, vTask2 running[0m
-[0;32mI (1946) VTASK3: #164, vTask3 running[0m
-[0;32mI (1946) VTASK3: #164, vTask3 running[0m
-[0;32mI (1956) VTASK2: #165, vTask2 running[0m
-[0;32mI (1956) VTASK2: #165, vTask2 running[0m
-[0;32mI (1966) VTASK3: #166, vTask3 running[0m
-[0;32mI (1966) VTASK3: #166, vTask3 running[0m
-[0;32mI (1966) VTASK3: #166, vTask3 running[0m
-[0;32mI (1976) VTASK2: #167, vTask2 running[0m
-[0;32mI (1976) VTASK2: #167, vTask2 running[0m
-[0;32mI (1986) VTASK3: #168, vTask3 running[0m
-[0;32mI (1986) VTASK3: #168, vTask3 running[0m
-[0;32mI (1996) VTASK2: #169, vTask2 running[0m
-[0;32mI (1996) VTASK2: #169, vTask2 running[0m
-[0;32mI (2006) VTASK3: #170, vTask3 running[0m
-[0;32mI (2006) VTASK3: #170, vTask3 running[0m
-[0;32mI (2006) VTASK3: #170, vTask3 running[0m
-[0;32mI (2016) VTASK2: #171, vTask2 running[0m
-[0;32mI (2016) VTASK2: #171, vTask2 running[0m
-[0;32mI (2026) VTASK3: #172, vTask3 running[0m
-[0;32mI (2026) VTASK3: #172, vTask3 running[0m
-[0;32mI (2036) VTASK2: #173, vTask2 running[0m
-[0;32mI (2036) VTASK2: #173, vTask2 running[0m
-[0;32mI (2036) VTASK2: #173, vTask2 running[0m
-[0;32mI (2046) VTASK3: #174, vTask3 running[0m
-[0;32mI (2046) VTASK3: #174, vTask3 running[0m
-[0;32mI (2056) VTASK2: #175, vTask2 running[0m
-[0;32mI (2056) VTASK2: #175, vTask2 running[0m
-[0;32mI (2066) VTASK3: #176, vTask3 running[0m
-[0;32mI (2066) VTASK3: #176, vTask3 running[0m
-[0;32mI (2066) VTASK3: #176, vTask3 running[0m
-[0;32mI (2076) VTASK2: #177, vTask2 running[0m
-[0;32mI (2076) VTASK2: #177, vTask2 running[0m
-[0;32mI (2086) VTASK3: #178, vTask3 running[0m
-[0;32mI (2086) VTASK3: #178, vTask3 running[0m
-[0;32mI (2096) VTASK2: #179, vTask2 running[0m
-[0;32mI (2096) VTASK2: #179, vTask2 running[0m
-[0;32mI (2106) VTASK3: #180, vTask3 running[0m
-[0;32mI (2106) VTASK3: #180, vTask3 running[0m
-[0;32mI (2106) VTASK3: #180, vTask3 running[0m
-[0;32mI (2116) VTASK2: #181, vTask2 running[0m
-[0;32mI (2116) VTASK2: #181, vTask2 running[0m
-[0;32mI (2126) VTASK3: #182, vTask3 running[0m
-[0;32mI (2126) VTASK3: #182, vTask3 running[0m
-[0;32mI (2136) VTASK2: #183, vTask2 running[0m
-[0;32mI (2136) VTASK2: #183, vTask2 running[0m
-[0;32mI (2136) VTASK2: #183, vTask2 running[0m
-[0;32mI (2146) VTASK3: #184, vTask3 running[0m
-[0;32mI (2146) VTASK3: #184, vTask3 running[0m
-[0;32mI (2156) VTASK2: #185, vTask2 running[0m
-[0;32mI (2156) VTASK2: #185, vTask2 running[0m
-[0;32mI (2166) VTASK3: #186, vTask3 running[0m
-[0;32mI (2166) VTASK3: #186, vTask3 running[0m
-[0;32mI (2166) VTASK3: #186, vTask3 running[0m
-[0;32mI (2176) VTASK2: #187, vTask2 running[0m
-[0;32mI (2176) VTASK2: #187, vTask2 running[0m
-[0;32mI (2186) VTASK3: #188, vTask3 running[0m
-[0;32mI (2186) VTASK3: #188, vTask3 running[0m
-[0;32mI (2196) VTASK2: #189, vTask2 running[0m
-[0;32mI (2196) VTASK2: #189, vTask2 running[0m
-[0;32mI (2196) VTASK2: #189, vTask2 running[0m
-[0;32mI (2206) VTASK3: #190, vTask3 running[0m
-[0;32mI (2206) VTASK3: #190, vTask3 running[0m
-[0;32mI (2216) VTASK2: #191, vTask2 running[0m
-[0;32mI (2216) VTASK2: #191, vTask2 running[0m
-[0;32mI (2226) VTASK3: #192, vTask3 running[0m
-[0;32mI (2226) VTASK3: #192, vTask3 running[0m
-[0;32mI (2236) VTASK2: #193, vTask2 running[0m
-[0;32mI (2236) VTASK2: #193, vTask2 running[0m
-[0;32mI (2236) VTASK2: #193, vTask2 running[0m
-[0;32mI (2246) VTASK3: #194, vTask3 running[0m
-[0;32mI (2246) VTASK3: #194, vTask3 running[0m
-[0;32mI (2256) VTASK2: #195, vTask2 running[0m
-[0;32mI (2256) VTASK2: #195, vTask2 running[0m
-[0;32mI (2266) VTASK3: #196, vTask3 running[0m
-[0;32mI (2266) VTASK3: #196, vTask3 running[0m
-[0;32mI (2266) VTASK3: #196, vTask3 running[0m
-[0;32mI (2276) VTASK2: #197, vTask2 running[0m
-[0;32mI (2276) VTASK2: #197, vTask2 running[0m
-[0;32mI (2286) VTASK3: #198, vTask3 running[0m
-[0;32mI (2286) VTASK3: #198, vTask3 running[0m
-[0;32mI (2296) VTASK2: #199, vTask2 running[0m
-[0;32mI (2296) VTASK2: #199, vTask2 running[0m
-[0;32mI (2296) VTASK2: #199, vTask2 running[0m
-[0;32mI (2306) VTASK3: #200, vTask3 running[0m
-[0;32mI (2306) VTASK3: #200, vTask3 running[0m
-[0;32mI (2316) VTASK1: #201, vTask1 running[0m
-[0;32mI (2316) VTASK3: #201, vTask3 running[0m
-[0;32mI (2326) VTASK2: #202, vTask2 running[0m
-[0;32mI (2326) VTASK2: #202, vTask2 running[0m
-[0;32mI (2336) VTASK3: #203, vTask3 running[0m
-[0;32mI (2336) VTASK3: #203, vTask3 running[0m
-[0;32mI (2336) VTASK3: #203, vTask3 running[0m
-[0;32mI (2346) VTASK2: #204, vTask2 running[0m
-[0;32mI (2346) VTASK2: #204, vTask2 running[0m
-[0;32mI (2356) VTASK3: #205, vTask3 running[0m
-[0;32mI (2356) VTASK3: #205, vTask3 running[0m
-[0;32mI (2366) VTASK2: #206, vTask2 running[0m
-[0;32mI (2366) VTASK2: #206, vTask2 running[0m
-[0;32mI (2366) VTASK2: #206, vTask2 running[0m
-[0;32mI (2376) VTASK3: #207, vTask3 running[0m
-[0;32mI (2376) VTASK3: #207, vTask3 running[0m
-[0;32mI (2386) VTASK2: #208, vTask2 running[0m
-[0;32mI (2386) VTASK2: #208, vTask2 running[0m
-[0;32mI (2396) VTASK3: #209, vTask3 running[0m
-[0;32mI (2396) VTASK3: #209, vTask3 running[0m
-[0;32mI (2396) VTASK3: #209, vTask3 running[0m
-[0;32mI (2406) VTASK2: #210, vTask2 running[0m
-[0;32mI (2406) VTASK2: #210, vTask2 running[0m
-[0;32mI (2416) VTASK3: #211, vTask3 running[0m
-[0;32mI (2416) VTASK3: #211, vTask3 running[0m
-[0;32mI (2426) VTASK2: #212, vTask2 running[0m
-[0;32mI (2426) VTASK2: #212, vTask2 running[0m
-[0;32mI (2426) VTASK2: #212, vTask2 running[0m
-[0;32mI (2436) VTASK3: #213, vTask3 running[0m
-[0;32mI (2436) VTASK3: #213, vTask3 running[0m
-[0;32mI (2446) VTASK2: #214, vTask2 running[0m
-[0;32mI (2446) VTASK2: #214, vTask2 running[0m
-[0;32mI (2456) VTASK3: #215, vTask3 running[0m
-[0;32mI (2456) VTASK3: #215, vTask3 running[0m
-[0;32mI (2466) VTASK2: #216, vTask2 running[0m
-[0;32mI (2466) VTASK2: #216, vTask2 running[0m
-[0;32mI (2466) VTASK2: #216, vTask2 running[0m
-[0;32mI (2476) VTASK3: #217, vTask3 running[0m
-[0;32mI (2476) VTASK3: #217, vTask3 running[0m
-[0;32mI (2486) VTASK2: #218, vTask2 running[0m
-[0;32mI (2486) VTASK2: #218, vTask2 running[0m
-[0;32mI (2496) VTASK3: #219, vTask3 running[0m
-[0;32mI (2496) VTASK3: #219, vTask3 running[0m
-[0;32mI (2496) VTASK3: #219, vTask3 running[0m
-[0;32mI (2506) VTASK2: #220, vTask2 running[0m
-[0;32mI (2506) VTASK2: #220, vTask2 running[0m
-[0;32mI (2516) VTASK3: #221, vTask3 running[0m
-[0;32mI (2516) VTASK3: #221, vTask3 running[0m
-[0;32mI (2526) VTASK2: #222, vTask2 running[0m
-[0;32mI (2526) VTASK2: #222, vTask2 running[0m
-[0;32mI (2526) VTASK2: #222, vTask2 running[0m
-[0;32mI (2536) VTASK3: #223, vTask3 running[0m
-[0;32mI (2536) VTASK3: #223, vTask3 running[0m
-[0;32mI (2546) VTASK2: #224, vTask2 running[0m
-[0;32mI (2546) VTASK2: #224, vTask2 running[0m
-[0;32mI (2556) VTASK3: #225, vTask3 running[0m
-[0;32mI (2556) VTASK3: #225, vTask3 running[0m
-[0;32mI (2566) VTASK2: #226, vTask2 running[0m
-[0;32mI (2566) VTASK2: #226, vTask2 running[0m
-[0;32mI (2566) VTASK2: #226, vTask2 running[0m
-[0;32mI (2576) VTASK3: #227, vTask3 running[0m
-[0;32mI (2576) VTASK3: #227, vTask3 running[0m
-[0;32mI (2586) VTASK2: #228, vTask2 running[0m
-[0;32mI (2586) VTASK2: #228, vTask2 running[0m
-[0;32mI (2596) VTASK3: #229, vTask3 running[0m
-[0;32mI (2596) VTASK3: #229, vTask3 running[0m
-[0;32mI (2596) VTASK3: #229, vTask3 running[0m
-[0;32mI (2606) VTASK2: #230, vTask2 running[0m
-[0;32mI (2606) VTASK2: #230, vTask2 running[0m
-[0;32mI (2616) VTASK3: #231, vTask3 running[0m
-[0;32mI (2616) VTASK3: #231, vTask3 running[0m
-[0;32mI (2626) VTASK2: #232, vTask2 running[0m
-[0;32mI (2626) VTASK2: #232, vTask2 running[0m
-[0;32mI (2626) VTASK2: #232, vTask2 running[0m
-[0;32mI (2636) VTASK3: #233, vTask3 running[0m
-[0;32mI (2636) VTASK3: #233, vTask3 running[0m
-[0;32mI (2646) VTASK2: #234, vTask2 running[0m
-[0;32mI (2646) VTASK2: #234, vTask2 running[0m
-[0;32mI (2656) VTASK3: #235, vTask3 running[0m
-[0;32mI (2656) VTASK3: #235, vTask3 running[0m
-[0;32mI (2666) VTASK2: #236, vTask2 running[0m
-[0;32mI (2666) VTASK2: #236, vTask2 running[0m
-[0;32mI (2666) VTASK2: #236, vTask2 running[0m
-[0;32mI (2676) VTASK3: #237, vTask3 running[0m
-[0;32mI (2676) VTASK3: #237, vTask3 running[0m
-[0;32mI (2686) VTASK2: #238, vTask2 running[0m
-[0;32mI (2686) VTASK2: #238, vTask2 running[0m
-[0;32mI (2696) VTASK3: #239, vTask3 running[0m
-[0;32mI (2696) VTASK3: #239, vTask3 running[0m
-[0;32mI (2696) VTASK3: #239, vTask3 running[0m
-[0;32mI (2706) VTASK2: #240, vTask2 running[0m
-[0;32mI (2706) VTASK2: #240, vTask2 running[0m
-[0;32mI (2716) VTASK3: #241, vTask3 running[0m
-[0;32mI (2716) VTASK3: #241, vTask3 running[0m
-[0;32mI (2726) VTASK2: #242, vTask2 running[0m
-[0;32mI (2726) VTASK2: #242, vTask2 running[0m
-[0;32mI (2726) VTASK2: #242, vTask2 running[0m
-[0;32mI (2736) VTASK3: #243, vTask3 running[0m
-[0;32mI (2736) VTASK3: #243, vTask3 running[0m
-[0;32mI (2746) VTASK2: #244, vTask2 running[0m
-[0;32mI (2746) VTASK2: #244, vTask2 running[0m
-[0;32mI (2756) VTASK3: #245, vTask3 running[0m
-[0;32mI (2756) VTASK3: #245, vTask3 running[0m
-[0;32mI (2756) VTASK3: #245, vTask3 running[0m
-[0;32mI (2766) VTASK2: #246, vTask2 running[0m
-[0;32mI (2766) VTASK2: #246, vTask2 running[0m
-[0;32mI (2776) VTASK3: #247, vTask3 running[0m
-[0;32mI (2776) VTASK3: #247, vTask3 running[0m
-[0;32mI (2786) VTASK2: #248, vTask2 running[0m
-[0;32mI (2786) VTASK2: #248, vTask2 running
+(29) boot: ESP-IDF v4.3.2-dirty 2nd stage bootloader
+(29) boot: compile time 10:26:55
+(29) boot: chip revision: 1
+(32) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+(39) boot.esp32: SPI Speed      : 40MHz
+(44) boot.esp32: SPI Mode       : DIO
+(49) boot.esp32: SPI Flash Size : 2MB
+(53) boot: Enabling RNG early entropy source...
+(58) boot: Partition Table:
+(62) boot: ## Label            Usage          Type ST Offset   Length
+(69) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+(77) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+(84) boot:  2 factory          factory app      00 00 00010000 00100000
+(92) boot: End of partition table
+(96) boot_comm: chip revision: 1, min. application chip revision: 0
+(103) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=06214h ( 25108) map
+(121) esp_image: segment 1: paddr=0001623c vaddr=3ffb0000 size=0211ch (  8476) load
+(124) esp_image: segment 2: paddr=00018360 vaddr=40080000 size=07cb8h ( 31928) load
+(142) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0fab8h ( 64184) map
+(165) esp_image: segment 4: paddr=0002fae0 vaddr=40087cb8 size=02a90h ( 10896) load
+(170) esp_image: segment 5: paddr=00032578 vaddr=50000000 size=00010h (    16) load
+(176) boot: Loaded app from partition at offset 0x10000
+(177) boot: Disabling RNG early entropy source...
+(194) cpu_start: Pro cpu up.
+(194) cpu_start: Single core mode
+(202) cpu_start: Pro cpu start user code
+(202) cpu_start: cpu freq: 160000000
+(202) cpu_start: Application information:
+(207) cpu_start: Project name:     lab2a
+(212) cpu_start: App version:      7c9d124-dirty
+(217) cpu_start: Compile time:     Jun 11 2022 10:26:53
+(223) cpu_start: ELF file SHA256:  770af9511fba9aae...
+(229) cpu_start: ESP-IDF:          v4.3.2-dirty
+(235) heap_init: Initializing. RAM available for dynamic allocation:
+(242) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM
+(248) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+(254) heap_init: At 3FFB2900 len 0002D700 (181 KiB): DRAM
+(260) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM
+(267) heap_init: At 40078000 len 00008000 (32 KiB): IRAM
+(273) heap_init: At 4008A748 len 000158B8 (86 KiB): IRAM
+(280) spi_flash: detected chip: generic
+(284) spi_flash: flash io: dio
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+(301) cpu_start: Starting scheduler on PRO CPU.
+(306) MAIN: vTask1 created successfully
+(306) MAIN: vTask2 created successfully
+(306) MAIN: vTask2 created successfully
+(316) VTASK1: #1, vTask1 running
+(316) VTASK3: #1, vTask3 running
+(326) VTASK2: #2, vTask2 running
+(326) VTASK2: #2, vTask2 running
+(336) VTASK3: #3, vTask3 running
+(336) VTASK3: #3, vTask3 running
+(336) VTASK3: #3, vTask3 running
+(346) VTASK2: #4, vTask2 running
+(346) VTASK2: #4, vTask2 running
+(356) VTASK3: #5, vTask3 running
+(356) VTASK3: #5, vTask3 running
+(356) VTASK3: #5, vTask3 running
+(366) VTASK2: #6, vTask2 running
+(366) VTASK2: #6, vTask2 running
+(376) VTASK3: #7, vTask3 running
+(376) VTASK3: #7, vTask3 running
+(376) VTASK3: #7, vTask3 running
+(386) VTASK2: #8, vTask2 running
+(386) VTASK2: #8, vTask2 running
+(396) VTASK3: #9, vTask3 running
+(396) VTASK3: #9, vTask3 running
+(396) VTASK3: #9, vTask3 running
+(406) VTASK2: #10, vTask2 running
+(406) VTASK2: #10, vTask2 running
+(416) VTASK3: #11, vTask3 running
+(416) VTASK3: #11, vTask3 running
+(426) VTASK2: #12, vTask2 running
+(426) VTASK2: #12, vTask2 running
+(426) VTASK2: #12, vTask2 running
+(436) VTASK3: #13, vTask3 running
+(436) VTASK3: #13, vTask3 running
+(446) VTASK2: #14, vTask2 running
+(446) VTASK2: #14, vTask2 running
+(446) VTASK2: #14, vTask2 running
+(456) VTASK3: #15, vTask3 running
+(456) VTASK3: #15, vTask3 running
+(466) VTASK2: #16, vTask2 running
+(466) VTASK2: #16, vTask2 running
+(476) VTASK3: #17, vTask3 running
+(476) VTASK3: #17, vTask3 running
+(476) VTASK3: #17, vTask3 running
+(486) VTASK2: #18, vTask2 running
+(486) VTASK2: #18, vTask2 running
+(496) VTASK3: #19, vTask3 running
+(496) VTASK3: #19, vTask3 running
+(496) VTASK3: #19, vTask3 running
+(506) VTASK2: #20, vTask2 running
+(506) VTASK2: #20, vTask2 running
+(516) VTASK3: #21, vTask3 running
+(516) VTASK3: #21, vTask3 running
+(526) VTASK2: #22, vTask2 running
+(526) VTASK2: #22, vTask2 running
+(526) VTASK2: #22, vTask2 running
+(536) VTASK3: #23, vTask3 running
+(536) VTASK3: #23, vTask3 running
+(546) VTASK2: #24, vTask2 running
+(546) VTASK2: #24, vTask2 running
+(546) VTASK2: #24, vTask2 running
+(556) VTASK3: #25, vTask3 running
+(556) VTASK3: #25, vTask3 running
+(566) VTASK2: #26, vTask2 running
+(566) VTASK2: #26, vTask2 running
+(576) VTASK3: #27, vTask3 running
+(576) VTASK3: #27, vTask3 running
+(576) VTASK3: #27, vTask3 running
+(586) VTASK2: #28, vTask2 running
+(586) VTASK2: #28, vTask2 running
+(596) VTASK3: #29, vTask3 running
+(596) VTASK3: #29, vTask3 running
+(596) VTASK3: #29, vTask3 running
+(606) VTASK2: #30, vTask2 running
+(606) VTASK2: #30, vTask2 running
+(616) VTASK3: #31, vTask3 running
+(616) VTASK3: #31, vTask3 running
+(626) VTASK2: #32, vTask2 running
+(626) VTASK2: #32, vTask2 running
+(626) VTASK2: #32, vTask2 running
+(636) VTASK3: #33, vTask3 running
+(636) VTASK3: #33, vTask3 running
+(646) VTASK2: #34, vTask2 running
+(646) VTASK2: #34, vTask2 running
+(646) VTASK2: #34, vTask2 running
+(656) VTASK3: #35, vTask3 running
+(656) VTASK3: #35, vTask3 running
+(666) VTASK2: #36, vTask2 running
+(666) VTASK2: #36, vTask2 running
+(676) VTASK3: #37, vTask3 running
+(676) VTASK3: #37, vTask3 running
+(676) VTASK3: #37, vTask3 running
+(686) VTASK2: #38, vTask2 running
+(686) VTASK2: #38, vTask2 running
+(696) VTASK3: #39, vTask3 running
+(696) VTASK3: #39, vTask3 running
+(696) VTASK3: #39, vTask3 running
+(706) VTASK2: #40, vTask2 running
+(706) VTASK2: #40, vTask2 running
+(716) VTASK3: #41, vTask3 running
+(716) VTASK3: #41, vTask3 running
+(726) VTASK2: #42, vTask2 running
+(726) VTASK2: #42, vTask2 running
+(726) VTASK2: #42, vTask2 running
+(736) VTASK3: #43, vTask3 running
+(736) VTASK3: #43, vTask3 running
+(746) VTASK2: #44, vTask2 running
+(746) VTASK2: #44, vTask2 running
+(746) VTASK2: #44, vTask2 running
+(756) VTASK3: #45, vTask3 running
+(756) VTASK3: #45, vTask3 running
+(766) VTASK2: #46, vTask2 running
+(766) VTASK2: #46, vTask2 running
+(776) VTASK3: #47, vTask3 running
+(776) VTASK3: #47, vTask3 running
+(776) VTASK3: #47, vTask3 running
+(786) VTASK2: #48, vTask2 running
+(786) VTASK2: #48, vTask2 running
+(796) VTASK3: #49, vTask3 running
+(796) VTASK3: #49, vTask3 running
+(796) VTASK3: #49, vTask3 running
+(806) VTASK2: #50, vTask2 running
+(806) VTASK2: #50, vTask2 running
+(816) VTASK1: #51, vTask1 running
+(816) VTASK2: #51, vTask2 running
+(826) VTASK3: #52, vTask3 running
+(826) VTASK3: #52, vTask3 running
+(826) VTASK3: #52, vTask3 running
+(836) VTASK2: #53, vTask2 running
+(836) VTASK2: #53, vTask2 running
+(846) VTASK3: #54, vTask3 running
+(846) VTASK3: #54, vTask3 running
+(846) VTASK3: #54, vTask3 running
+(856) VTASK2: #55, vTask2 running
+(856) VTASK2: #55, vTask2 running
+(866) VTASK3: #56, vTask3 running
+(866) VTASK3: #56, vTask3 running
+(876) VTASK2: #57, vTask2 running
+(876) VTASK2: #57, vTask2 running
+(876) VTASK2: #57, vTask2 running
+(886) VTASK3: #58, vTask3 running
+(886) VTASK3: #58, vTask3 running
+(896) VTASK2: #59, vTask2 running
+(896) VTASK2: #59, vTask2 running
+(896) VTASK2: #59, vTask2 running
+(906) VTASK3: #60, vTask3 running
+(906) VTASK3: #60, vTask3 running
+(916) VTASK2: #61, vTask2 running
+(916) VTASK2: #61, vTask2 running
+(926) VTASK3: #62, vTask3 running
+(926) VTASK3: #62, vTask3 running
+(926) VTASK3: #62, vTask3 running
+(936) VTASK2: #63, vTask2 running
+(936) VTASK2: #63, vTask2 running
+(946) VTASK3: #64, vTask3 running
+(946) VTASK3: #64, vTask3 running
+(946) VTASK3: #64, vTask3 running
+(956) VTASK2: #65, vTask2 running
+(956) VTASK2: #65, vTask2 running
+(966) VTASK3: #66, vTask3 running
+(966) VTASK3: #66, vTask3 running
+(976) VTASK2: #67, vTask2 running
+(976) VTASK2: #67, vTask2 running
+(976) VTASK2: #67, vTask2 running
+(986) VTASK3: #68, vTask3 running
+(986) VTASK3: #68, vTask3 running
+(996) VTASK2: #69, vTask2 running
+(996) VTASK2: #69, vTask2 running
+(996) VTASK2: #69, vTask2 running
+(1006) VTASK3: #70, vTask3 running
+(1006) VTASK3: #70, vTask3 running
+(1016) VTASK2: #71, vTask2 running
+(1016) VTASK2: #71, vTask2 running
+(1026) VTASK3: #72, vTask3 running
+(1026) VTASK3: #72, vTask3 running
+(1026) VTASK3: #72, vTask3 running
+(1036) VTASK2: #73, vTask2 running
+(1036) VTASK2: #73, vTask2 running
+(1046) VTASK3: #74, vTask3 running
+(1046) VTASK3: #74, vTask3 running
+(1056) VTASK2: #75, vTask2 running
+(1056) VTASK2: #75, vTask2 running
+(1056) VTASK2: #75, vTask2 running
+(1066) VTASK3: #76, vTask3 running
+(1066) VTASK3: #76, vTask3 running
+(1076) VTASK2: #77, vTask2 running
+(1076) VTASK2: #77, vTask2 running
+(1086) VTASK3: #78, vTask3 running
+(1086) VTASK3: #78, vTask3 running
+(1086) VTASK3: #78, vTask3 running
+(1096) VTASK2: #79, vTask2 running
+(1096) VTASK2: #79, vTask2 running
+(1106) VTASK3: #80, vTask3 running
+(1106) VTASK3: #80, vTask3 running
+(1116) VTASK2: #81, vTask2 running
+(1116) VTASK2: #81, vTask2 running
+(1116) VTASK2: #81, vTask2 running
+(1126) VTASK3: #82, vTask3 running
+(1126) VTASK3: #82, vTask3 running
+(1136) VTASK2: #83, vTask2 running
+(1136) VTASK2: #83, vTask2 running
+(1136) VTASK2: #83, vTask2 running
+(1146) VTASK3: #84, vTask3 running
+(1146) VTASK3: #84, vTask3 running
+(1156) VTASK2: #85, vTask2 running
+(1156) VTASK2: #85, vTask2 running
+(1166) VTASK3: #86, vTask3 running
+(1166) VTASK3: #86, vTask3 running
+(1166) VTASK3: #86, vTask3 running
+(1176) VTASK2: #87, vTask2 running
+(1176) VTASK2: #87, vTask2 running
+(1186) VTASK3: #88, vTask3 running
+(1186) VTASK3: #88, vTask3 running
+(1196) VTASK2: #89, vTask2 running
+(1196) VTASK2: #89, vTask2 running
+(1196) VTASK2: #89, vTask2 running
+(1206) VTASK3: #90, vTask3 running
+(1206) VTASK3: #90, vTask3 running
+(1216) VTASK2: #91, vTask2 running
+(1216) VTASK2: #91, vTask2 running
+(1226) VTASK3: #92, vTask3 running
+(1226) VTASK3: #92, vTask3 running
+(1226) VTASK3: #92, vTask3 running
+(1236) VTASK2: #93, vTask2 running
+(1236) VTASK2: #93, vTask2 running
+(1246) VTASK3: #94, vTask3 running
+(1246) VTASK3: #94, vTask3 running
+(1256) VTASK2: #95, vTask2 running
+(1256) VTASK2: #95, vTask2 running
+(1256) VTASK2: #95, vTask2 running
+(1266) VTASK3: #96, vTask3 running
+(1266) VTASK3: #96, vTask3 running
+(1276) VTASK2: #97, vTask2 running
+(1276) VTASK2: #97, vTask2 running
+(1286) VTASK3: #98, vTask3 running
+(1286) VTASK3: #98, vTask3 running
+(1286) VTASK3: #98, vTask3 running
+(1296) VTASK2: #99, vTask2 running
+(1296) VTASK2: #99, vTask2 running
+(1306) VTASK3: #100, vTask3 running
+(1306) VTASK3: #100, vTask3 running
+(1316) VTASK1: #101, vTask1 running
+(1316) VTASK3: #101, vTask3 running
+(1316) VTASK3: #101, vTask3 running
+(1326) VTASK2: #102, vTask2 running
+(1326) VTASK2: #102, vTask2 running
+(1336) VTASK3: #103, vTask3 running
+(1336) VTASK3: #103, vTask3 running
+(1346) VTASK2: #104, vTask2 running
+(1346) VTASK2: #104, vTask2 running
+(1346) VTASK2: #104, vTask2 running
+(1356) VTASK3: #105, vTask3 running
+(1356) VTASK3: #105, vTask3 running
+(1366) VTASK2: #106, vTask2 running
+(1366) VTASK2: #106, vTask2 running
+(1376) VTASK3: #107, vTask3 running
+(1376) VTASK3: #107, vTask3 running
+(1376) VTASK3: #107, vTask3 running
+(1386) VTASK2: #108, vTask2 running
+(1386) VTASK2: #108, vTask2 running
+(1396) VTASK3: #109, vTask3 running
+(1396) VTASK3: #109, vTask3 running
+(1406) VTASK2: #110, vTask2 running
+(1406) VTASK2: #110, vTask2 running
+(1416) VTASK3: #111, vTask3 running
+(1416) VTASK3: #111, vTask3 running
+(1416) VTASK3: #111, vTask3 running
+(1426) VTASK2: #112, vTask2 running
+(1426) VTASK2: #112, vTask2 running
+(1436) VTASK3: #113, vTask3 running
+(1436) VTASK3: #113, vTask3 running
+(1446) VTASK2: #114, vTask2 running
+(1446) VTASK2: #114, vTask2 running
+(1446) VTASK2: #114, vTask2 running
+(1456) VTASK3: #115, vTask3 running
+(1456) VTASK3: #115, vTask3 running
+(1466) VTASK2: #116, vTask2 running
+(1466) VTASK2: #116, vTask2 running
+(1476) VTASK3: #117, vTask3 running
+(1476) VTASK3: #117, vTask3 running
+(1476) VTASK3: #117, vTask3 running
+(1486) VTASK2: #118, vTask2 running
+(1486) VTASK2: #118, vTask2 running
+(1496) VTASK3: #119, vTask3 running
+(1496) VTASK3: #119, vTask3 running
+(1506) VTASK2: #120, vTask2 running
+(1506) VTASK2: #120, vTask2 running
+(1506) VTASK2: #120, vTask2 running
+(1516) VTASK3: #121, vTask3 running
+(1516) VTASK3: #121, vTask3 running
+(1526) VTASK2: #122, vTask2 running
+(1526) VTASK2: #122, vTask2 running
+(1536) VTASK3: #123, vTask3 running
+(1536) VTASK3: #123, vTask3 running
+(1546) VTASK2: #124, vTask2 running
+(1546) VTASK2: #124, vTask2 running
+(1546) VTASK2: #124, vTask2 running
+(1556) VTASK3: #125, vTask3 running
+(1556) VTASK3: #125, vTask3 running
+(1566) VTASK2: #126, vTask2 running
+(1566) VTASK2: #126, vTask2 running
+(1576) VTASK3: #127, vTask3 running
+(1576) VTASK3: #127, vTask3 running
+(1576) VTASK3: #127, vTask3 running
+(1586) VTASK2: #128, vTask2 running
+(1586) VTASK2: #128, vTask2 running
+(1596) VTASK3: #129, vTask3 running
+(1596) VTASK3: #129, vTask3 running
+(1606) VTASK2: #130, vTask2 running
+(1606) VTASK2: #130, vTask2 running
+(1606) VTASK2: #130, vTask2 running
+(1616) VTASK3: #131, vTask3 running
+(1616) VTASK3: #131, vTask3 running
+(1626) VTASK2: #132, vTask2 running
+(1626) VTASK2: #132, vTask2 running
+(1636) VTASK3: #133, vTask3 running
+(1636) VTASK3: #133, vTask3 running
+(1646) VTASK2: #134, vTask2 running
+(1646) VTASK2: #134, vTask2 running
+(1646) VTASK2: #134, vTask2 running
+(1656) VTASK3: #135, vTask3 running
+(1656) VTASK3: #135, vTask3 running
+(1666) VTASK2: #136, vTask2 running
+(1666) VTASK2: #136, vTask2 running
+(1676) VTASK3: #137, vTask3 running
+(1676) VTASK3: #137, vTask3 running
+(1676) VTASK3: #137, vTask3 running
+(1686) VTASK2: #138, vTask2 running
+(1686) VTASK2: #138, vTask2 running
+(1696) VTASK3: #139, vTask3 running
+(1696) VTASK3: #139, vTask3 running
+(1706) VTASK2: #140, vTask2 running
+(1706) VTASK2: #140, vTask2 running
+(1706) VTASK2: #140, vTask2 running
+(1716) VTASK3: #141, vTask3 running
+(1716) VTASK3: #141, vTask3 running
+(1726) VTASK2: #142, vTask2 running
+(1726) VTASK2: #142, vTask2 running
+(1736) VTASK3: #143, vTask3 running
+(1736) VTASK3: #143, vTask3 running
+(1736) VTASK3: #143, vTask3 running
+(1746) VTASK2: #144, vTask2 running
+(1746) VTASK2: #144, vTask2 running
+(1756) VTASK3: #145, vTask3 running
+(1756) VTASK3: #145, vTask3 running
+(1766) VTASK2: #146, vTask2 running
+(1766) VTASK2: #146, vTask2 running
+(1776) VTASK3: #147, vTask3 running
+(1776) VTASK3: #147, vTask3 running
+(1776) VTASK3: #147, vTask3 running
+(1786) VTASK2: #148, vTask2 running
+(1786) VTASK2: #148, vTask2 running
+(1796) VTASK3: #149, vTask3 running
+(1796) VTASK3: #149, vTask3 running
+(1806) VTASK2: #150, vTask2 running
+(1806) VTASK2: #150, vTask2 running
+(1806) VTASK2: #150, vTask2 running
+(1816) VTASK1: #151, vTask1 running
+(1816) VTASK2: #151, vTask2 running
+(1826) VTASK3: #152, vTask3 running
+(1826) VTASK3: #152, vTask3 running
+(1836) VTASK2: #153, vTask2 running
+(1836) VTASK2: #153, vTask2 running
+(1836) VTASK2: #153, vTask2 running
+(1846) VTASK3: #154, vTask3 running
+(1846) VTASK3: #154, vTask3 running
+(1856) VTASK2: #155, vTask2 running
+(1856) VTASK2: #155, vTask2 running
+(1866) VTASK3: #156, vTask3 running
+(1866) VTASK3: #156, vTask3 running
+(1876) VTASK2: #157, vTask2 running
+(1876) VTASK2: #157, vTask2 running
+(1876) VTASK2: #157, vTask2 running
+(1886) VTASK3: #158, vTask3 running
+(1886) VTASK3: #158, vTask3 running
+(1896) VTASK2: #159, vTask2 running
+(1896) VTASK2: #159, vTask2 running
+(1906) VTASK3: #160, vTask3 running
+(1906) VTASK3: #160, vTask3 running
+(1906) VTASK3: #160, vTask3 running
+(1916) VTASK2: #161, vTask2 running
+(1916) VTASK2: #161, vTask2 running
+(1926) VTASK3: #162, vTask3 running
+(1926) VTASK3: #162, vTask3 running
+(1936) VTASK2: #163, vTask2 running
+(1936) VTASK2: #163, vTask2 running
+(1936) VTASK2: #163, vTask2 running
+(1946) VTASK3: #164, vTask3 running
+(1946) VTASK3: #164, vTask3 running
+(1956) VTASK2: #165, vTask2 running
+(1956) VTASK2: #165, vTask2 running
+(1966) VTASK3: #166, vTask3 running
+(1966) VTASK3: #166, vTask3 running
+(1966) VTASK3: #166, vTask3 running
+(1976) VTASK2: #167, vTask2 running
+(1976) VTASK2: #167, vTask2 running
+(1986) VTASK3: #168, vTask3 running
+(1986) VTASK3: #168, vTask3 running
+(1996) VTASK2: #169, vTask2 running
+(1996) VTASK2: #169, vTask2 running
+(2006) VTASK3: #170, vTask3 running
+(2006) VTASK3: #170, vTask3 running
+(2006) VTASK3: #170, vTask3 running
+(2016) VTASK2: #171, vTask2 running
+(2016) VTASK2: #171, vTask2 running
+(2026) VTASK3: #172, vTask3 running
+(2026) VTASK3: #172, vTask3 running
+(2036) VTASK2: #173, vTask2 running
+(2036) VTASK2: #173, vTask2 running
+(2036) VTASK2: #173, vTask2 running
+(2046) VTASK3: #174, vTask3 running
+(2046) VTASK3: #174, vTask3 running
+(2056) VTASK2: #175, vTask2 running
+(2056) VTASK2: #175, vTask2 running
+(2066) VTASK3: #176, vTask3 running
+(2066) VTASK3: #176, vTask3 running
+(2066) VTASK3: #176, vTask3 running
+(2076) VTASK2: #177, vTask2 running
+(2076) VTASK2: #177, vTask2 running
+(2086) VTASK3: #178, vTask3 running
+(2086) VTASK3: #178, vTask3 running
+(2096) VTASK2: #179, vTask2 running
+(2096) VTASK2: #179, vTask2 running
+(2106) VTASK3: #180, vTask3 running
+(2106) VTASK3: #180, vTask3 running
+(2106) VTASK3: #180, vTask3 running
+(2116) VTASK2: #181, vTask2 running
+(2116) VTASK2: #181, vTask2 running
+(2126) VTASK3: #182, vTask3 running
+(2126) VTASK3: #182, vTask3 running
+(2136) VTASK2: #183, vTask2 running
+(2136) VTASK2: #183, vTask2 running
+(2136) VTASK2: #183, vTask2 running
+(2146) VTASK3: #184, vTask3 running
+(2146) VTASK3: #184, vTask3 running
+(2156) VTASK2: #185, vTask2 running
+(2156) VTASK2: #185, vTask2 running
+(2166) VTASK3: #186, vTask3 running
+(2166) VTASK3: #186, vTask3 running
+(2166) VTASK3: #186, vTask3 running
+(2176) VTASK2: #187, vTask2 running
+(2176) VTASK2: #187, vTask2 running
+(2186) VTASK3: #188, vTask3 running
+(2186) VTASK3: #188, vTask3 running
+(2196) VTASK2: #189, vTask2 running
+(2196) VTASK2: #189, vTask2 running
+(2196) VTASK2: #189, vTask2 running
+(2206) VTASK3: #190, vTask3 running
+(2206) VTASK3: #190, vTask3 running
+(2216) VTASK2: #191, vTask2 running
+(2216) VTASK2: #191, vTask2 running
+(2226) VTASK3: #192, vTask3 running
+(2226) VTASK3: #192, vTask3 running
+(2236) VTASK2: #193, vTask2 running
+(2236) VTASK2: #193, vTask2 running
+(2236) VTASK2: #193, vTask2 running
+(2246) VTASK3: #194, vTask3 running
+(2246) VTASK3: #194, vTask3 running
+(2256) VTASK2: #195, vTask2 running
+(2256) VTASK2: #195, vTask2 running
+(2266) VTASK3: #196, vTask3 running
+(2266) VTASK3: #196, vTask3 running
+(2266) VTASK3: #196, vTask3 running
+(2276) VTASK2: #197, vTask2 running
+(2276) VTASK2: #197, vTask2 running
+(2286) VTASK3: #198, vTask3 running
+(2286) VTASK3: #198, vTask3 running
+(2296) VTASK2: #199, vTask2 running
+(2296) VTASK2: #199, vTask2 running
+(2296) VTASK2: #199, vTask2 running
+(2306) VTASK3: #200, vTask3 running
+(2306) VTASK3: #200, vTask3 running
+(2316) VTASK1: #201, vTask1 running
+(2316) VTASK3: #201, vTask3 running
+(2326) VTASK2: #202, vTask2 running
+(2326) VTASK2: #202, vTask2 running
+(2336) VTASK3: #203, vTask3 running
+(2336) VTASK3: #203, vTask3 running
+(2336) VTASK3: #203, vTask3 running
+(2346) VTASK2: #204, vTask2 running
+(2346) VTASK2: #204, vTask2 running
+(2356) VTASK3: #205, vTask3 running
+(2356) VTASK3: #205, vTask3 running
+(2366) VTASK2: #206, vTask2 running
+(2366) VTASK2: #206, vTask2 running
+(2366) VTASK2: #206, vTask2 running
+(2376) VTASK3: #207, vTask3 running
+(2376) VTASK3: #207, vTask3 running
+(2386) VTASK2: #208, vTask2 running
+(2386) VTASK2: #208, vTask2 running
+(2396) VTASK3: #209, vTask3 running
+(2396) VTASK3: #209, vTask3 running
+(2396) VTASK3: #209, vTask3 running
+(2406) VTASK2: #210, vTask2 running
+(2406) VTASK2: #210, vTask2 running
+(2416) VTASK3: #211, vTask3 running
+(2416) VTASK3: #211, vTask3 running
+(2426) VTASK2: #212, vTask2 running
+(2426) VTASK2: #212, vTask2 running
+(2426) VTASK2: #212, vTask2 running
+(2436) VTASK3: #213, vTask3 running
+(2436) VTASK3: #213, vTask3 running
+(2446) VTASK2: #214, vTask2 running
+(2446) VTASK2: #214, vTask2 running
+(2456) VTASK3: #215, vTask3 running
+(2456) VTASK3: #215, vTask3 running
+(2466) VTASK2: #216, vTask2 running
+(2466) VTASK2: #216, vTask2 running
+(2466) VTASK2: #216, vTask2 running
+(2476) VTASK3: #217, vTask3 running
+(2476) VTASK3: #217, vTask3 running
+(2486) VTASK2: #218, vTask2 running
+(2486) VTASK2: #218, vTask2 running
+(2496) VTASK3: #219, vTask3 running
+(2496) VTASK3: #219, vTask3 running
+(2496) VTASK3: #219, vTask3 running
+(2506) VTASK2: #220, vTask2 running
+(2506) VTASK2: #220, vTask2 running
+(2516) VTASK3: #221, vTask3 running
+(2516) VTASK3: #221, vTask3 running
+(2526) VTASK2: #222, vTask2 running
+(2526) VTASK2: #222, vTask2 running
+(2526) VTASK2: #222, vTask2 running
+(2536) VTASK3: #223, vTask3 running
+(2536) VTASK3: #223, vTask3 running
+(2546) VTASK2: #224, vTask2 running
+(2546) VTASK2: #224, vTask2 running
+(2556) VTASK3: #225, vTask3 running
+(2556) VTASK3: #225, vTask3 running
+(2566) VTASK2: #226, vTask2 running
+(2566) VTASK2: #226, vTask2 running
+(2566) VTASK2: #226, vTask2 running
+(2576) VTASK3: #227, vTask3 running
+(2576) VTASK3: #227, vTask3 running
+(2586) VTASK2: #228, vTask2 running
+(2586) VTASK2: #228, vTask2 running
+(2596) VTASK3: #229, vTask3 running
+(2596) VTASK3: #229, vTask3 running
+(2596) VTASK3: #229, vTask3 running
+(2606) VTASK2: #230, vTask2 running
+(2606) VTASK2: #230, vTask2 running
+(2616) VTASK3: #231, vTask3 running
+(2616) VTASK3: #231, vTask3 running
+(2626) VTASK2: #232, vTask2 running
+(2626) VTASK2: #232, vTask2 running
+(2626) VTASK2: #232, vTask2 running
+(2636) VTASK3: #233, vTask3 running
+(2636) VTASK3: #233, vTask3 running
+(2646) VTASK2: #234, vTask2 running
+(2646) VTASK2: #234, vTask2 running
+(2656) VTASK3: #235, vTask3 running
+(2656) VTASK3: #235, vTask3 running
+(2666) VTASK2: #236, vTask2 running
+(2666) VTASK2: #236, vTask2 running
+(2666) VTASK2: #236, vTask2 running
+(2676) VTASK3: #237, vTask3 running
+(2676) VTASK3: #237, vTask3 running
+(2686) VTASK2: #238, vTask2 running
+(2686) VTASK2: #238, vTask2 running
+(2696) VTASK3: #239, vTask3 running
+(2696) VTASK3: #239, vTask3 running
+(2696) VTASK3: #239, vTask3 running
+(2706) VTASK2: #240, vTask2 running
+(2706) VTASK2: #240, vTask2 running
+(2716) VTASK3: #241, vTask3 running
+(2716) VTASK3: #241, vTask3 running
+(2726) VTASK2: #242, vTask2 running
+(2726) VTASK2: #242, vTask2 running
+(2726) VTASK2: #242, vTask2 running
+(2736) VTASK3: #243, vTask3 running
+(2736) VTASK3: #243, vTask3 running
+(2746) VTASK2: #244, vTask2 running
+(2746) VTASK2: #244, vTask2 running
+(2756) VTASK3: #245, vTask3 running
+(2756) VTASK3: #245, vTask3 running
+(2756) VTASK3: #245, vTask3 running
+(2766) VTASK2: #246, vTask2 running
+(2766) VTASK2: #246, vTask2 running
+(2776) VTASK3: #247, vTask3 running
+(2776) VTASK3: #247, vTask3 running
+(2786) VTASK2: #248, vTask2 running
+(2786) VTASK2: #248, vTask2 running
