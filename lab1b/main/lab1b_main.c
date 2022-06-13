@@ -2,58 +2,75 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"
+#include "esp_log.h"
+
+#define pdTICKS_TO_S(xTicks) pdTICKS_TO_MS(xTicks) / 1000
+#define pdS_TO_TICKS(s) pdMS_TO_TICKS(s * 1000)
 
 #define IN_BUTTON_PIN       GPIO_NUM_21
 #define DEBOUNCE_INTERVAL   2
 #define BUTTON_PRESSED      0   //value when reading
 #define BUTTON_RELEASED     1   //value when reading
 
+const char *LOG_TAG_MAIN = "MAIN";
+const char *LOG_TAG_PRINT = "print_student_id";
+const char *LOG_TAG_POLL = "poll_button";
+
+//cyclic task: start executing a block of code for every fixed interval, using vTaskDelayUntil
 void print_student_id(void *pvParameters) {
+    uint64_t start_tick;
+
     for (;;) {
-        printf("1852161\n");
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        start_tick = xTaskGetTickCount();
+        ESP_LOGI(LOG_TAG_PRINT, "1852161");
+        vTaskDelayUntil(start_tick, pdS_TO_TICKS(1)); //delay for 1s for start_stick
     }
 
     vTaskDelete(NULL);
 }
 
-
-
+//acyclic task: start executing a block of code but not nessessary meet the fixed time interval, can use vTaskDelay
 void poll_button(void *pvParameters) {
     uint8_t debounce_buffer_1 = gpio_get_level(IN_BUTTON_PIN);
     uint8_t debounce_buffer_2;
     uint8_t valid_buffer;
     uint8_t valid_buffer_prev;
-    uint64_t prev_tick = 0;
-    uint64_t curr_tick;
 
     for (;;) {
-        curr_tick = xTaskGetTickCount();
         //debounce button with 2 filter layers
-        if (curr_tick - prev_tick >= DEBOUNCE_INTERVAL) {
-            debounce_buffer_2 = debounce_buffer_1;
-            debounce_buffer_1 = gpio_get_level(IN_BUTTON_PIN);
+        debounce_buffer_2 = debounce_buffer_1;
+        debounce_buffer_1 = gpio_get_level(IN_BUTTON_PIN);
 
-            if (debounce_buffer_2 == debounce_buffer_1) { //valid pressed, not noise
-                valid_buffer_prev = valid_buffer;
-                valid_buffer = debounce_buffer_1;
+        if (debounce_buffer_2 == debounce_buffer_1) { //valid pressed, not noise
+            valid_buffer_prev = valid_buffer;
+            valid_buffer = debounce_buffer_1;
 
-                //print 'ESP32' only then button is first released after pressing
-                if (valid_buffer == BUTTON_RELEASED && valid_buffer_prev == BUTTON_PRESSED) {
-                    printf("ESP32\n");
-                }
+            //print 'ESP32' only then button is first released after pressing
+            if (valid_buffer == BUTTON_RELEASED && valid_buffer_prev == BUTTON_PRESSED) {
+                ESP_LOGI(LOG_TAG_POLL, "ESP32");
             }
-
-            prev_tick = curr_tick;
         }
+
+        vTaskDelay(DEBOUNCE_INTERVAL);
     }
 
     vTaskDelete(NULL);
 }
 
-void init() {
+void gpio_init() {
     gpio_set_direction(IN_BUTTON_PIN, GPIO_MODE_INPUT);
     gpio_set_pull_mode(IN_BUTTON_PIN, GPIO_PULLUP_ONLY);
+    ESP_LOGI(LOG_TAG_MAIN, "GPIO PIN init successfully");
+}
+
+void tasks_init() {
+    if (xTaskCreate(&print_student_id, "print_student_id", 2048, NULL, 10, NULL) == pdPASS) {
+        ESP_LOGI(LOG_TAG_MAIN, "print_student_id created successfully");
+    }
+
+    if (xTaskCreate(&poll_button, "poll_button", 2048, NULL, 9, NULL) == pdPASS) {
+        ESP_LOGI(LOG_TAG_MAIN, "poll_button created successfully");
+    }
 }
 
 void app_main(void)
@@ -62,11 +79,9 @@ void app_main(void)
     //after that kill app_main for not blocking other tasks
     vTaskPrioritySet(NULL, 15);
     
-    init();
+    gpio_init();
+    tasks_init();
 
-    if (xTaskCreate(&print_student_id, "print_student_id", 2048, NULL, 0, NULL) == pdPASS) printf("print_student_id created successfully\n");
-    if (xTaskCreate(&poll_button, "poll_button", 2048, NULL, 0, NULL) == pdPASS) printf("poll_button created successfully\n");
-    
     vTaskPrioritySet(NULL, 1);
    
 }
