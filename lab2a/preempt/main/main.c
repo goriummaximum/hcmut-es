@@ -34,14 +34,16 @@ const char *LOG_TAG_VTASK2 = "VTASK2";
 const char *LOG_TAG_VTASK3 = "VTASK3";
 const char *LOG_TAG_IDLE = "IDLE";
 
+uint32_t idle_timestamp = 0;
+/*
 void vApplicationIdleHook(void) {
-    ESP_LOGI(LOG_TAG_IDLE, "running");
+    idle_timestamp = esp_log_early_timestamp();
 }
-
+*/
 
 void vTask1(void *pvParameters) {
     for (;;) {
-        ESP_LOGI(LOG_TAG_VTASK1, "running");
+        printf("(%d) %s: running, (%d) %s: running\n", esp_log_early_timestamp(), LOG_TAG_VTASK1, idle_timestamp, LOG_TAG_IDLE);
         vTaskDelay(10);
     }
 
@@ -50,7 +52,7 @@ void vTask1(void *pvParameters) {
 
 void vTask2(void *pvParameters) {
     for (;;) {
-        ESP_LOGI(LOG_TAG_VTASK2, "running");
+        printf("(%d) %s: running, (%d) %s: running\n", esp_log_early_timestamp(), LOG_TAG_VTASK2, idle_timestamp, LOG_TAG_IDLE);
     }
 
     vTaskDelete(NULL);
@@ -58,7 +60,7 @@ void vTask2(void *pvParameters) {
 
 void vTask3(void *pvParameters) {
     for (;;) {
-        ESP_LOGI(LOG_TAG_VTASK3, "running");
+        printf("(%d) %s: running, (%d) %s: running\n", esp_log_early_timestamp(), LOG_TAG_VTASK3, idle_timestamp, LOG_TAG_IDLE);
     }
 
     vTaskDelete(NULL);

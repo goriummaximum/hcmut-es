@@ -31,10 +31,10 @@ void vTask1(void *pvParameters) {
     vTaskDelay(30);
 
     uint32_t curr_tick;
-    ESP_LOGI(LOG_TAG_VTASK1, "#%d, vTask1 start", xTaskGetTickCount());
+    printf("(%d) %s: vTask1 start\n", xTaskGetTickCount(), LOG_TAG_VTASK1);
     curr_tick = xTaskGetTickCount();
     while (xTaskGetTickCount() - curr_tick < 20) {}
-    ESP_LOGI(LOG_TAG_VTASK1, "#%d, vTask1 end", xTaskGetTickCount());
+    printf("(%d) %s: vTask1 end\n", xTaskGetTickCount(), LOG_TAG_VTASK1);
     taskYIELD();
 
     vTaskDelete(NULL);
@@ -44,10 +44,10 @@ void vTask2(void *pvParameters) {
     vTaskDelay(20);
 
     uint32_t curr_tick;
-    ESP_LOGI(LOG_TAG_VTASK2, "#%d, vTask2 start", xTaskGetTickCount());
+    printf("(%d) %s: vTask2 start\n", xTaskGetTickCount(), LOG_TAG_VTASK2);
     curr_tick = xTaskGetTickCount();
     while (xTaskGetTickCount() - curr_tick < 30) {}
-    ESP_LOGI(LOG_TAG_VTASK2, "#%d, vTask2 end", xTaskGetTickCount());
+    printf("(%d) %s: vTask2 end\n", xTaskGetTickCount(), LOG_TAG_VTASK2);
     taskYIELD();
 
     vTaskDelete(NULL);
@@ -57,10 +57,10 @@ void vTask3(void *pvParameters) {
     uint32_t curr_tick;
 
     for (;;) {
-        ESP_LOGI(LOG_TAG_VTASK3, "#%d, vTask3 start", xTaskGetTickCount());
+        printf("(%d) %s: vTask3 start\n", xTaskGetTickCount(), LOG_TAG_VTASK3);
         curr_tick = xTaskGetTickCount();
         while (xTaskGetTickCount() - curr_tick < 50) {}
-        ESP_LOGI(LOG_TAG_VTASK3, "#%d, vTask3 end", xTaskGetTickCount());
+        printf("(%d) %s: vTask3 end\n", xTaskGetTickCount(), LOG_TAG_VTASK3);
         taskYIELD();
     }
 

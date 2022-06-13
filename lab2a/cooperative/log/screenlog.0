@@ -10,7 +10,7 @@ load:0x40078000,len:14912
 load:0x40080400,len:3688
 entry 0x4008067c
 [0;32mI (29) boot: ESP-IDF v4.3.2-dirty 2nd stage bootloader[0m
-[0;32mI (29) boot: compile time 11:08:33[0m
+[0;32mI (29) boot: compile time 00:43:55[0m
 [0;32mI (29) boot: chip revision: 1[0m
 [0;32mI (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
 [0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
@@ -24,12 +24,12 @@ entry 0x4008067c
 [0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
 [0;32mI (92) boot: End of partition table[0m
 [0;32mI (96) boot_comm: chip revision: 1, min. application chip revision: 0[0m
-[0;32mI (103) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=062c4h ( 25284) map[0m
-[0;32mI (121) esp_image: segment 1: paddr=000162ec vaddr=3ffb0000 size=0211ch (  8476) load[0m
-[0;32mI (124) esp_image: segment 2: paddr=00018410 vaddr=40080000 size=07c08h ( 31752) load[0m
-[0;32mI (141) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0fb70h ( 64368) map[0m
-[0;32mI (165) esp_image: segment 4: paddr=0002fb98 vaddr=40087c08 size=02a40h ( 10816) load[0m
-[0;32mI (170) esp_image: segment 5: paddr=000325e0 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (103) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=06254h ( 25172) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001627c vaddr=3ffb0000 size=0211ch (  8476) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=000183a0 vaddr=40080000 size=07c78h ( 31864) load[0m
+[0;32mI (142) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0fadch ( 64220) map[0m
+[0;32mI (165) esp_image: segment 4: paddr=0002fb04 vaddr=40087c78 size=0299ch ( 10652) load[0m
+[0;32mI (170) esp_image: segment 5: paddr=000324a8 vaddr=50000000 size=00010h (    16) load[0m
 [0;32mI (176) boot: Loaded app from partition at offset 0x10000[0m
 [0;32mI (177) boot: Disabling RNG early entropy source...[0m
 [0;32mI (194) cpu_start: Pro cpu up.[0m
@@ -38,9 +38,9 @@ entry 0x4008067c
 [0;32mI (202) cpu_start: cpu freq: 160000000[0m
 [0;32mI (202) cpu_start: Application information:[0m
 [0;32mI (207) cpu_start: Project name:     lab2a[0m
-[0;32mI (211) cpu_start: App version:      7c9d124-dirty[0m
-[0;32mI (217) cpu_start: Compile time:     Jun 11 2022 11:16:55[0m
-[0;32mI (223) cpu_start: ELF file SHA256:  24260c8f48a3eca8...[0m
+[0;32mI (211) cpu_start: App version:      d9c274c-dirty[0m
+[0;32mI (217) cpu_start: Compile time:     Jun 14 2022 00:43:51[0m
+[0;32mI (223) cpu_start: ELF file SHA256:  884a40149092b35b...[0m
 [0;32mI (229) cpu_start: ESP-IDF:          v4.3.2-dirty[0m
 [0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
 [0;32mI (242) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
@@ -48,7 +48,7 @@ entry 0x4008067c
 [0;32mI (254) heap_init: At 3FFB2900 len 0002D700 (181 KiB): DRAM[0m
 [0;32mI (260) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
 [0;32mI (267) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
-[0;32mI (273) heap_init: At 4008A648 len 000159B8 (86 KiB): IRAM[0m
+[0;32mI (273) heap_init: At 4008A614 len 000159EC (86 KiB): IRAM[0m
 [0;32mI (280) spi_flash: detected chip: generic[0m
 [0;32mI (284) spi_flash: flash io: dio[0m
 [0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
@@ -56,37 +56,109 @@ entry 0x4008067c
 [0;32mI (306) MAIN: vTask1 created successfully[0m
 [0;32mI (306) MAIN: vTask2 created successfully[0m
 [0;32mI (306) MAIN: vTask3 created successfully[0m
-[0;32mI (316) VTASK3: #1, vTask3 start[0m
-[0;32mI (816) VTASK3: #51, vTask3 end[0m
-[0;32mI (816) VTASK1: #51, vTask1 start[0m
-[0;32mI (1016) VTASK1: #71, vTask1 end[0m
-[0;32mI (1016) VTASK2: #71, vTask2 start[0m
-[0;32mI (1316) VTASK2: #101, vTask2 end[0m
-[0;32mI (1316) VTASK3: #101, vTask3 start[0m
-[0;32mI (1816) VTASK3: #151, vTask3 end[0m
-[0;32mI (1816) VTASK3: #151, vTask3 start[0m
-[0;32mI (2316) VTASK3: #201, vTask3 end[0m
-[0;32mI (2316) VTASK3: #201, vTask3 start[0m
-[0;32mI (2816) VTASK3: #251, vTask3 end[0m
-[0;32mI (2816) VTASK3: #251, vTask3 start[0m
-[0;32mI (3316) VTASK3: #301, vTask3 end[0m
-[0;32mI (3316) VTASK3: #301, vTask3 start[0m
-[0;32mI (3816) VTASK3: #351, vTask3 end[0m
-[0;32mI (3816) VTASK3: #351, vTask3 start[0m
-[0;32mI (4316) VTASK3: #401, vTask3 end[0m
-[0;32mI (4316) VTASK3: #401, vTask3 start[0m
-[0;32mI (4816) VTASK3: #451, vTask3 end[0m
-[0;32mI (4816) VTASK3: #451, vTask3 start[0m
-[0;31mE (5306) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:[0m
-[0;31mE (5306) task_wdt:  - IDLE (CPU 0)[0m
-[0;31mE (5306) task_wdt: Tasks currently running:[0m
-[0;31mE (5306) task_wdt: CPU 0: vTask3[0m
-[0;31mE (5306) task_wdt: Print CPU 0 (current core) backtrace[0m
+(1) VTASK3: vTask3 start
+(51) VTASK3: vTask3 end
+(51) VTASK1: vTask1 start
+(71) VTASK1: vTask1 end
+(71) VTASK2: vTask2 start
+(101) VTASK2: vTask2 end
+(101) VTASK3: vTask3 start
+(151) VTASK3: vTask3 end
+(151) VTASK3: vTask3 start
+(201) VTASK3: vTask3 end
+(201) VTASK3: vTask3 start
+(251) VTASK3: vTask3 end
+(251) VTASK3: vTask3 start
+(301) VTASK3: vTask3 end
+(301) VTASK3: vTask3 start
+(351) VTASK3: vTask3 end
+(351) VTASK3: vTask3 start
+(401) VTASK3: vTask3 end
+(401) VTASK3: vTask3 start
+(451) VTASK3: vTask3 end
+(451) VTASK3: vTask3 start
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0). 
+
+Core  0 register dump:
+PC      : 0x400d3d49  PS      : 0x00060434  A0      : 0x80087334  A1      : 0x3ffb5120  
+A2      : 0x000001c3  A3      : 0x00000000  A4      : 0x00060023  A5      : 0x00000000  
+A6      : 0x00000000  A7      : 0x00000001  A8      : 0x00000031  A9      : 0x3ffb5100  
+A10     : 0x00000030  A11     : 0x3ffb5228  A12     : 0x3f404420  A13     : 0x3ffb50e0  
+A14     : 0x3ffb2314  A15     : 0x00050423  SAR     : 0x00000004  EXCCAUSE: 0x00000005  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffe  
+
+Backtrace:0x400d3d46:0x3ffb5120 0x40087331:0x3ffb5140
 
 
-Backtrace:0x400D50A1:0x3FFB07B0 0x40081F8A:0x3FFB07D0 0x400D3D59:0x3FFB5120 0x40087365:0x3FFB5140 
+ELF file SHA256: 884a40149092b35b
 
-[0;32mI (5326) VTASK3: #502, vTask3 end[0m
-[0;32mI (5336) VTASK3: #503, vTask3 start[0m
-[0;32mI (5836) VTASK3: #553, vTask3 end[0m
-[0;32mI (5836) VTASK3: #553, vTask3 start[0m
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7420
+ho 0 tail 12 room 4
+load:0x40078000,len:14912
+load:0x40080400,len:3688
+entry 0x4008067c
+[0;32mI (29) boot: ESP-IDF v4.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time 00:43:55[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (103) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=06254h ( 25172) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0001627c vaddr=3ffb0000 size=0211ch (  8476) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=000183a0 vaddr=40080000 size=07c78h ( 31864) load[0m
+[0;32mI (142) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0fadch ( 64220) map[0m
+[0;32mI (165) esp_image: segment 4: paddr=0002fb04 vaddr=40087c78 size=0299ch ( 10652) load[0m
+[0;32mI (170) esp_image: segment 5: paddr=000324a8 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (176) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (194) cpu_start: Pro cpu up.[0m
+[0;32mI (194) cpu_start: Single core mode[0m
+[0;32mI (202) cpu_start: Pro cpu start user code[0m
+[0;32mI (202) cpu_start: cpu freq: 160000000[0m
+[0;32mI (202) cpu_start: Application information:[0m
+[0;32mI (207) cpu_start: Project name:     lab2a[0m
+[0;32mI (211) cpu_start: App version:      d9c274c-dirty[0m
+[0;32mI (217) cpu_start: Compile time:     Jun 14 2022 00:43:51[0m
+[0;32mI (223) cpu_start: ELF file SHA256:  884a40149092b35b...[0m
+[0;32mI (229) cpu_start: ESP-IDF:          v4.3.2-dirty[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (242) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (248) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 3FFB2900 len 0002D700 (181 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (267) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (273) heap_init: At 4008A614 len 000159EC (86 KiB): IRAM[0m
+[0;32mI (280) spi_flash: detected chip: generic[0m
+[0;32mI (284) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (301) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (306) MAIN: vTask1 created successfully[0m
+[0;32mI (306) MAIN: vTask2 created successfully[0m
+[0;32mI (306) MAIN: vTask3 created successfully[0m
+(1) VTASK3: vTask3 start
+(51) VTASK3: vTask3 end
+(51) VTASK1: vTask1 start
+(71) VTASK1: vTask1 end
+(71) VTASK2: vTask2 start
+(101) VTASK2: vTask2 end
+(101) VTASK3: vTask3 start
+(151) VTASK3: vTask3 end
+(151) VTASK3: vTask3 start
+(201) VTASK3: vTask3 end
+(201) VTASK3: vTask3 start
