@@ -18,12 +18,12 @@ const char *LOG_TAG_POLL = "poll_button";
 
 //cyclic task: start executing a block of code for every fixed interval, using vTaskDelayUntil
 void print_student_id(void *pvParameters) {
-    uint64_t start_tick;
+    TickType_t start_tick;
 
     for (;;) {
         start_tick = xTaskGetTickCount();
         ESP_LOGI(LOG_TAG_PRINT, "1852161");
-        vTaskDelayUntil(start_tick, pdS_TO_TICKS(1)); //delay for 1s for start_stick
+        vTaskDelayUntil(&start_tick, pdS_TO_TICKS(1)); //delay for 1s for start_stick
     }
 
     vTaskDelete(NULL);
@@ -32,9 +32,9 @@ void print_student_id(void *pvParameters) {
 //acyclic task: start executing a block of code but not nessessary meet the fixed time interval, can use vTaskDelay
 void poll_button(void *pvParameters) {
     uint8_t debounce_buffer_1 = gpio_get_level(IN_BUTTON_PIN);
-    uint8_t debounce_buffer_2;
-    uint8_t valid_buffer;
-    uint8_t valid_buffer_prev;
+    uint8_t debounce_buffer_2 = 0;
+    uint8_t valid_buffer = BUTTON_RELEASED;
+    uint8_t valid_buffer_prev = BUTTON_RELEASED;
 
     for (;;) {
         //debounce button with 2 filter layers
