@@ -30,7 +30,8 @@ void SoftTimerCallback(TimerHandle_t xTimer) {
         printf("[stimer0] %d (s): ahihi\n", pdTICKS_TO_S(xTaskGetTickCount()));
 
         soft_timers_counter[0]++;
-        //why need to check counter > max while == max is enough? in case the xtimer stop failed, the next callback will try to stop again
+        //why need to check counter >= max while == max is enough? 
+        //answer: in case the xtimer stop failed, the next callback will try to stop again
         if (soft_timers_counter[0] >= soft_timers_counter_max[0]) {
             if (xTimerStop(xTimer, 0) == pdPASS) {
                 soft_timers_counter[0] = 0;
@@ -43,7 +44,8 @@ void SoftTimerCallback(TimerHandle_t xTimer) {
         printf("[stimer1] %d (s): ihaha\n", pdTICKS_TO_S(xTaskGetTickCount()));
 
         soft_timers_counter[1]++;
-        //why need to check counter > max while == max is enough? in case the xtimer stop failed, the next callback will try to stop again
+        //why need to check counter > max while == max is enough?
+        //answer: in case the xtimer stop failed, the next callback will try to stop again
         if (soft_timers_counter[1] >= soft_timers_counter_max[1]) {
             if (xTimerStop(xTimer, 0) == pdPASS) {
                 soft_timers_counter[1] = 0;
