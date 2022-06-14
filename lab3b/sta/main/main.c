@@ -31,8 +31,8 @@
 #include "lwip/err.h"
 #include "lwip/sys.h"
 
-#define WIFI_SSID       "narhoa"
-#define WIFI_PSWD       "nhathuduc12"
+#define WIFI_SSID       "default"
+#define WIFI_PSWD       "default"
 #define WIFI_RETRIES    5
 
 #if CONFIG_ESP_WIFI_AUTH_OPEN
