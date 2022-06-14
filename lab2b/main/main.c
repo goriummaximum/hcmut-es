@@ -4,7 +4,7 @@
 #include "freertos/queue.h"
 #include "freertos/event_groups.h"
 #include "driver/gpio.h"
-#include "esp_random.h"
+//#include "esp_random.h"
 #include "esp_log.h"
 
 /*
@@ -52,7 +52,7 @@ inline void toggle_camera_flash(void) {
 }
 
 inline void reset_camera(void) {
-    ESP_LOGI(LOG_TAG_FLASH, "reset");
+    ESP_LOGI(LOG_TAG_RESET, "reset");
 }
 
 /* IMPLEMENTATION */
@@ -102,7 +102,7 @@ void cmd_reception_handler(void *pvParameters) {
             );
         }
 
-        vTaskDelay(10); //delay for 10 ticks and generate next cmd pkt
+        vTaskDelay(5); //delay for 5 ticks and generate next cmd pkt
     }
 
     vTaskDelete(NULL);

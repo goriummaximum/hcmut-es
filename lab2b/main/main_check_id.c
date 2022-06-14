@@ -3,7 +3,7 @@
 #include "freertos/task.h"
 #include "freertos/queue.h"
 #include "driver/gpio.h"
-#include "esp_random.h"
+//#include "esp_random.h"
 #include "esp_log.h"
 
 /*
@@ -88,7 +88,7 @@ void cmd_reception_handler(void *pvParameters) {
             );
         }
 
-        vTaskDelay(10); //delay for 10 ticks and generate next cmd pkt
+        vTaskDelay(5); //delay for 10 ticks and generate next cmd pkt
     }
 
     vTaskDelete(NULL);
@@ -194,8 +194,6 @@ void q_garbage_collector(void *pvParameters) {
             recv_cmd_pkt.id, 
             recv_cmd_pkt.cmd
         );
-        
-        vTaskDelay(20); //check for garbage for every 20 ticks
     }
 
     vTaskDelete(NULL);
@@ -224,25 +222,25 @@ void app_main(void)
     }
     ESP_LOGI(LOG_TAG_MAIN, "cmd_reception_handler created successfully!");
 
-    if (xTaskCreate(&camera_quality_handler, "camera_quality_handler", 1024 * 2, NULL, 9, NULL) != pdPASS){
+    if (xTaskCreate(&camera_quality_handler, "camera_quality_handler", 1024 * 2, NULL, 0, NULL) != pdPASS){
         ESP_LOGI(LOG_TAG_MAIN, "camera_quality_handler created failed!");
         return;
     }
     ESP_LOGI(LOG_TAG_MAIN, "camera_quality_handler created successfully!");
 
-    if (xTaskCreate(&camera_flash_handler, "camera_flash_handler", 1024 * 2, NULL, 9, NULL) != pdPASS) {
+    if (xTaskCreate(&camera_flash_handler, "camera_flash_handler", 1024 * 2, NULL, 0, NULL) != pdPASS) {
         ESP_LOGI(LOG_TAG_MAIN, "camera_flash_handler created failed!");
         return;
     }
     ESP_LOGI(LOG_TAG_MAIN, "camera_flash_handler created successfully!");
 
-    if (xTaskCreate(&camera_reset_handler, "camera_reset_handler", 1024 * 2, NULL, 9, NULL) != pdPASS) {
+    if (xTaskCreate(&camera_reset_handler, "camera_reset_handler", 1024 * 2, NULL, 0, NULL) != pdPASS) {
         ESP_LOGI(LOG_TAG_MAIN, "camera_reset_handler created failed!");
         return;
     }
     ESP_LOGI(LOG_TAG_MAIN, "camera_reset_handle created successfully!");
 
-    if (xTaskCreate(&q_garbage_collector, "q_garbage_collector", 1024 * 2, NULL, 9, NULL) != pdPASS) {
+    if (xTaskCreate(&q_garbage_collector, "q_garbage_collector", 1024 * 2, NULL, 0, NULL) != pdPASS) {
         ESP_LOGI(LOG_TAG_MAIN, "q_garbage_collector created failed!");
         return;
     }

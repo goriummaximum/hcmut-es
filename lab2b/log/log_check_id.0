@@ -4,117 +4,478 @@ rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
 configsip: 0, SPIWP:0xee
 clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
 mode:DIO, clock div:2
-load:0x3fff0030,len:6608
-load:0x40078000,len:14788
+load:0x3fff0030,len:7420
 ho 0 tail 12 room 4
-load:0x40080400,len:3792
-entry 0x40080694
-[0;32mI (29) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
-[0;32mI (29) boot: compile time 19:43:54[0m
-[0;32mI (29) boot: chip revision: 1[0m
-[0;32mI (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
-[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (52) boot: Enabling RNG early entropy source...[0m
-[0;32mI (58) boot: Partition Table:[0m
-[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (91) boot: End of partition table[0m
-[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
-[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=07cdch ( 31964) map[0m
-[0;32mI (123) esp_image: segment 1: paddr=00017d04 vaddr=3ffb0000 size=02358h (  9048) load[0m
-[0;32mI (126) esp_image: segment 2: paddr=0001a064 vaddr=40080000 size=05fb4h ( 24500) load[0m
-[0;32mI (140) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14c48h ( 85064) map[0m
-[0;32mI (171) esp_image: segment 4: paddr=00034c70 vaddr=40085fb4 size=05568h ( 21864) load[0m
-[0;32mI (181) esp_image: segment 5: paddr=0003a1e0 vaddr=50000000 size=00010h (    16) load[0m
-[0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (187) boot: Disabling RNG early entropy source...[0m
-[0;32mI (202) cpu_start: Pro cpu up.[0m
-[0;32mI (202) cpu_start: Starting app cpu, entry point is 0x40081010[0m
-[0;32mI (0) cpu_start: App cpu up.[0m
-[0;32mI (216) cpu_start: Pro cpu start user code[0m
-[0;32mI (216) cpu_start: cpu freq: 160000000[0m
-[0;32mI (217) cpu_start: Application information:[0m
-[0;32mI (221) cpu_start: Project name:     lab2a[0m
-[0;32mI (226) cpu_start: App version:      7755468-dirty[0m
-[0;32mI (231) cpu_start: Compile time:     Jun  7 2022 19:43:48[0m
-[0;32mI (237) cpu_start: ELF file SHA256:  d0e2b8ac5d8e3d9c...[0m
-[0;32mI (243) cpu_start: ESP-IDF:          v4.4.1[0m
-[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (261) heap_init: At 3FFB2C48 len 0002D3B8 (180 KiB): DRAM[0m
-[0;32mI (268) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
-[0;32mI (274) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
-[0;32mI (281) heap_init: At 4008B51C len 00014AE4 (82 KiB): IRAM[0m
-[0;32mI (288) spi_flash: detected chip: generic[0m
-[0;32mI (291) spi_flash: flash io: dio[0m
-[0;33mW (295) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (309) cpu_start: Starting scheduler on PRO CPU.[0m
-[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
-[0;32mI (319) MAIN: cmd_q created successfully![0m
-[0;32mI (319) MAIN: cmd_reception_handler created successfully![0m
-[0;32mI (319) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:a843158} successfully[0m
-[0;32mI (329) MAIN: camera_quality_handler created successfully![0m
-[0;32mI (329) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:a843158} successfully[0m
-[0;32mI (349) MAIN: camera_flash_handler created successfully![0m
-[0;32mI (359) MAIN: camera_reset_handle created successfully![0m
-[0;32mI (369) MAIN: q_garbage_collector created successfully![0m
-[0;32mI (439) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:edec4891} successfully[0m
-[0;32mI (439) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:edec4891} successfully[0m
-[0;32mI (539) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:41f77cd6} successfully[0m
-[0;32mI (539) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:41f77cd6} successfully[0m
-[0;32mI (639) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:e8ce5a8d} successfully[0m
-[0;32mI (639) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:e8ce5a8d} successfully[0m
-[0;32mI (739) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:595bb225} successfully[0m
-[0;32mI (749) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:595bb225} successfully[0m
-[0;32mI (839) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:c36ab5b1} successfully[0m
-[0;32mI (839) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:c36ab5b1} collected[0m
-[0;32mI (939) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:7c47c453} successfully[0m
-[0;32mI (1039) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:0,cmd:9ff46d20} successfully[0m
-[0;32mI (1049) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:7c47c453} collected[0m
-[0;32mI (1059) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:9ff46d20} successfully[0m
-[0;32mI (1139) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:982267c3} successfully[0m
-[0;32mI (1139) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:982267c3} successfully[0m
-[0;32mI (1239) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:eac15a98} successfully[0m
-[0;32mI (1259) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:eac15a98} collected[0m
-[0;32mI (1339) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:3d16230b} successfully[0m
-[0;32mI (1339) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:3d16230b} successfully[0m
-[0;32mI (1439) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:619dafe2} successfully[0m
-[0;32mI (1439) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:619dafe2} successfully[0m
-[0;32mI (1539) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:b162f8a5} successfully[0m
-[0;32mI (1539) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:b162f8a5} successfully[0m
-[0;32mI (1639) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:a3098b10} successfully[0m
-[0;32mI (1639) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:a3098b10} collected[0m
-[0;32mI (1739) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:5f427b53} successfully[0m
-[0;32mI (1839) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:e96b87ca} successfully[0m
-[0;32mI (1849) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:5f427b53} collected[0m
-[0;32mI (1849) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:e96b87ca} successfully[0m
-[0;32mI (1939) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:6890f848} successfully[0m
-[0;32mI (1939) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:6890f848} successfully[0m
-[0;32mI (2039) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:d45a0bfb} successfully[0m
-[0;32mI (2039) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:d45a0bfb} successfully[0m
-[0;32mI (2139) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:95374525} successfully[0m
-[0;32mI (2139) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:95374525} successfully[0m
-[0;32mI (2239) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:7f143b0a} successfully[0m
-[0;32mI (2239) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:7f143b0a} collected[0m
-[0;32mI (2339) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:62fc0a5a} successfully[0m
-[0;32mI (2339) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:62fc0a5a} successfully[0m
-[0;32mI (2439) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:4d187590} successfully[0m
-[0;32mI (2439) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:4d187590} successfully[0m
-[0;32mI (2539) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:3ec134bf} successfully[0m
-[0;32mI (2549) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:3ec134bf} successfully[0m
-[0;32mI (2639) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:933d85b6} successfully[0m
-[0;32mI (2639) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:933d85b6} collected[0m
-[0;32mI (2739) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:a2ea13a2} successfully[0m
-[0;32mI (2739) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:a2ea13a2} successfully[0m
-[0;32mI (2839) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:18f85fed} successfully[0m
-[0;32mI (2839) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:18f85fed} successfully[0m
-[0;32mI (2939) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:996413e5} successfully[0m
-[0;32mI (2939) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:996413e5} collected[0m
-[0;32mI (3039) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:489fddac} successfully[0m
-[0;32mI (3039) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:489fddac} successfully[0m
-[0;32mI (3139) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:15a4ceb7} successfully[0m
-[0;32mI (3149) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:15a4ceb7} successfully[0m
+load:0x40078000,len:14912
+load:0x40080400,len:3688
+entry 0x4008067c
+(29) boot: ESP-IDF v4.3.2-dirty 2nd stage bootloader
+(29) boot: compile time 13:28:18
+(29) boot: chip revision: 1
+(32) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+(39) boot.esp32: SPI Speed      : 40MHz
+(44) boot.esp32: SPI Mode       : DIO
+(48) boot.esp32: SPI Flash Size : 2MB
+(53) boot: Enabling RNG early entropy source...
+(58) boot: Partition Table:
+(62) boot: ## Label            Usage          Type ST Offset   Length
+(69) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+(77) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+(84) boot:  2 factory          factory app      00 00 00010000 00100000
+(92) boot: End of partition table
+(96) boot_comm: chip revision: 1, min. application chip revision: 0
+(103) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=06644h ( 26180) map
+(121) esp_image: segment 1: paddr=0001666c vaddr=3ffb0000 size=02124h (  8484) load
+(125) esp_image: segment 2: paddr=00018798 vaddr=40080000 size=07880h ( 30848) load
+(141) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0fde8h ( 65000) map
+(165) esp_image: segment 4: paddr=0002fe10 vaddr=40087880 size=0322ch ( 12844) load
+(170) esp_image: segment 5: paddr=00033044 vaddr=50000000 size=00010h (    16) load
+(176) boot: Loaded app from partition at offset 0x10000
+(177) boot: Disabling RNG early entropy source...
+(193) cpu_start: Pro cpu up.
+(194) cpu_start: Single core mode
+(202) cpu_start: Pro cpu start user code
+(202) cpu_start: cpu freq: 160000000
+(202) cpu_start: Application information:
+(206) cpu_start: Project name:     lab2a
+(211) cpu_start: App version:      6a5b857-dirty
+(217) cpu_start: Compile time:     Jun 14 2022 13:49:40
+(223) cpu_start: ELF file SHA256:  28225b9d8b59e3c4...
+(229) cpu_start: ESP-IDF:          v4.3.2-dirty
+(234) heap_init: Initializing. RAM available for dynamic allocation:
+(241) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM
+(248) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+(254) heap_init: At 3FFB2910 len 0002D6F0 (181 KiB): DRAM
+(260) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM
+(266) heap_init: At 40078000 len 00008000 (32 KiB): IRAM
+(273) heap_init: At 4008AAAC len 00015554 (85 KiB): IRAM
+(280) spi_flash: detected chip: generic
+(284) spi_flash: flash io: dio
+[0;33mW (287) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+(301) cpu_start: Starting scheduler on PRO CPU.
+(306) MAIN: cmd_q created successfully!
+(306) MAIN: cmd_reception_handler created successfully!
+(316) MAIN: camera_quality_handler created successfully!
+(316) MAIN: camera_flash_handler created successfully!
+(326) MAIN: camera_reset_handle created successfully!
+(326) MAIN: q_garbage_collector created successfully!
+(336) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:6aa7b939} successfully
+(346) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:6aa7b939} successfully
+(366) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:60deb996} successfully
+(386) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:67ef886c} successfully
+(386) CAMERA_FLASH_HANDLER: q_length: 1/5, recv cmd {id:1,cmd:60deb996} successfully
+(386) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:67ef886c} successfully
+(406) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:683ca61e} successfully
+(416) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:683ca61e} successfully
+(426) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:3854493f} successfully
+(446) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:0,cmd:67b5d33d} successfully
+(446) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:3854493f} collected
+(466) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:da79bb45} successfully
+(476) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:0,cmd:67b5d33d} successfully
+(486) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:1330998b} successfully
+(486) CAMERA_RESET_HANDLER: q_length: 1/5, recv cmd {id:2,cmd:da79bb45} successfully
+(506) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:3,cmd:51ca2096} successfully
+(506) CAMERA_FLASH_HANDLER: q_length: 1/5, recv cmd {id:1,cmd:1330998b} successfully
+(526) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:3,cmd:896fa27} successfully
+(546) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:1,cmd:db9c37fd} successfully
+(546) GARBAGE_COLLECTOR: q_length: 2/5, garbage cmd {id:3,cmd:51ca2096} collected
+(546) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:896fa27} collected
+(566) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:ae16e6a5} successfully
+(586) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:0,cmd:7545cad5} successfully
+(586) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:ae16e6a5} collected
+(556) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:db9c37fd} successfully
+(606) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:3,cmd:a7030eca} successfully
+(616) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:0,cmd:7545cad5} successfully
+(626) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:f505c2c3} successfully
+(636) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:a7030eca} collected
+(646) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:1998186} successfully
+(646) CAMERA_FLASH_HANDLER: q_length: 1/5, recv cmd {id:1,cmd:f505c2c3} successfully
+(666) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:5e6b3ee5} successfully
+(676) CAMERA_RESET_HANDLER: q_length: 1/5, recv cmd {id:2,cmd:1998186} successfully
+(686) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:41c33494} successfully
+(696) CAMERA_FLASH_HANDLER: q_length: 1/5, recv cmd {id:1,cmd:5e6b3ee5} successfully
+(696) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:41c33494} successfully
+(706) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:c619ec3} successfully
+(716) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:c619ec3} successfully
+(726) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:3,cmd:1a7b2afa} successfully
+(736) GARBAGE_COLLECTOR: q_length: 0/5, garbage cmd {id:3,cmd:1a7b2afa} collected
+(746) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:6e3dd366} successfully
+(766) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:0,cmd:9e27542c} successfully
+(766) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:0,cmd:6e3dd366} successfully
+(766) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:9e27542c} successfully
+(786) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:720c7941} successfully
+(796) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:720c7941} successfully
+(806) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:bb5fb8} successfully
+(826) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:b462e0b2} successfully
+(836) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:0,cmd:bb5fb8} successfully
+(846) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:3,cmd:ce64f6e4} successfully
+(866) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:1,cmd:e396a1af} successfully
+(876) CAMERA_RESET_HANDLER: q_length: 2/5, recv cmd {id:2,cmd:b462e0b2} successfully
+(886) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:0,cmd:3002b06c} successfully
+(906) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:5ababcbd} successfully
+(906) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:ce64f6e4} collected
+(916) CAMERA_FLASH_HANDLER: q_length: 2/5, recv cmd {id:1,cmd:e396a1af} successfully
+(926) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:3,cmd:78fba12e} successfully
+(936) CAMERA_QUALITY_HANDLER: q_length: 2/5, recv cmd {id:0,cmd:3002b06c} successfully
+(936) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:0,cmd:5ababcbd} successfully
+(946) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:14573ed7} successfully
+(956) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:78fba12e} collected
+(966) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:52722946} successfully
+(966) CAMERA_FLASH_HANDLER: q_length: 1/5, recv cmd {id:1,cmd:14573ed7} successfully
+(986) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:3,cmd:50a3c08f} successfully
+(986) CAMERA_RESET_HANDLER: q_length: 1/5, recv cmd {id:2,cmd:52722946} successfully
+(1006) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:27cfb5f7} successfully
+(1006) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:50a3c08f} collected
+(1026) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:3,cmd:45ae2d5c} successfully
+(1036) CAMERA_RESET_HANDLER: q_length: 1/5, recv cmd {id:2,cmd:27cfb5f7} successfully
+(1046) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:d44486bf} successfully
+(1056) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:45ae2d5c} collected
+(1066) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:d387fb8e} successfully
+(1086) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:1,cmd:746c5bc8} successfully
+(1086) CAMERA_RESET_HANDLER: q_length: 2/5, recv cmd {id:2,cmd:d44486bf} successfully
+(1106) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:0,cmd:97c9ad60} successfully
+(1116) CAMERA_FLASH_HANDLER: q_length: 2/5, recv cmd {id:1,cmd:d387fb8e} successfully
+(1116) CAMERA_FLASH_HANDLER: q_length: 1/5, recv cmd {id:1,cmd:746c5bc8} successfully
+(1126) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:0,cmd:c9776f87} successfully
+(1126) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:0,cmd:97c9ad60} successfully
+(1146) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:ee9a302c} successfully
+(1166) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:2,cmd:4b9175e2} successfully
+(1176) CAMERA_QUALITY_HANDLER: q_length: 2/5, recv cmd {id:0,cmd:c9776f87} successfully
+(1186) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:1,cmd:d5b55c5c} successfully
+(1186) CAMERA_RESET_HANDLER: q_length: 2/5, recv cmd {id:2,cmd:ee9a302c} successfully
+(1186) CAMERA_RESET_HANDLER: q_length: 1/5, recv cmd {id:2,cmd:4b9175e2} successfully
+(1206) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:0,cmd:d1a3d978} successfully
+(1216) CAMERA_FLASH_HANDLER: q_length: 1/5, recv cmd {id:1,cmd:d5b55c5c} successfully
+(1226) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:0,cmd:e9bfdcb0} successfully
+(1226) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:0,cmd:d1a3d978} successfully
+(1246) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:5b28fabc} successfully
+(1266) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:2,cmd:e09dc5ba} successfully
+(1276) CAMERA_QUALITY_HANDLER: q_length: 2/5, recv cmd {id:0,cmd:e9bfdcb0} successfully
+(1286) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:0,cmd:4efb540c} successfully
+(1286) CAMERA_RESET_HANDLER: q_length: 2/5, recv cmd {id:2,cmd:5b28fabc} successfully
+(1286) CAMERA_RESET_HANDLER: q_length: 1/5, recv cmd {id:2,cmd:e09dc5ba} successfully
+(1306) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:727a8d5d} successfully
+(1326) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:3,cmd:12e9910b} successfully
+(1326) CAMERA_QUALITY_HANDLER: q_length: 2/5, recv cmd {id:0,cmd:4efb540c} successfully
+(1346) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:2,cmd:840d2720} successfully
+(1366) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:67bdd97} successfully
+(1366) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:727a8d5d} successfully
+(1386) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:8eed1128} successfully
+(1406) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:83a15637} successfully
+(1406) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:12e9910b} collected
+(1426) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:29ae1dd8} successfully
+(1436) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:840d2720} successfully
+(1446) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:d8824ff2} successfully
+(1456) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:67bdd97} collected
+(1466) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:d6daea8b} successfully
+(1476) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:8eed1128} successfully
+(1476) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:83a15637} successfully
+(1476) CAMERA_QUALITY_HANDLER: q_length: 2/5, recv cmd {id:0,cmd:29ae1dd8} successfully
+(1486) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:1,cmd:e7843caf} successfully
+(1496) CAMERA_RESET_HANDLER: q_length: 2/5, recv cmd {id:2,cmd:d8824ff2} successfully
+(1516) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:3,cmd:48ced9c8} successfully
+(1536) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:3d76781c} successfully
+(1546) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:d6daea8b} successfully
+(1556) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:8343d34} successfully
+(1576) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:743d801e} successfully
+(1586) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:e7843caf} successfully
+(1596) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:d5e96205} successfully
+(1616) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:deb361cd} successfully
+(1616) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:3d76781c} successfully
+(1626) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:8343d34} successfully
+(1636) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:b96f8035} successfully
+(1636) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:743d801e} successfully
+(1656) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:4b923905} successfully
+(1656) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:48ced9c8} collected
+(1666) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:d5e96205} successfully
+(1676) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:90a23960} successfully
+(1686) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:deb361cd} successfully
+(1696) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:2fd87002} successfully
+(1706) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:b96f8035} collected
+(1716) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:fbd0ca2} successfully
+(1726) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:4b923905} successfully
+(1736) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:aef6ac8d} successfully
+(1736) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:90a23960} successfully
+(1756) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:e7dad58f} successfully
+(1766) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:2fd87002} successfully
+(1776) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:93ca948e} successfully
+(1796) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:96e54371} successfully
+(1806) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:fbd0ca2} collected
+(1816) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:6e44c18d} successfully
+(1836) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:86000e3b} successfully
+(1876) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:aef6ac8d} successfully
+(1876) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:18efa8c8} successfully
+(1916) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:e7dad58f} successfully
+(1916) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:977d6595} successfully
+(1926) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:96e54371} collected
+(1936) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:5ddcefad} successfully
+(1956) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:93ca948e} successfully
+(1956) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:95984d33} successfully
+(1966) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:86000e3b} collected
+(1976) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:916ebd0e} successfully
+(1996) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:6e44c18d} successfully
+(1996) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:9c20a754} successfully
+(2036) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:18efa8c8} successfully
+(2036) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:f76faa0d} successfully
+(2056) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:e455ca19} successfully
+(2056) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:95984d33} successfully
+(2056) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:916ebd0e} successfully
+(2076) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:95b04b2e} successfully
+(2076) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:9c20a754} collected
+(2096) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:539feaa6} successfully
+(2066) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:977d6595} successfully
+(2116) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:1d4f4462} successfully
+(2116) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:f76faa0d} collected
+(2116) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:e455ca19} collected
+(2136) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:b0dcd11b} successfully
+(2156) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:558f2b1d} successfully
+(2086) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:5ddcefad} successfully
+(2166) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:95b04b2e} successfully
+(2166) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:539feaa6} successfully
+(2176) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:1ac69f54} successfully
+(2196) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:1d4f4462} successfully
+(2206) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:224d3d96} successfully
+(2226) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:15bd0bb0} successfully
+(2236) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:b0dcd11b} successfully
+(2246) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:fa0da053} successfully
+(2246) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:558f2b1d} successfully
+(2266) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:2f30f01} successfully
+(2286) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:66ae98e9} successfully
+(2316) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:74a258c2} successfully
+(2316) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:1ac69f54} successfully
+(2356) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:224d3d96} collected
+(2356) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:c330ee0f} successfully
+(2356) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:fa0da053} successfully
+(2376) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:97634200} successfully
+(2386) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:15bd0bb0} collected
+(2396) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:f78bde93} successfully
+(2396) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:66ae98e9} successfully
+(2366) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:2f30f01} successfully
+(2416) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:7372f8c5} successfully
+(2426) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:74a258c2} successfully
+(2436) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:49c355ab} successfully
+(2446) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:c330ee0f} successfully
+(2456) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:9034bc8a} successfully
+(2486) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:c830aaef} successfully
+(2496) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:f78bde93} successfully
+(2506) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:37247cc0} successfully
+(2526) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:97634200} collected
+(2526) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:e77fd4ed} successfully
+(2536) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:49c355ab} successfully
+(2546) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:36ee4d38} successfully
+(2556) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:9034bc8a} successfully
+(2556) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:c830aaef} successfully
+(2566) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:4ba8c024} successfully
+(2596) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:f4303639} successfully
+(2616) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:7372f8c5} collected
+(2616) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:6c84465e} successfully
+(2616) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:e77fd4ed} successfully
+(2636) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:6956dec4} successfully
+(2656) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:37247cc0} collected
+(2666) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:9bf42679} successfully
+(2686) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:de4b05b3} successfully
+(2696) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:36ee4d38} successfully
+(2696) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:f4303639} successfully
+(2696) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:6c84465e} successfully
+(2706) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:904cd7eb} successfully
+(2716) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:6956dec4} successfully
+(2736) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:5eff5c41} successfully
+(2736) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:4ba8c024} successfully
+(2756) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:65270dd9} successfully
+(2766) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:de4b05b3} collected
+(2776) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:c0bf7906} successfully
+(2746) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:9bf42679} successfully
+(2786) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:904cd7eb} successfully
+(2796) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:129b0536} successfully
+(2796) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:5eff5c41} successfully
+(2816) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:f66cb90d} successfully
+(2836) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:fab464fd} successfully
+(2836) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:65270dd9} successfully
+(2836) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:c0bf7906} successfully
+(2856) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:47c51ad2} successfully
+(2876) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:bd5a6e91} successfully
+(2886) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:129b0536} successfully
+(2886) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:f66cb90d} successfully
+(2896) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:9a32d67d} successfully
+(2916) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:5818f531} successfully
+(2926) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:fab464fd} successfully
+(2936) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:b4f540e7} successfully
+(2946) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:47c51ad2} successfully
+(2946) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:bd5a6e91} successfully
+(2956) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:3fe9d0b9} successfully
+(2976) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:92ac9539} successfully
+(2976) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:9a32d67d} successfully
+(2996) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:5719aa47} successfully
+(2996) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:5818f531} successfully
+(3016) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:eb575199} successfully
+(3016) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:b4f540e7} collected
+(3036) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:94fa176d} successfully
+(3036) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:3fe9d0b9} successfully
+(3056) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:a504a09} successfully
+(3076) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:e9fa4ae6} successfully
+(3106) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:11541c72} successfully
+(3106) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:92ac9539} successfully
+(3116) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:eb575199} successfully
+(3126) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:7baa3a7c} successfully
+(3146) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:5719aa47} collected
+(3156) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:b0897cd} successfully
+(3186) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:bf873528} successfully
+(3186) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:94fa176d} successfully
+(3226) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:a504a09} collected
+(3226) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:f25a19c7} successfully
+(3246) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:10649150} successfully
+(3256) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:e9fa4ae6} collected
+(3276) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:6e98609a} successfully
+(3276) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:11541c72} successfully
+(3276) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:b0897cd} successfully
+(3296) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:1b825ab3} successfully
+(3316) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:7baa3a7c} successfully
+(3316) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:d88408e2} successfully
+(3346) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:d2924a52} successfully
+(3346) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:bf873528} successfully
+(3346) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:10649150} successfully
+(3366) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:1e2493f3} successfully
+(3376) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:6e98609a} collected
+(3386) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:87b7e19a} successfully
+(3386) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:f25a19c7} successfully
+(3386) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:1b825ab3} successfully
+(3406) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:fcbd7d25} successfully
+(3406) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:d88408e2} successfully
+(3426) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:2482908c} successfully
+(3436) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:d2924a52} successfully
+(3436) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:1e2493f3} successfully
+(3446) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:e8e3e718} successfully
+(3476) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:6f96eb21} successfully
+(3496) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:924899d3} successfully
+(3526) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:afedf9b3} successfully
+(3526) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:87b7e19a} collected
+(3566) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:fcbd7d25} successfully
+(3566) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:77a37196} successfully
+(3586) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:21d48544} successfully
+(3596) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:2482908c} successfully
+(3596) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:6f96eb21} successfully
+(3606) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:ea1673f8} successfully
+(3606) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:924899d3} collected
+(3626) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:9dea2143} successfully
+(3636) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:77a37196} collected
+(3616) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:afedf9b3} successfully
+(3646) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:49026fd1} successfully
+(3666) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:bb6c763d} successfully
+(3616) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:e8e3e718} successfully
+(3666) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:21d48544} successfully
+(3686) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:9d318a22} successfully
+(3716) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:82e64abc} successfully
+(3756) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:ea1673f8} successfully
+(3756) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:e5d692c5} successfully
+(3756) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:49026fd1} successfully
+(3776) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:ec0f046} successfully
+(3776) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:9d318a22} successfully
+(3796) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:1a228f41} successfully
+(3766) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:bb6c763d} collected
+(3816) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:6bc0ff8f} successfully
+(3816) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:82e64abc} successfully
+(3786) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:9dea2143} successfully
+(3836) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:1bb728f4} successfully
+(3846) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:e5d692c5} collected
+(3846) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:ec0f046} collected
+(3856) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:81905252} successfully
+(3876) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:1a228f41} successfully
+(3886) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:4b243e0f} successfully
+(3906) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:5bd54821} successfully
+(3906) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:6bc0ff8f} successfully
+(3906) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:1bb728f4} successfully
+(3926) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:364a7133} successfully
+(3936) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:81905252} successfully
+(3946) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:f25c945c} successfully
+(3946) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:4b243e0f} collected
+(3966) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:d6b3ee61} successfully
+(3986) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:a97f74e5} successfully
+(3986) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:5bd54821} successfully
+(3986) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:364a7133} successfully
+(4006) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:b806e8d9} successfully
+(4026) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:99fc3de} successfully
+(4026) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:f25c945c} successfully
+(4046) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:10463114} successfully
+(4056) CAMERA_FLASH_HANDLER: q_length: 4/5, recv cmd {id:1,cmd:d6b3ee61} successfully
+(4056) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:a97f74e5} successfully
+(4066) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:4b0e2d9e} successfully
+(4076) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:b806e8d9} successfully
+(4086) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:31c8a98f} successfully
+(4086) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:99fc3de} successfully
+(4106) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:f47da3ea} successfully
+(4126) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:f87a714f} successfully
+(4126) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:10463114} successfully
+(4146) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:2d75f33e} successfully
+(4146) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:4b0e2d9e} collected
+(4156) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:31c8a98f} successfully
+(4166) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:1acefaa6} successfully
+(4186) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:4224deb7} successfully
+(4186) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:f47da3ea} successfully
+(4186) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:f87a714f} successfully
+(4206) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:9981b04a} successfully
+(4206) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:2d75f33e} successfully
+(4226) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:1,cmd:53f37a8b} successfully
+(4226) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:1acefaa6} successfully
+(4246) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:39bb8cc} successfully
+(4256) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:4224deb7} successfully
+(4256) CAMERA_FLASH_HANDLER: q_length: 2/5, recv cmd {id:1,cmd:9981b04a} successfully
+(4256) CAMERA_FLASH_HANDLER: q_length: 1/5, recv cmd {id:1,cmd:53f37a8b} successfully
+(4266) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:fa6132e2} successfully
+(4296) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:0,cmd:141ed78f} successfully
+(4316) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:2879f104} successfully
+(4316) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:39bb8cc} collected
+(4336) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:8b71d676} successfully
+(4346) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:fa6132e2} successfully
+(4356) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:7767ed80} successfully
+(4376) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:b1f27322} successfully
+(4386) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:141ed78f} successfully
+(4396) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:a3f7356f} successfully
+(4396) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:2879f104} successfully
+(4416) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:c55ed35e} successfully
+(4436) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:309328ea} successfully
+(4436) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:7767ed80} successfully
+(4446) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:b1f27322} successfully
+(4456) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:5f1929d0} successfully
+(4476) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:6ba1fc25} successfully
+(4476) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:8b71d676} successfully
+(4476) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:a3f7356f} successfully
+(4496) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:200d61df} successfully
+(4506) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:c55ed35e} collected
+(4506) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:3,cmd:309328ea} collected
+(4516) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:2669d571} successfully
+(4526) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:5f1929d0} successfully
+(4536) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:b968236b} successfully
+(4536) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:6ba1fc25} successfully
+(4556) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:3,cmd:3462e5c0} successfully
+(4566) CAMERA_QUALITY_HANDLER: q_length: 2/5, recv cmd {id:0,cmd:2669d571} successfully
+(4566) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:0,cmd:b968236b} successfully
+(4576) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:fda4be58} successfully
+(4546) GARBAGE_COLLECTOR: q_length: 2/5, garbage cmd {id:3,cmd:200d61df} collected
+(4586) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:3462e5c0} collected
+(4606) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:2271b029} successfully
+(4606) CAMERA_QUALITY_HANDLER: q_length: 0/5, recv cmd {id:0,cmd:2271b029} successfully
+(4626) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:51da3469} successfully
+(4636) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:51da3469} successfully
+(4596) CAMERA_FLASH_HANDLER: q_length: 0/5, recv cmd {id:1,cmd:fda4be58} successfully
+(4646) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:0,cmd:77f42cee} successfully
+(4676) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:3,cmd:85735d75} successfully
+(4696) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:2,cmd:65532d28} successfully
+(4696) CAMERA_QUALITY_HANDLER: q_length: 2/5, recv cmd {id:0,cmd:77f42cee} successfully
+(4706) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:85735d75} collected
+(4716) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:dcd32d45} successfully
+(4726) CAMERA_RESET_HANDLER: q_length: 1/5, recv cmd {id:2,cmd:65532d28} successfully
+(4726) CAMERA_RESET_HANDLER: q_length: 0/5, recv cmd {id:2,cmd:dcd32d45} successfully
+(4736) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:1,cmd:2a73b332} successfully
+(4756) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:3,cmd:300945c4} successfully
+(4776) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:1,cmd:9b89397f} successfully
+(4776) CAMERA_FLASH_HANDLER: q_length: 2/5, recv cmd {id:1,cmd:2a73b332} successfully
+(4796) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:2,cmd:65519c36} successfully
+(4806) GARBAGE_COLLECTOR: q_length: 2/5, garbage cmd {id:3,cmd:300945c4} collected
+(4816) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:3,cmd:28aeb16} successfully
+(4826) CAMERA_FLASH_HANDLER: q_length: 2/5, recv cmd {id:1,cmd:9b89397f} successfully
+(4836) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:3,cmd:c8e7f15b} successfully
+(4856) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:11d760ef} successfully
+(4866) CAMERA_RESET_HANDLER: q_length: 3/5, recv cmd {id:2,cmd:65519c36} successfully
+(4876) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:a420e04c} successfully
+(4896) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:eb77410c} successfully
+(4906) GARBAGE_COLLECTOR: q_length: 4/5, garb
