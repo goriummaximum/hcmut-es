@@ -274,12 +274,22 @@ key_value_t extract_content(char *buf, int buf_len) {
 }
 
 int gen_index_page(char *buf) {
-    strcat(buf, ""); //THIS BUF MUST BE CLEARG. IF NOT, THE INITIAL CONTENT IS UNKNOWN WHICH CAUSE UNEXPECTED CHARACTERS
+    strcat(buf, ""); //THIS BUF MUST BE CLEAR. IF NOT, THE INITIAL CONTENT IS UNKNOWN WHICH CAUSE UNEXPECTED CHARACTERS
+    strcat(buf, "<head>\n");
     strcat(buf, "<title>ESP32 control</title>\n");
+    strcat(buf, "<style>\n");
+    strcat(buf, ".circle {\n");
+    strcat(buf, "height: 50px;\n");
+    strcat(buf, "width: 50px;\n");
+    strcat(buf, (led_st == 0) ? "background-color: #ffff00;\n" : "background-color: #555;\n");
+    strcat(buf, "border-radius: 50%;\n");
+    strcat(buf, "}\n");
+    strcat(buf, "</style>\n");
     strcat(buf, "</head>\n");
     strcat(buf, "<body>\n");
     strcat(buf, "<h2>ESP32 control</h2>\n");
     strcat(buf, "<form action=\"/\" method=\"post\">\n");
+    //strcat(buf, "<div class=\"circle\"></div>\n");
     strcat(buf, "<input type=\"submit\" id=\"toggle\" name=\"toggle\" value=\"toggleled\">\n");
     strcat(buf, "</form>\n");
     strcat(buf, "<form action=\"/\" method=\"post\">\n");
