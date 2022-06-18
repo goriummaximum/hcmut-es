@@ -1,0 +1,764 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7420
+ho 0 tail 12 room 4
+load:0x40078000,len:14912
+load:0x40080400,len:3688
+entry 0x4008067c
+(29) boot: ESP-IDF v4.3.2-dirty 2nd stage bootloader
+(29) boot: compile time 13:28:18
+(29) boot: chip revision: 1
+(32) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+(39) boot.esp32: SPI Speed      : 40MHz
+(44) boot.esp32: SPI Mode       : DIO
+(48) boot.esp32: SPI Flash Size : 2MB
+(53) boot: Enabling RNG early entropy source...
+(58) boot: Partition Table:
+(62) boot: ## Label            Usage          Type ST Offset   Length
+(69) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+(77) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+(84) boot:  2 factory          factory app      00 00 00010000 00100000
+(92) boot: End of partition table
+(96) boot_comm: chip revision: 1, min. application chip revision: 0
+(103) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=068a4h ( 26788) map
+(121) esp_image: segment 1: paddr=000168cc vaddr=3ffb0000 size=02124h (  8484) load
+(125) esp_image: segment 2: paddr=000189f8 vaddr=40080000 size=07620h ( 30240) load
+(141) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0fee0h ( 65248) map
+(165) esp_image: segment 4: paddr=0002ff08 vaddr=40087620 size=03988h ( 14728) load
+(171) esp_image: segment 5: paddr=00033898 vaddr=50000000 size=00010h (    16) load
+(177) boot: Loaded app from partition at offset 0x10000
+(177) boot: Disabling RNG early entropy source...
+(193) cpu_start: Pro cpu up.
+(193) cpu_start: Single core mode
+(202) cpu_start: Pro cpu start user code
+(202) cpu_start: cpu freq: 160000000
+(202) cpu_start: Application information:
+(206) cpu_start: Project name:     lab2a
+(211) cpu_start: App version:      6a5b857-dirty
+(217) cpu_start: Compile time:     Jun 14 2022 13:49:40
+(223) cpu_start: ELF file SHA256:  62406f6d43020895...
+(229) cpu_start: ESP-IDF:          v4.3.2-dirty
+(234) heap_init: Initializing. RAM available for dynamic allocation:
+(241) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM
+(248) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+(254) heap_init: At 3FFB2918 len 0002D6E8 (181 KiB): DRAM
+(260) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM
+(266) heap_init: At 40078000 len 00008000 (32 KiB): IRAM
+(272) heap_init: At 4008AFA8 len 00015058 (84 KiB): IRAM
+(280) spi_flash: detected chip: generic
+(283) spi_flash: flash io: dio
+[0;33mW (287) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+(301) cpu_start: Starting scheduler on PRO CPU.
+(306) MAIN: cmd_q created successfully!
+(306) MAIN: cmd_reception_handler created successfully!
+(316) MAIN: camera_quality_handler created successfully!
+(316) MAIN: camera_flash_handler created successfully!
+(326) MAIN: camera_reset_handle created successfully!
+(326) MAIN: q_garbage_collector created successfully!
+(336) CMD_RECEPTION_HANLDER: q_length: 1/5, sent cmd {id:2,cmd:91b4da67} successfully
+(346) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:91b4da67}
+(356) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:91b4da67}
+(356) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:2,cmd:91b4da67}
+(396) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:d0de34fa} successfully
+(396) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:2,cmd:91b4da67} collected
+(406) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:d0de34fa}
+(406) CAMERA_RESET_HANDLER: q_length: 1/5, recv cmd {id:2,cmd:91b4da67} successfully
+(416) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:d0de34fa}
+(436) CAMERA_RESET_HANDLER: reset
+(436) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:1,cmd:d0de34fa}
+(446) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:0,cmd:c702c9b1} successfully
+(446) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:1,cmd:d0de34fa} collected
+(476) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:0,cmd:c702c9b1}
+(476) CAMERA_FLASH_HANDLER: q_length: 1/5, recv cmd {id:1,cmd:d0de34fa} successfully
+(476) CAMERA_FLASH_HANDLER: toggle flash
+(496) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:3,cmd:3ac593ca} successfully
+(486) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:0,cmd:c702c9b1}
+(476) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:0,cmd:c702c9b1}
+(516) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:0,cmd:c702c9b1} collected
+(526) CAMERA_QUALITY_HANDLER: q_length: 1/5, recv cmd {id:0,cmd:c702c9b1} successfully
+(526) CAMERA_QUALITY_HANDLER: change quality
+(526) CAMERA_QUALITY_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:3ac593ca}
+(546) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:1,cmd:efd738a6} successfully
+(536) CAMERA_RESET_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:3ac593ca}
+(536) CAMERA_FLASH_HANDLER: q_length: 1/5, peek cmd {id:3,cmd:3ac593ca}
+(586) GARBAGE_COLLECTOR: q_length: 1/5, garbage cmd {id:3,cmd:3ac593ca} collected
+(596) CMD_RECEPTION_HANLDER: q_length: 2/5, sent cmd {id:2,cmd:9a0e91c2} successfully
+(596) CAMERA_QUALITY_HANDLER: q_length: 2/5, peek cmd {id:1,cmd:efd738a6}
+(596) CAMERA_RESET_HANDLER: q_length: 2/5, peek cmd {id:1,cmd:efd738a6}
+(616) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:1,cmd:efd738a6}
+(646) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:0,cmd:905e7dd9} successfully
+(656) GARBAGE_COLLECTOR: q_length: 2/5, garbage cmd {id:1,cmd:efd738a6} collected
+(666) CAMERA_QUALITY_HANDLER: q_length: 2/5, peek cmd {id:2,cmd:9a0e91c2}
+(666) CAMERA_RESET_HANDLER: q_length: 2/5, peek cmd {id:2,cmd:9a0e91c2}
+(676) CAMERA_FLASH_HANDLER: q_length: 2/5, recv cmd {id:1,cmd:efd738a6} successfully
+(676) CAMERA_FLASH_HANDLER: toggle flash
+(676) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:2,cmd:9a0e91c2}
+(696) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:3,cmd:3987270d} successfully
+(706) GARBAGE_COLLECTOR: q_length: 2/5, garbage cmd {id:2,cmd:9a0e91c2} collected
+(716) CAMERA_QUALITY_HANDLER: q_length: 2/5, peek cmd {id:0,cmd:905e7dd9}
+(716) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:0,cmd:905e7dd9}
+(726) CAMERA_RESET_HANDLER: q_length: 2/5, recv cmd {id:2,cmd:9a0e91c2} successfully
+(726) CAMERA_RESET_HANDLER: reset
+(746) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:0,cmd:fffa2040} successfully
+(746) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:905e7dd9}
+(756) GARBAGE_COLLECTOR: q_length: 2/5, garbage cmd {id:0,cmd:905e7dd9} collected
+(766) CAMERA_QUALITY_HANDLER: q_length: 2/5, recv cmd {id:0,cmd:905e7dd9} successfully
+(766) CAMERA_QUALITY_HANDLER: change quality
+(766) CAMERA_QUALITY_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:3987270d}
+(796) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:1,cmd:63be4bb0} successfully
+(776) CAMERA_FLASH_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:3987270d}
+(776) CAMERA_RESET_HANDLER: q_length: 2/5, peek cmd {id:3,cmd:3987270d}
+(836) GARBAGE_COLLECTOR: q_length: 2/5, garbage cmd {id:3,cmd:3987270d} collected
+(846) CMD_RECEPTION_HANLDER: q_length: 3/5, sent cmd {id:0,cmd:4a80bfd1} successfully
+(846) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:fffa2040}
+(846) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:fffa2040}
+(866) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:fffa2040}
+(896) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:fd71c133} successfully
+(906) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:0,cmd:fffa2040} collected
+(916) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:1,cmd:63be4bb0}
+(916) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:1,cmd:63be4bb0}
+(926) CAMERA_QUALITY_HANDLER: q_length: 3/5, recv cmd {id:0,cmd:fffa2040} successfully
+(926) CAMERA_QUALITY_HANDLER: change quality
+(926) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:1,cmd:63be4bb0}
+(946) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:3,cmd:ef246606} successfully
+(956) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:1,cmd:63be4bb0} collected
+(966) CAMERA_FLASH_HANDLER: q_length: 3/5, recv cmd {id:1,cmd:63be4bb0} successfully
+(966) CAMERA_FLASH_HANDLER: toggle flash
+(966) CAMERA_FLASH_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:4a80bfd1}
+(996) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:2,cmd:7fa58fff} successfully
+(976) CAMERA_RESET_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:4a80bfd1}
+(976) CAMERA_QUALITY_HANDLER: q_length: 3/5, peek cmd {id:0,cmd:4a80bfd1}
+(1036) GARBAGE_COLLECTOR: q_length: 3/5, garbage cmd {id:0,cmd:4a80bfd1} collected
+(1046) CMD_RECEPTION_HANLDER: q_length: 4/5, sent cmd {id:0,cmd:e458f26c} successfully
+(1046) CAMERA_RESET_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:fd71c133}
+(1046) CAMERA_QUALITY_HANDLER: q_length: 4/5, recv cmd {id:0,cmd:4a80bfd1} successfully
+(1066) CAMERA_FLASH_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:fd71c133}
+(1096) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:b4d61eb1} successfully
+(1096) CAMERA_QUALITY_HANDLER: change quality
+(1096) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:fd71c133}
+(1126) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:fd71c133} collected
+(1136) CAMERA_RESET_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:ef246606}
+(1136) CAMERA_QUALITY_HANDLER: q_length: 4/5, peek cmd {id:3,cmd:ef246606}
+(1146) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:78d34c69} successfully
+(1146) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:ef246606}
+(1176) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:ef246606} collected
+(1186) CAMERA_RESET_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:7fa58fff}
+(1186) CAMERA_FLASH_HANDLER: q_length: 4/5, peek cmd {id:2,cmd:7fa58fff}
+(1196) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:69ff79e9} successfully
+(1196) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:7fa58fff}
+(1226) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:2,cmd:7fa58fff} collected
+(1236) CAMERA_RESET_HANDLER: q_length: 4/5, recv cmd {id:2,cmd:7fa58fff} successfully
+(1236) CAMERA_RESET_HANDLER: reset
+(1236) CAMERA_RESET_HANDLER: q_length: 4/5, peek cmd {id:0,cmd:e458f26c}
+(1246) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:484cbf1c} successfully
+(1246) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:e458f26c}
+(1266) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:e458f26c}
+(1306) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:c787e480} successfully
+(1316) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:e458f26c} collected
+(1326) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:b4d61eb1}
+(1326) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:e458f26c} successfully
+(1326) CAMERA_QUALITY_HANDLER: change quality
+(1346) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:b4d61eb1}
+(1376) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:b4d61eb1}
+(1386) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:c0565142} successfully
+(1396) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:b4d61eb1} collected
+(1406) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:78d34c69}
+(1406) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:78d34c69}
+(1416) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:b4d61eb1} successfully
+(1416) CAMERA_FLASH_HANDLER: toggle flash
+(1416) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:78d34c69}
+(1446) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:509c5048} successfully
+(1456) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:78d34c69} collected
+(1466) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:69ff79e9}
+(1466) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:69ff79e9}
+(1476) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:78d34c69} successfully
+(1476) CAMERA_QUALITY_HANDLER: change quality
+(1496) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:69ff79e9}
+(1506) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:d1310e31} successfully
+(1516) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:69ff79e9} collected
+(1526) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:484cbf1c}
+(1526) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:69ff79e9} successfully
+(1526) CAMERA_QUALITY_HANDLER: change quality
+(1546) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:484cbf1c}
+(1576) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:484cbf1c}
+(1586) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:a51a9d59} successfully
+(1596) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:484cbf1c} collected
+(1606) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:c787e480}
+(1606) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:484cbf1c} successfully
+(1606) CAMERA_QUALITY_HANDLER: change quality
+(1626) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:c787e480}
+(1656) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:c787e480}
+(1666) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:37aff75b} successfully
+(1676) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:c787e480} collected
+(1686) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:c0565142}
+(1686) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:c787e480} successfully
+(1686) CAMERA_QUALITY_HANDLER: change quality
+(1706) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:c0565142}
+(1736) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:c0565142}
+(1746) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:2005d97e} successfully
+(1756) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:c0565142} collected
+(1766) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:509c5048}
+(1766) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:c0565142} successfully
+(1766) CAMERA_QUALITY_HANDLER: change quality
+(1786) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:509c5048}
+(1816) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:509c5048}
+(1826) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:bb9bfa9} successfully
+(1836) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:509c5048} collected
+(1846) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:d1310e31}
+(1846) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:d1310e31}
+(1856) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:509c5048} successfully
+(1856) CAMERA_FLASH_HANDLER: toggle flash
+(1856) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:d1310e31}
+(1886) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:622527c6} successfully
+(1896) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:d1310e31} collected
+(1906) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:d1310e31} successfully
+(1906) CAMERA_RESET_HANDLER: reset
+(1906) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:a51a9d59}
+(1916) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:a51a9d59}
+(1916) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:a51a9d59}
+(1966) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:a0067731} successfully
+(1976) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:a51a9d59} collected
+(1986) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:37aff75b}
+(1986) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:37aff75b}
+(1996) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:37aff75b}
+(2006) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:37aff75b} collected
+(2016) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:77e7d866} successfully
+(2016) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:2005d97e}
+(2016) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:2005d97e}
+(2036) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:2005d97e}
+(2076) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:3fa609ea} successfully
+(2086) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:2005d97e} collected
+(2096) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:2005d97e} successfully
+(2096) CAMERA_RESET_HANDLER: reset
+(2096) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:bb9bfa9}
+(2106) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:bb9bfa9}
+(2106) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:bb9bfa9}
+(2156) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:3801d135} successfully
+(2166) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:bb9bfa9} collected
+(2176) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:622527c6}
+(2176) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:622527c6}
+(2186) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:bb9bfa9} successfully
+(2186) CAMERA_FLASH_HANDLER: toggle flash
+(2186) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:622527c6}
+(2216) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:d8672550} successfully
+(2226) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:622527c6} collected
+(2236) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:a0067731}
+(2236) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:622527c6} successfully
+(2236) CAMERA_FLASH_HANDLER: toggle flash
+(2256) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:a0067731}
+(2286) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:a0067731}
+(2296) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:e3e6ad7b} successfully
+(2306) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:a0067731} collected
+(2316) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:a0067731} successfully
+(2316) CAMERA_RESET_HANDLER: reset
+(2316) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:77e7d866}
+(2326) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:77e7d866}
+(2326) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:77e7d866}
+(2376) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:e04ecba9} successfully
+(2386) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:77e7d866} collected
+(2396) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:77e7d866} successfully
+(2396) CAMERA_RESET_HANDLER: reset
+(2396) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:3fa609ea}
+(2406) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:3fa609ea}
+(2406) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:3fa609ea}
+(2456) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:90fcc900} successfully
+(2466) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:3fa609ea} collected
+(2476) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:3801d135}
+(2476) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:3801d135}
+(2486) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:3801d135}
+(2496) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:3801d135} collected
+(2506) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:c1779029} successfully
+(2506) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:d8672550}
+(2506) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:d8672550}
+(2526) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:d8672550}
+(2566) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:838a8f8e} successfully
+(2576) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:d8672550} collected
+(2586) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:d8672550} successfully
+(2586) CAMERA_RESET_HANDLER: reset
+(2586) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:e3e6ad7b}
+(2596) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:e3e6ad7b}
+(2596) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:e3e6ad7b}
+(2646) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:82bd73af} successfully
+(2656) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:e3e6ad7b} collected
+(2666) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:e04ecba9}
+(2666) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:e04ecba9}
+(2676) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:e3e6ad7b} successfully
+(2676) CAMERA_QUALITY_HANDLER: change quality
+(2676) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:e04ecba9}
+(2706) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:245e0705} successfully
+(2716) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:e04ecba9} collected
+(2726) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:90fcc900}
+(2726) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:90fcc900}
+(2736) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:e04ecba9} successfully
+(2736) CAMERA_FLASH_HANDLER: toggle flash
+(2736) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:90fcc900}
+(2766) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:d65952b7} successfully
+(2776) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:90fcc900} collected
+(2786) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:c1779029}
+(2786) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:90fcc900} successfully
+(2786) CAMERA_FLASH_HANDLER: toggle flash
+(2806) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:c1779029}
+(2836) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:c1779029}
+(2846) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:b7126306} successfully
+(2856) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:c1779029} collected
+(2866) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:838a8f8e}
+(2866) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:c1779029} successfully
+(2866) CAMERA_FLASH_HANDLER: toggle flash
+(2886) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:838a8f8e}
+(2916) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:838a8f8e}
+(2926) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:e0dc58d9} successfully
+(2936) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:838a8f8e} collected
+(2946) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:82bd73af}
+(2946) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:82bd73af}
+(2956) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:838a8f8e} successfully
+(2956) CAMERA_QUALITY_HANDLER: change quality
+(2956) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:82bd73af}
+(2986) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:90fe7266} successfully
+(2996) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:82bd73af} collected
+(3006) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:245e0705}
+(3006) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:245e0705}
+(3016) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:245e0705}
+(3026) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:2,cmd:245e0705} collected
+(3036) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:944ac087} successfully
+(3036) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:245e0705} successfully
+(3036) CAMERA_RESET_HANDLER: reset
+(3046) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:d65952b7}
+(3066) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:d65952b7}
+(3046) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:d65952b7}
+(3096) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:26a79b36} successfully
+(3106) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:d65952b7} collected
+(3116) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:d65952b7} successfully
+(3116) CAMERA_RESET_HANDLER: reset
+(3116) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b7126306}
+(3126) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b7126306}
+(3126) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:b7126306}
+(3176) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:e5193e57} successfully
+(3186) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:b7126306} collected
+(3196) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:e0dc58d9}
+(3196) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:e0dc58d9}
+(3206) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:e0dc58d9}
+(3216) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:2,cmd:e0dc58d9} collected
+(3226) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:67fedfd4} successfully
+(3226) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:e0dc58d9} successfully
+(3226) CAMERA_RESET_HANDLER: reset
+(3236) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:90fe7266}
+(3256) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:90fe7266}
+(3236) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:90fe7266}
+(3286) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:9a41e827} successfully
+(3296) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:90fe7266} collected
+(3306) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:944ac087}
+(3306) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:90fe7266} successfully
+(3306) CAMERA_FLASH_HANDLER: toggle flash
+(3326) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:944ac087}
+(3356) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:944ac087}
+(3366) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:e1bdd6b7} successfully
+(3376) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:944ac087} collected
+(3386) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:944ac087} successfully
+(3386) CAMERA_RESET_HANDLER: reset
+(3386) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:26a79b36}
+(3396) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:26a79b36}
+(3396) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:26a79b36}
+(3446) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:e5f1822f} successfully
+(3456) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:26a79b36} collected
+(3466) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:e5193e57}
+(3466) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:e5193e57}
+(3476) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:e5193e57}
+(3486) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:2,cmd:e5193e57} collected
+(3496) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:41fd4cd6} successfully
+(3496) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:e5193e57} successfully
+(3496) CAMERA_RESET_HANDLER: reset
+(3506) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:67fedfd4}
+(3526) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:67fedfd4}
+(3506) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:67fedfd4}
+(3556) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:1cb8e8cb} successfully
+(3566) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:67fedfd4} collected
+(3576) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:9a41e827}
+(3576) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:67fedfd4} successfully
+(3576) CAMERA_QUALITY_HANDLER: change quality
+(3596) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:9a41e827}
+(3626) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:9a41e827}
+(3636) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:cb11c863} successfully
+(3646) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:9a41e827} collected
+(3656) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:e1bdd6b7}
+(3656) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:9a41e827} successfully
+(3656) CAMERA_QUALITY_HANDLER: change quality
+(3676) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:e1bdd6b7}
+(3706) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:e1bdd6b7}
+(3716) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:2ae8485} successfully
+(3726) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:e1bdd6b7} collected
+(3736) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:e5f1822f}
+(3736) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:e1bdd6b7} successfully
+(3736) CAMERA_QUALITY_HANDLER: change quality
+(3756) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:e5f1822f}
+(3786) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:e5f1822f}
+(3796) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:ebd49205} successfully
+(3806) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:e5f1822f} collected
+(3816) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:41fd4cd6}
+(3816) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:41fd4cd6}
+(3826) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:e5f1822f} successfully
+(3826) CAMERA_FLASH_HANDLER: toggle flash
+(3826) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:41fd4cd6}
+(3856) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:d8464d93} successfully
+(3866) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:41fd4cd6} collected
+(3876) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:1cb8e8cb}
+(3876) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:1cb8e8cb}
+(3886) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:41fd4cd6} successfully
+(3886) CAMERA_QUALITY_HANDLER: change quality
+(3906) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:1cb8e8cb}
+(3916) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:2e802299} successfully
+(3926) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:1cb8e8cb} collected
+(3936) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:cb11c863}
+(3936) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:cb11c863}
+(3946) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:cb11c863}
+(3956) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:2,cmd:cb11c863} collected
+(3966) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:74c737a0} successfully
+(3966) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:cb11c863} successfully
+(3966) CAMERA_RESET_HANDLER: reset
+(3976) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:2ae8485}
+(3996) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:2ae8485}
+(3976) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:2ae8485}
+(4026) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:7e0543a4} successfully
+(4036) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:2ae8485} collected
+(4046) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:2ae8485} successfully
+(4046) CAMERA_RESET_HANDLER: reset
+(4046) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:ebd49205}
+(4056) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:ebd49205}
+(4056) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:ebd49205}
+(4106) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:dd80bc96} successfully
+(4116) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:ebd49205} collected
+(4126) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:d8464d93}
+(4126) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:d8464d93}
+(4136) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:ebd49205} successfully
+(4136) CAMERA_QUALITY_HANDLER: change quality
+(4136) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:d8464d93}
+(4166) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:a0a16b93} successfully
+(4176) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:d8464d93} collected
+(4186) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:2e802299}
+(4186) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:2e802299}
+(4196) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:d8464d93} successfully
+(4196) CAMERA_FLASH_HANDLER: toggle flash
+(4196) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:2e802299}
+(4226) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:aa87bfd2} successfully
+(4236) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:2e802299} collected
+(4246) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:74c737a0}
+(4246) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:74c737a0}
+(4256) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:74c737a0}
+(4266) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:0,cmd:74c737a0} collected
+(4276) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:24eaf142} successfully
+(4276) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:7e0543a4}
+(4276) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:74c737a0} successfully
+(4296) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:7e0543a4}
+(4326) CAMERA_QUALITY_HANDLER: change quality
+(4326) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:7e0543a4}
+(4336) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:f866648} successfully
+(4346) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:7e0543a4} collected
+(4356) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:dd80bc96}
+(4356) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:dd80bc96}
+(4366) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:dd80bc96}
+(4376) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:dd80bc96} collected
+(4386) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:a2a373d6} successfully
+(4386) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:a0a16b93}
+(4386) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:a0a16b93}
+(4406) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:a0a16b93}
+(4446) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:af39f28d} successfully
+(4456) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:a0a16b93} collected
+(4466) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:aa87bfd2}
+(4466) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:a0a16b93} successfully
+(4466) CAMERA_FLASH_HANDLER: toggle flash
+(4486) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:aa87bfd2}
+(4516) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:aa87bfd2}
+(4526) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:18cf49f} successfully
+(4536) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:aa87bfd2} collected
+(4546) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:24eaf142}
+(4546) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:aa87bfd2} successfully
+(4546) CAMERA_FLASH_HANDLER: toggle flash
+(4566) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:24eaf142}
+(4596) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:24eaf142}
+(4606) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:b5d8fb43} successfully
+(4616) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:24eaf142} collected
+(4626) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:f866648}
+(4626) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:24eaf142} successfully
+(4626) CAMERA_FLASH_HANDLER: toggle flash
+(4646) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:f866648}
+(4676) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:f866648}
+(4686) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:471fae5e} successfully
+(4696) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:f866648} collected
+(4706) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:a2a373d6}
+(4706) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:a2a373d6}
+(4716) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:a2a373d6}
+(4726) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:0,cmd:a2a373d6} collected
+(4736) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:a300fc26} successfully
+(4736) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:af39f28d}
+(4736) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:a2a373d6} successfully
+(4756) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:af39f28d}
+(4786) CAMERA_QUALITY_HANDLER: change quality
+(4786) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:af39f28d}
+(4796) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:d526717f} successfully
+(4806) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:af39f28d} collected
+(4816) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:18cf49f}
+(4816) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:18cf49f}
+(4826) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:af39f28d} successfully
+(4826) CAMERA_FLASH_HANDLER: toggle flash
+(4826) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:18cf49f}
+(4856) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:13cdc4cb} successfully
+(4866) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:18cf49f} collected
+(4876) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:18cf49f} successfully
+(4876) CAMERA_RESET_HANDLER: reset
+(4876) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:b5d8fb43}
+(4886) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:b5d8fb43}
+(4886) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:b5d8fb43}
+(4936) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:8713a21} successfully
+(4946) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:b5d8fb43} collected
+(4956) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:471fae5e}
+(4956) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:b5d8fb43} successfully
+(4956) CAMERA_QUALITY_HANDLER: change quality
+(4976) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:471fae5e}
+(5006) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:471fae5e}
+(5016) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:ab94dd30} successfully
+(5026) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:471fae5e} collected
+(5036) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:a300fc26}
+(5036) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:471fae5e} successfully
+(5036) CAMERA_QUALITY_HANDLER: change quality
+(5056) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:a300fc26}
+(5086) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:a300fc26}
+(5096) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:64395219} successfully
+(5106) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:a300fc26} collected
+(5116) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:d526717f}
+(5116) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:a300fc26} successfully
+(5116) CAMERA_QUALITY_HANDLER: change quality
+(5136) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:d526717f}
+(5166) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:d526717f}
+(5176) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:b18d0969} successfully
+(5186) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:d526717f} collected
+(5196) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:13cdc4cb}
+(5196) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:13cdc4cb}
+(5206) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:13cdc4cb}
+(5216) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:2,cmd:13cdc4cb} collected
+(5226) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:cabb56fe} successfully
+(5226) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:13cdc4cb} successfully
+(5226) CAMERA_RESET_HANDLER: reset
+(5236) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:8713a21}
+(5256) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:8713a21}
+(5236) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:8713a21}
+(5286) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:366ea7c2} successfully
+(5296) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:8713a21} collected
+(5306) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:8713a21} successfully
+(5306) CAMERA_RESET_HANDLER: reset
+(5306) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:ab94dd30}
+(5316) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:ab94dd30}
+(5316) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:ab94dd30}
+(5366) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:b22ae9ef} successfully
+(5376) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:ab94dd30} collected
+(5386) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:ab94dd30} successfully
+(5386) CAMERA_RESET_HANDLER: reset
+(5386) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:64395219}
+(5396) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:64395219}
+(5396) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:64395219}
+(5446) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:ee4fb309} successfully
+(5456) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:64395219} collected
+(5466) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:b18d0969}
+(5466) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:64395219} successfully
+(5466) CAMERA_QUALITY_HANDLER: change quality
+(5486) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:b18d0969}
+(5516) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:b18d0969}
+(5526) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:678426c8} successfully
+(5536) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:b18d0969} collected
+(5546) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:b18d0969} successfully
+(5546) CAMERA_RESET_HANDLER: reset
+(5546) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:cabb56fe}
+(5556) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:cabb56fe}
+(5556) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:cabb56fe}
+(5606) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:f8ca77bd} successfully
+(5616) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:cabb56fe} collected
+(5626) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:366ea7c2}
+(5626) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:366ea7c2}
+(5636) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:cabb56fe} successfully
+(5636) CAMERA_QUALITY_HANDLER: change quality
+(5636) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:366ea7c2}
+(5666) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:2014cf4f} successfully
+(5676) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:366ea7c2} collected
+(5686) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:b22ae9ef}
+(5686) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:b22ae9ef}
+(5696) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:b22ae9ef}
+(5706) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:1,cmd:b22ae9ef} collected
+(5716) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:adf3e49e} successfully
+(5716) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:ee4fb309}
+(5716) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:b22ae9ef} successfully
+(5736) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:ee4fb309}
+(5766) CAMERA_FLASH_HANDLER: toggle flash
+(5766) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:ee4fb309}
+(5776) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:26e33450} successfully
+(5786) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:ee4fb309} collected
+(5796) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:678426c8}
+(5796) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:ee4fb309} successfully
+(5796) CAMERA_FLASH_HANDLER: toggle flash
+(5816) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:678426c8}
+(5846) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:678426c8}
+(5856) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:7ecc86d7} successfully
+(5866) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:678426c8} collected
+(5876) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:f8ca77bd}
+(5876) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:f8ca77bd}
+(5886) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:f8ca77bd}
+(5896) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:0,cmd:f8ca77bd} collected
+(5906) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:f05f9289} successfully
+(5906) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:2014cf4f}
+(5906) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:f8ca77bd} successfully
+(5926) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:2014cf4f}
+(5956) CAMERA_QUALITY_HANDLER: change quality
+(5956) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:2014cf4f}
+(5966) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:e089ade7} successfully
+(5976) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:2014cf4f} collected
+(5986) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:adf3e49e}
+(5986) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:adf3e49e}
+(5996) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:2014cf4f} successfully
+(5996) CAMERA_FLASH_HANDLER: toggle flash
+(5996) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:adf3e49e}
+(6026) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:a815dc82} successfully
+(6036) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:adf3e49e} collected
+(6046) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:26e33450}
+(6046) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:adf3e49e} successfully
+(6046) CAMERA_FLASH_HANDLER: toggle flash
+(6066) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:26e33450}
+(6096) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:26e33450}
+(6106) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:6f86089e} successfully
+(6116) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:26e33450} collected
+(6126) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:7ecc86d7}
+(6126) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:26e33450} successfully
+(6126) CAMERA_FLASH_HANDLER: toggle flash
+(6146) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:7ecc86d7}
+(6176) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:7ecc86d7}
+(6186) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:31ad50f9} successfully
+(6196) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:7ecc86d7} collected
+(6206) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:f05f9289}
+(6206) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:7ecc86d7} successfully
+(6206) CAMERA_FLASH_HANDLER: toggle flash
+(6226) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:f05f9289}
+(6256) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:f05f9289}
+(6266) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:3d4c2326} successfully
+(6276) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:f05f9289} collected
+(6286) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:e089ade7}
+(6286) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:f05f9289} successfully
+(6286) CAMERA_FLASH_HANDLER: toggle flash
+(6306) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:e089ade7}
+(6336) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:e089ade7}
+(6346) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:40269dd1} successfully
+(6356) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:e089ade7} collected
+(6366) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:a815dc82}
+(6366) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:e089ade7} successfully
+(6366) CAMERA_FLASH_HANDLER: toggle flash
+(6386) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:a815dc82}
+(6416) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:a815dc82}
+(6426) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:e47171} successfully
+(6436) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:a815dc82} collected
+(6446) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:6f86089e}
+(6446) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:6f86089e}
+(6456) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:6f86089e}
+(6466) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:6f86089e} collected
+(6476) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:8b5daf65} successfully
+(6476) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:31ad50f9}
+(6476) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:31ad50f9}
+(6496) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:31ad50f9}
+(6536) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:f779bae7} successfully
+(6546) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:31ad50f9} collected
+(6556) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:31ad50f9} successfully
+(6556) CAMERA_RESET_HANDLER: reset
+(6556) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:3d4c2326}
+(6566) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:3d4c2326}
+(6566) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:3d4c2326}
+(6616) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:98c969c2} successfully
+(6626) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:3d4c2326} collected
+(6636) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:40269dd1}
+(6636) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:40269dd1}
+(6646) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:40269dd1}
+(6656) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:0,cmd:40269dd1} collected
+(6666) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:46b80079} successfully
+(6666) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:e47171}
+(6666) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:40269dd1} successfully
+(6686) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:e47171}
+(6716) CAMERA_QUALITY_HANDLER: change quality
+(6716) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:e47171}
+(6726) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:30c7ce17} successfully
+(6736) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:e47171} collected
+(6746) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:8b5daf65}
+(6746) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:8b5daf65}
+(6756) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:8b5daf65}
+(6766) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:1,cmd:8b5daf65} collected
+(6776) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:7784dd95} successfully
+(6776) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:f779bae7}
+(6776) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:8b5daf65} successfully
+(6796) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:f779bae7}
+(6826) CAMERA_FLASH_HANDLER: toggle flash
+(6826) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:f779bae7}
+(6836) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:1,cmd:5b78c66d} successfully
+(6846) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:f779bae7} collected
+(6856) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:98c969c2}
+(6856) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:98c969c2}
+(6866) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:98c969c2}
+(6876) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:2,cmd:98c969c2} collected
+(6886) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:13812a3e} successfully
+(6886) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:98c969c2} successfully
+(6886) CAMERA_RESET_HANDLER: reset
+(6896) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:46b80079}
+(6916) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:46b80079}
+(6896) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:46b80079}
+(6946) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:23dc3040} successfully
+(6956) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:46b80079} collected
+(6966) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:30c7ce17}
+(6966) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:30c7ce17}
+(6976) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:30c7ce17}
+(6986) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:30c7ce17} collected
+(6996) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:bcd232be} successfully
+(6996) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:7784dd95}
+(6996) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:7784dd95}
+(7016) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:7784dd95}
+(7056) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:8ab7f856} successfully
+(7066) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:2,cmd:7784dd95} collected
+(7076) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:7784dd95} successfully
+(7076) CAMERA_RESET_HANDLER: reset
+(7076) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:5b78c66d}
+(7086) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:5b78c66d}
+(7086) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:1,cmd:5b78c66d}
+(7136) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:69e515d8} successfully
+(7146) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:1,cmd:5b78c66d} collected
+(7156) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:13812a3e}
+(7156) CAMERA_FLASH_HANDLER: q_length: 5/5, recv cmd {id:1,cmd:5b78c66d} successfully
+(7156) CAMERA_FLASH_HANDLER: toggle flash
+(7176) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:13812a3e}
+(7206) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:13812a3e}
+(7216) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:c6cd37bf} successfully
+(7226) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:13812a3e} collected
+(7236) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:23dc3040}
+(7236) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:23dc3040}
+(7246) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:23dc3040}
+(7256) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:3,cmd:23dc3040} collected
+(7266) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:8cc60614} successfully
+(7266) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:bcd232be}
+(7266) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:bcd232be}
+(7286) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:bcd232be}
+(7326) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:86c6876d} successfully
+(7336) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:3,cmd:bcd232be} collected
+(7346) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:8ab7f856}
+(7346) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:8ab7f856}
+(7356) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:2,cmd:8ab7f856}
+(7366) GARBAGE_COLLECTOR: q_length: 4/5, garbage cmd {id:2,cmd:8ab7f856} collected
+(7376) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:3,cmd:7b9a2729} successfully
+(7376) CAMERA_RESET_HANDLER: q_length: 5/5, recv cmd {id:2,cmd:8ab7f856} successfully
+(7376) CAMERA_RESET_HANDLER: reset
+(7386) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:69e515d8}
+(7406) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:69e515d8}
+(7386) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:69e515d8}
+(7436) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:0,cmd:9c387cf3} successfully
+(7446) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:69e515d8} collected
+(7456) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:c6cd37bf}
+(7456) CAMERA_QUALITY_HANDLER: q_length: 5/5, recv cmd {id:0,cmd:69e515d8} successfully
+(7456) CAMERA_QUALITY_HANDLER: change quality
+(7476) CAMERA_FLASH_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:c6cd37bf}
+(7506) CAMERA_QUALITY_HANDLER: q_length: 5/5, peek cmd {id:0,cmd:c6cd37bf}
+(7516) CMD_RECEPTION_HANLDER: q_length: 5/5, sent cmd {id:2,cmd:60e29f30} successfully
+(7526) GARBAGE_COLLECTOR: q_length: 5/5, garbage cmd {id:0,cmd:c6cd37bf} collected
+(7536) CAMERA_RESET_HANDLER: q_length: 5/5, peek cmd {id:3,cmd:8cc60614}
+(7536) CAMERA_QUAL

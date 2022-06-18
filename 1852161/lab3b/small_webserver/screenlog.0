@@ -1,0 +1,2328 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (28) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time 16:30:09[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (31) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=167f0h ( 92144) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=00026818 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=0002a06c vaddr=40080000 size=05fach ( 24492) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=77254h (488020) map[0m
+[0;32mI (337) esp_image: segment 4: paddr=000a727c vaddr=40085fac size=0e4f0h ( 58608) load[0m
+[0;32mI (361) esp_image: segment 5: paddr=000b5774 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (372) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (372) boot: Disabling RNG early entropy source...[0m
+[0;32mI (384) cpu_start: Pro cpu up.[0m
+[0;32mI (384) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (398) cpu_start: Pro cpu start user code[0m
+[0;32mI (398) cpu_start: cpu freq: 160000000[0m
+[0;32mI (398) cpu_start: Application information:[0m
+[0;32mI (403) cpu_start: Project name:     lab3a[0m
+[0;32mI (407) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (413) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (419) cpu_start: ELF file SHA256:  4c84b4775435df1b...[0m
+[0;32mI (425) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (430) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (437) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (443) heap_init: At 3FFB7500 len 00028B00 (162 KiB): DRAM[0m
+[0;32mI (449) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (456) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (462) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (470) spi_flash: detected chip: generic[0m
+[0;32mI (473) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (608) wifi:wifi driver task: 3ffc0284, prio:23, stack:6656, core=0
+[0;32mI (608) system_api: Base MAC address is not set[0m
+[0;32mI (608) system_api: read default base MAC address from EFUSE[0m
+I (638) wifi:wifi firmware version: 63017e0
+I (638) wifi:wifi certification version: v7.0
+I (638) wifi:config NVS flash: enabled
+I (638) wifi:config nano formating: disabled
+I (638) wifi:Init data frame dynamic rx buffer num: 32
+I (648) wifi:Init management frame dynamic rx buffer num: 32
+I (648) wifi:Init management short buffer num: 32
+I (658) wifi:Init dynamic tx buffer num: 32
+I (658) wifi:Init static rx buffer size: 1600
+I (658) wifi:Init static rx buffer num: 10
+I (668) wifi:Init dynamic rx buffer num: 32
+[0;32mI (668) wifi_init: rx ba win: 6[0m
+[0;32mI (678) wifi_init: tcpip mbox: 32[0m
+[0;32mI (678) wifi_init: udp mbox: 6[0m
+[0;32mI (678) wifi_init: tcp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp tx win: 5744[0m
+[0;32mI (688) wifi_init: tcp rx win: 5744[0m
+[0;32mI (698) wifi_init: tcp mss: 1440[0m
+[0;32mI (698) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (698) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (708) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (818) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (818) wifi:Total power save buffer number: 16
+I (818) wifi:Init max length of beacon: 752/752
+I (818) wifi:Init max length of beacon: 752/752
+[0;32mI (828) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (828) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (838) HTTP_SERVER: register URIs[0m
+[0;32mI (838) QUEUE: data size = 100[0m
+[0;32mI (838) QUEUE: q created success[0m
+[0;32mI (848) LED_HANDLER: led_handler created success[0m
+[0;32mI (848) PRINT_HANDLER: print_handler created success[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (28) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time 16:30:09[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (31) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=167f0h ( 92144) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=00026818 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=0002a06c vaddr=40080000 size=05fach ( 24492) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=77250h (488016) map[0m
+[0;32mI (337) esp_image: segment 4: paddr=000a7278 vaddr=40085fac size=0e4f0h ( 58608) load[0m
+[0;32mI (361) esp_image: segment 5: paddr=000b5770 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (372) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (372) boot: Disabling RNG early entropy source...[0m
+[0;32mI (384) cpu_start: Pro cpu up.[0m
+[0;32mI (384) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (398) cpu_start: Pro cpu start user code[0m
+[0;32mI (398) cpu_start: cpu freq: 160000000[0m
+[0;32mI (398) cpu_start: Application information:[0m
+[0;32mI (403) cpu_start: Project name:     lab3a[0m
+[0;32mI (407) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (413) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (419) cpu_start: ELF file SHA256:  81679d91e6d9d56e...[0m
+[0;32mI (425) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (430) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (437) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (443) heap_init: At 3FFB7500 len 00028B00 (162 KiB): DRAM[0m
+[0;32mI (449) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (456) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (462) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (469) spi_flash: detected chip: generic[0m
+[0;32mI (473) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (608) wifi:wifi driver task: 3ffc0284, prio:23, stack:6656, core=0
+[0;32mI (608) system_api: Base MAC address is not set[0m
+[0;32mI (608) system_api: read default base MAC address from EFUSE[0m
+I (638) wifi:wifi firmware version: 63017e0
+I (638) wifi:wifi certification version: v7.0
+I (638) wifi:config NVS flash: enabled
+I (638) wifi:config nano formating: disabled
+I (638) wifi:Init data frame dynamic rx buffer num: 32
+I (648) wifi:Init management frame dynamic rx buffer num: 32
+I (648) wifi:Init management short buffer num: 32
+I (658) wifi:Init dynamic tx buffer num: 32
+I (658) wifi:Init static rx buffer size: 1600
+I (658) wifi:Init static rx buffer num: 10
+I (668) wifi:Init dynamic rx buffer num: 32
+[0;32mI (668) wifi_init: rx ba win: 6[0m
+[0;32mI (678) wifi_init: tcpip mbox: 32[0m
+[0;32mI (678) wifi_init: udp mbox: 6[0m
+[0;32mI (678) wifi_init: tcp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp tx win: 5744[0m
+[0;32mI (688) wifi_init: tcp rx win: 5744[0m
+[0;32mI (698) wifi_init: tcp mss: 1440[0m
+[0;32mI (698) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (698) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (708) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (808) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (818) wifi:Total power save buffer number: 16
+I (818) wifi:Init max length of beacon: 752/752
+I (818) wifi:Init max length of beacon: 752/752
+[0;32mI (818) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (828) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (838) HTTP_SERVER: register URIs[0m
+[0;32mI (838) QUEUE: data size = 100[0m
+[0;32mI (838) QUEUE: q created success[0m
+[0;32mI (848) LED_HANDLER: led_handler created success[0m
+[0;32mI (848) PRINT_HANDLER: print_handler created success[0m
+I (10368) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (10368) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (10378) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+[0;32mI (10388) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+W (10428) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (36678) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (36688) HTTP_SERVER: success while sending /[0m
+[0;32mI (38948) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (38948) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (38958) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (38958) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (38968) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (49238) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (49238) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (49248) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (49248) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (49258) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (61568) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (61568) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (61568) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (61568) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (61578) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (61958) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (61958) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (61958) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (61968) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (61978) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (62238) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (62238) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (62238) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (62248) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (62258) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (62408) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (62408) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (62408) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (62418) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (62428) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (62658) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (62658) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (62658) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (62668) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (62688) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (62938) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (62938) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (62938) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (62948) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (62958) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (63208) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (63208) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (63208) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (63218) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (63228) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (63498) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (63498) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (63498) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (63498) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (63508) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (63768) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (63768) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (63768) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (63778) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (63778) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (64078) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (64078) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (64078) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (64088) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (64098) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (64348) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (64348) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (64348) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (64358) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (64368) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (64628) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (64628) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (64638) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (64638) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (64648) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (64988) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (64988) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (64988) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (64998) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (65008) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (65258) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (65258) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (65258) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (65268) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (65288) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (65658) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (65658) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (65658) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (65668) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (65678) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (66188) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (66188) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (66188) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (66198) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (66208) LED_HANDLER: key = toggle, val = toggleled[0m
+[0;32mI (68928) HTTP_SERVER: toggle req content: str=ddd[0m
+[0;32mI (68928) HTTP_SERVER: toggle req content: key = str, value = ddd[0m
+[0;32mI (68928) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (68938) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (68948) PRINT_HANDLER: ddd[0m
+[0;32mI (73088) HTTP_SERVER: toggle req content: str=qwd223[0m
+[0;32mI (73088) HTTP_SERVER: toggle req content: key = str, value = qwd223[0m
+[0;32mI (73098) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (73098) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (73108) PRINT_HANDLER: qwd223[0m
+[0;32mI (73888) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (73888) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (73888) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (73888) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (73898) PRINT_HANDLER: [0m
+[0;32mI (74448) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (74448) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (74448) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (74458) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (74468) LED_HANDLER: key = str, val = [0m
+[0;32mI (74468) PRINT_HANDLER: [0m
+[0;32mI (78338) HTTP_SERVER: toggle req content: str=assfv+gtr4[0m
+[0;32mI (78338) HTTP_SERVER: toggle req content: key = str, value = assfv+gtr4[0m
+[0;32mI (78348) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (78348) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (78358) LED_HANDLER: key = str, val = assfv+gtr4[0m
+[0;32mI (78358) LED_HANDLER: key = str, val = assfv+gtr4[0m
+[0;32mI (78368) PRINT_HANDLER: assfv+gtr4[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (28) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time 16:30:09[0m
+[0;32mI (28) boot: chip revision: 1[0m
+[0;32mI (31) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=167c0h ( 92096) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=000267e8 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=0002a03c vaddr=40080000 size=05fdch ( 24540) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7723ch (487996) map[0m
+[0;32mI (337) esp_image: segment 4: paddr=000a7264 vaddr=40085fdc size=0e4c0h ( 58560) load[0m
+[0;32mI (361) esp_image: segment 5: paddr=000b572c vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (371) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (372) boot: Disabling RNG early entropy source...[0m
+[0;32mI (384) cpu_start: Pro cpu up.[0m
+[0;32mI (384) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (398) cpu_start: Pro cpu start user code[0m
+[0;32mI (398) cpu_start: cpu freq: 160000000[0m
+[0;32mI (398) cpu_start: Application information:[0m
+[0;32mI (402) cpu_start: Project name:     lab3a[0m
+[0;32mI (407) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (413) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (419) cpu_start: ELF file SHA256:  4e8fb003078cd516...[0m
+[0;32mI (425) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (430) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (437) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (443) heap_init: At 3FFB7500 len 00028B00 (162 KiB): DRAM[0m
+[0;32mI (449) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (455) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (462) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (469) spi_flash: detected chip: generic[0m
+[0;32mI (473) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (608) wifi:wifi driver task: 3ffc0284, prio:23, stack:6656, core=0
+[0;32mI (608) system_api: Base MAC address is not set[0m
+[0;32mI (608) system_api: read default base MAC address from EFUSE[0m
+I (638) wifi:wifi firmware version: 63017e0
+I (638) wifi:wifi certification version: v7.0
+I (638) wifi:config NVS flash: enabled
+I (638) wifi:config nano formating: disabled
+I (638) wifi:Init data frame dynamic rx buffer num: 32
+I (648) wifi:Init management frame dynamic rx buffer num: 32
+I (648) wifi:Init management short buffer num: 32
+I (658) wifi:Init dynamic tx buffer num: 32
+I (658) wifi:Init static rx buffer size: 1600
+I (658) wifi:Init static rx buffer num: 10
+I (668) wifi:Init dynamic rx buffer num: 32
+[0;32mI (668) wifi_init: rx ba win: 6[0m
+[0;32mI (678) wifi_init: tcpip mbox: 32[0m
+[0;32mI (678) wifi_init: udp mbox: 6[0m
+[0;32mI (678) wifi_init: tcp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp tx win: 5744[0m
+[0;32mI (688) wifi_init: tcp rx win: 5744[0m
+[0;32mI (698) wifi_init: tcp mss: 1440[0m
+[0;32mI (698) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (698) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (708) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (818) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (818) wifi:Total power save buffer number: 16
+I (818) wifi:Init max length of beacon: 752/752
+I (818) wifi:Init max length of beacon: 752/752
+[0;32mI (828) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (828) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (838) HTTP_SERVER: register URIs[0m
+[0;32mI (838) QUEUE: data size = 100[0m
+[0;32mI (838) QUEUE: q created success[0m
+[0;32mI (848) LED_HANDLER: led_handler created success[0m
+[0;32mI (848) PRINT_HANDLER: print_handler created success[0m
+I (21908) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (21908) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (21918) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+W (21968) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (32028) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (32038) HTTP_SERVER: success while sending /[0m
+[0;32mI (33208) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (33208) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (33218) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (33218) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (35048) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (35058) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (35058) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (35058) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (35788) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (35788) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (35798) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (35798) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (36178) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (36178) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (36188) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (36188) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (36518) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (36518) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (36518) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (36528) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (36828) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (36828) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (36838) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (36838) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (37148) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (37148) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (37158) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (37158) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (37418) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (37418) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (37418) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (37428) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (37558) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (37558) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (37558) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (37568) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (37668) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (37668) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (37678) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (37678) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (37798) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (37798) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (37808) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (37808) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (38658) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (38658) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (38658) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (38668) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (38778) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (38778) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (38778) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (38788) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (38928) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (38928) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (38928) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (38938) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (39068) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (39068) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (39068) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (39078) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (39198) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (39198) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (39208) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (39208) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (39348) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (39348) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (39348) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (39358) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (41188) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (41188) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (41188) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (41188) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (41198) PRINT_HANDLER: [0m
+[0;32mI (45028) HTTP_SERVER: toggle req content: str=rff+erger+[0m
+[0;32mI (45028) HTTP_SERVER: toggle req content: key = str, value = rff erger [0m
+[0;32mI (45028) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (45038) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (45048) PRINT_HANDLER: rff erger [0m
+[0;32mI (52428) HTTP_SERVER: toggle req content: str=hello+there%21%21%21[0m
+[0;32mI (52428) HTTP_SERVER: toggle req content: key = str, value = hello there%21%21%21[0m
+[0;32mI (52428) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (52438) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (52448) PRINT_HANDLER: hello there%21%21%21[0m
+[0;32mI (63448) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (63448) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (63458) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (63458) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (64188) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (64188) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (64188) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (64198) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (64548) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (64548) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (64548) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (64558) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (64978) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (64978) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (64978) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (64988) HTTP_SERVER: resp_buf_len = 311[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (28) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time 16:30:09[0m
+[0;32mI (28) boot: chip revision: 1[0m
+[0;32mI (31) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15e28h ( 89640) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00025e50 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=000296a4 vaddr=40080000 size=06974h ( 26996) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=76a04h (485892) map[0m
+[0;32mI (336) esp_image: segment 4: paddr=000a6a2c vaddr=40086974 size=0db28h ( 56104) load[0m
+[0;32mI (360) esp_image: segment 5: paddr=000b455c vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (370) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (370) boot: Disabling RNG early entropy source...[0m
+[0;32mI (382) cpu_start: Pro cpu up.[0m
+[0;32mI (382) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (396) cpu_start: Pro cpu start user code[0m
+[0;32mI (396) cpu_start: cpu freq: 160000000[0m
+[0;32mI (396) cpu_start: Application information:[0m
+[0;32mI (401) cpu_start: Project name:     lab3a[0m
+[0;32mI (406) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (411) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (417) cpu_start: ELF file SHA256:  45946772c47be93c...[0m
+[0;32mI (423) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (428) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (435) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFB7500 len 00028B00 (162 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (454) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (489) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (606) wifi:wifi driver task: 3ffc0284, prio:23, stack:6656, core=0
+[0;32mI (606) system_api: Base MAC address is not set[0m
+[0;32mI (606) system_api: read default base MAC address from EFUSE[0m
+I (636) wifi:wifi firmware version: 63017e0
+I (636) wifi:wifi certification version: v7.0
+I (636) wifi:config NVS flash: enabled
+I (636) wifi:config nano formating: disabled
+I (636) wifi:Init data frame dynamic rx buffer num: 32
+I (646) wifi:Init management frame dynamic rx buffer num: 32
+I (646) wifi:Init management short buffer num: 32
+I (656) wifi:Init dynamic tx buffer num: 32
+I (656) wifi:Init static rx buffer size: 1600
+I (656) wifi:Init static rx buffer num: 10
+I (666) wifi:Init dynamic rx buffer num: 32
+[0;32mI (666) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: tcpip mbox: 32[0m
+[0;32mI (676) wifi_init: udp mbox: 6[0m
+[0;32mI (676) wifi_init: tcp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp tx win: 5744[0m
+[0;32mI (686) wifi_init: tcp rx win: 5744[0m
+[0;32mI (696) wifi_init: tcp mss: 1440[0m
+[0;32mI (696) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (696) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (706) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (816) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (816) wifi:Total power save buffer number: 16
+I (816) wifi:Init max length of beacon: 752/752
+I (816) wifi:Init max length of beacon: 752/752
+[0;32mI (826) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (826) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (836) HTTP_SERVER: register URIs[0m
+[0;32mI (836) QUEUE: data size = 100[0m
+[0;32mI (836) QUEUE: q created success[0m
+[0;32mI (846) LED_HANDLER: led_handler created success[0m
+[0;32mI (846) PRINT_HANDLER: print_handler created success[0m
+I (1006) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (1006) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (1026) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+W (1066) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (11946) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (11946) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (11946) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (11956) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (16116) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (16116) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (16116) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (16126) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (18296) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (18296) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (18296) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (18306) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (20976) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (20976) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (20976) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (20986) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (20996) PRINT_HANDLER: [0m
+[0;32mI (21906) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (21906) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (21906) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (21916) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (21926) PRINT_HANDLER: [0m
+[0;32mI (22406) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (22406) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (22406) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (22416) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (22426) PRINT_HANDLER: [0m
+[0;32mI (22716) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (22716) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (22716) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (22716) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (22726) PRINT_HANDLER: [0m
+[0;32mI (22986) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (22986) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (22986) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (22986) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (23006) PRINT_HANDLER: [0m
+[0;32mI (29206) HTTP_SERVER: toggle req content: str=fdsgdfg[0m
+[0;32mI (29206) HTTP_SERVER: toggle req content: key = str, value = fdsgdfg[0m
+[0;32mI (29216) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (29216) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (29226) PRINT_HANDLER: fdsgdfg[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (28) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time 16:30:09[0m
+[0;32mI (28) boot: chip revision: 1[0m
+[0;32mI (31) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15e28h ( 89640) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00025e50 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=000296a4 vaddr=40080000 size=06974h ( 26996) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=76a04h (485892) map[0m
+[0;32mI (336) esp_image: segment 4: paddr=000a6a2c vaddr=40086974 size=0db28h ( 56104) load[0m
+[0;32mI (360) esp_image: segment 5: paddr=000b455c vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (370) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (370) boot: Disabling RNG early entropy source...[0m
+[0;32mI (382) cpu_start: Pro cpu up.[0m
+[0;32mI (382) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (396) cpu_start: Pro cpu start user code[0m
+[0;32mI (396) cpu_start: cpu freq: 160000000[0m
+[0;32mI (396) cpu_start: Application information:[0m
+[0;32mI (401) cpu_start: Project name:     lab3a[0m
+[0;32mI (406) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (411) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (417) cpu_start: ELF file SHA256:  f9745b6546ec0807...[0m
+[0;32mI (423) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (428) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (435) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFB7500 len 00028B00 (162 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (454) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (489) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (606) wifi:wifi driver task: 3ffc0284, prio:23, stack:6656, core=0
+[0;32mI (606) system_api: Base MAC address is not set[0m
+[0;32mI (606) system_api: read default base MAC address from EFUSE[0m
+I (636) wifi:wifi firmware version: 63017e0
+I (636) wifi:wifi certification version: v7.0
+I (636) wifi:config NVS flash: enabled
+I (636) wifi:config nano formating: disabled
+I (636) wifi:Init data frame dynamic rx buffer num: 32
+I (646) wifi:Init management frame dynamic rx buffer num: 32
+I (646) wifi:Init management short buffer num: 32
+I (656) wifi:Init dynamic tx buffer num: 32
+I (656) wifi:Init static rx buffer size: 1600
+I (656) wifi:Init static rx buffer num: 10
+I (666) wifi:Init dynamic rx buffer num: 32
+[0;32mI (666) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: tcpip mbox: 32[0m
+[0;32mI (676) wifi_init: udp mbox: 6[0m
+[0;32mI (676) wifi_init: tcp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp tx win: 5744[0m
+[0;32mI (686) wifi_init: tcp rx win: 5744[0m
+[0;32mI (696) wifi_init: tcp mss: 1440[0m
+[0;32mI (696) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (696) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (706) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (816) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (816) wifi:Total power save buffer number: 16
+I (816) wifi:Init max length of beacon: 752/752
+I (816) wifi:Init max length of beacon: 752/752
+[0;32mI (816) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (826) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (836) HTTP_SERVER: register URIs[0m
+[0;32mI (836) QUEUE: data size = 100[0m
+[0;32mI (836) QUEUE: q created success[0m
+[0;32mI (846) LED_HANDLER: led_handler created success[0m
+[0;32mI (846) PRINT_HANDLER: print_handler created success[0m
+I (22596) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (22596) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (22616) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+W (22646) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (24856) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (24856) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (24866) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (24866) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (28106) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (28106) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (28116) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (28116) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (28446) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (28446) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (28446) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (28456) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (28736) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (28736) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (28736) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (28746) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (28956) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (28956) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (28956) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (28956) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (29676) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (29676) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (29676) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (29686) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (30126) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (30126) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (30136) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (30136) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (31936) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (31936) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (31936) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (31936) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (34346) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (34346) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (34346) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (34356) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (34766) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (34766) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (34766) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (34766) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (35266) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (35266) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (35266) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (35266) HTTP_SERVER: resp_buf_len = 311[0m
+I (716116) wifi:station: c8:ff:28:d7:91:c5 leave, AID = 1, bss_flags is 658531, bss:0x3ffb9964
+I (716116) wifi:new:<2,0>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+W (716116) wifi:<ba-del>idx
+[0;32mI (716126) WIFI_AP: station c8:ff:28:d7:91:c5 leave, AID = 1[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (28) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time 16:30:09[0m
+[0;32mI (28) boot: chip revision: 1[0m
+[0;32mI (31) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15eb8h ( 89784) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00025ee0 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00029734 vaddr=40080000 size=068e4h ( 26852) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=76aach (486060) map[0m
+[0;32mI (336) esp_image: segment 4: paddr=000a6ad4 vaddr=400868e4 size=0dbb8h ( 56248) load[0m
+[0;32mI (360) esp_image: segment 5: paddr=000b4694 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (370) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (370) boot: Disabling RNG early entropy source...[0m
+[0;32mI (382) cpu_start: Pro cpu up.[0m
+[0;32mI (382) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (396) cpu_start: Pro cpu start user code[0m
+[0;32mI (396) cpu_start: cpu freq: 160000000[0m
+[0;32mI (396) cpu_start: Application information:[0m
+[0;32mI (401) cpu_start: Project name:     lab3a[0m
+[0;32mI (406) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (411) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (417) cpu_start: ELF file SHA256:  52f2cf3b1e135d99...[0m
+[0;32mI (423) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (428) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (435) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFB7508 len 00028AF8 (162 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (454) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (489) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (606) wifi:wifi driver task: 3ffc028c, prio:23, stack:6656, core=0
+[0;32mI (606) system_api: Base MAC address is not set[0m
+[0;32mI (606) system_api: read default base MAC address from EFUSE[0m
+I (636) wifi:wifi firmware version: 63017e0
+I (636) wifi:wifi certification version: v7.0
+I (636) wifi:config NVS flash: enabled
+I (636) wifi:config nano formating: disabled
+I (636) wifi:Init data frame dynamic rx buffer num: 32
+I (646) wifi:Init management frame dynamic rx buffer num: 32
+I (646) wifi:Init management short buffer num: 32
+I (656) wifi:Init dynamic tx buffer num: 32
+I (656) wifi:Init static rx buffer size: 1600
+I (656) wifi:Init static rx buffer num: 10
+I (666) wifi:Init dynamic rx buffer num: 32
+[0;32mI (666) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: tcpip mbox: 32[0m
+[0;32mI (676) wifi_init: udp mbox: 6[0m
+[0;32mI (676) wifi_init: tcp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp tx win: 5744[0m
+[0;32mI (686) wifi_init: tcp rx win: 5744[0m
+[0;32mI (686) wifi_init: tcp mss: 1440[0m
+[0;32mI (696) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (696) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (706) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (816) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (816) wifi:Total power save buffer number: 16
+I (816) wifi:Init max length of beacon: 752/752
+I (816) wifi:Init max length of beacon: 752/752
+[0;32mI (826) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (826) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (836) HTTP_SERVER: register URIs[0m
+[0;32mI (836) QUEUE: data size = 100[0m
+[0;32mI (846) QUEUE: q created success[0m
+[0;32mI (846) LED_HANDLER: led_handler created success[0m
+[0;32mI (856) PRINT_HANDLER: print_handler created success[0m
+[0;32mI (856) GARBAGE_COLLECTOR: garbage_collector created success[0m
+I (23526) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (23526) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (23546) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+[0;32mI (23556) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+W (23586) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (34026) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (34036) HTTP_SERVER: success while sending /[0m
+[0;32mI (36986) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (36986) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (36986) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (36996) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (40496) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (40496) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (40496) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (40496) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (40506) PRINT_HANDLER: [0m
+[0;32mI (3623586) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (3683656) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (3743976) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (3804686) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (3865066) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (3925596) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (3985966) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4046116) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4106776) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4167486) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4228476) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4289046) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4349476) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4409996) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4470376) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4531306) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4592006) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4652636) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4713516) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4774516) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4835306) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4895426) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (4955546) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5015596) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5076226) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5136346) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5196966) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5257476) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5317546) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5378546) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5438996) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5499946) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5560236) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5620656) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5680676) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5740896) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5801706) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5861826) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5921986) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (5982676) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (6043086) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (6103156) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (6163676) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (6224296) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (6284386) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (6323616) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (8367716) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (8367716) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (8367726) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (8367726) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (8368476) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (8368476) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (8368486) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (8368486) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (8368846) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (8368846) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (8368856) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (8368856) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (8369376) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (8369376) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (8369376) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (8369386) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (8369396) GARBAGE_COLLECTOR: garbage collected[0m
+[0;32mI (8369896) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (8369896) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (8369896) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (8369896) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (8370336) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (8370346) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (8370346) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (8370346) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (8370716) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (8370716) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (8370716) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (8370726) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (8371106) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (8371106) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (8371106) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (8371116) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (8371396) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (8371396) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (8371406) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (8371406) HTTP_SERVER: resp_buf_len = 311[0m
+I (8409936) wifi:station: c8:ff:28:d7:91:c5 leave, AID = 1, bss_flags is 658531, bss:0x3ffb996c
+I (8409936) wifi:new:<2,0>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+W (8409936) wifi:<ba-del>idx
+[0;32mI (8409936) WIFI_AP: station c8:ff:28:d7:91:c5 leave, AID = 1[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (28) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time 16:30:09[0m
+[0;32mI (28) boot: chip revision: 1[0m
+[0;32mI (31) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15eb8h ( 89784) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00025ee0 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00029734 vaddr=40080000 size=068e4h ( 26852) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=76abch (486076) map[0m
+[0;32mI (336) esp_image: segment 4: paddr=000a6ae4 vaddr=400868e4 size=0dbb8h ( 56248) load[0m
+[0;32mI (360) esp_image: segment 5: paddr=000b46a4 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (370) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (370) boot: Disabling RNG early entropy source...[0m
+[0;32mI (382) cpu_start: Pro cpu up.[0m
+[0;32mI (382) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (396) cpu_start: Pro cpu start user code[0m
+[0;32mI (396) cpu_start: cpu freq: 160000000[0m
+[0;32mI (396) cpu_start: Application information:[0m
+[0;32mI (401) cpu_start: Project name:     lab3a[0m
+[0;32mI (406) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (411) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (417) cpu_start: ELF file SHA256:  69cbade326d5247a...[0m
+[0;32mI (423) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (428) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (435) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFB7508 len 00028AF8 (162 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (454) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (489) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (606) wifi:wifi driver task: 3ffc028c, prio:23, stack:6656, core=0
+[0;32mI (606) system_api: Base MAC address is not set[0m
+[0;32mI (606) system_api: read default base MAC address from EFUSE[0m
+I (636) wifi:wifi firmware version: 63017e0
+I (636) wifi:wifi certification version: v7.0
+I (636) wifi:config NVS flash: enabled
+I (636) wifi:config nano formating: disabled
+I (636) wifi:Init data frame dynamic rx buffer num: 32
+I (646) wifi:Init management frame dynamic rx buffer num: 32
+I (646) wifi:Init management short buffer num: 32
+I (656) wifi:Init dynamic tx buffer num: 32
+I (656) wifi:Init static rx buffer size: 1600
+I (656) wifi:Init static rx buffer num: 10
+I (666) wifi:Init dynamic rx buffer num: 32
+[0;32mI (666) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: tcpip mbox: 32[0m
+[0;32mI (676) wifi_init: udp mbox: 6[0m
+[0;32mI (676) wifi_init: tcp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp tx win: 5744[0m
+[0;32mI (686) wifi_init: tcp rx win: 5744[0m
+[0;32mI (686) wifi_init: tcp mss: 1440[0m
+[0;32mI (696) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (696) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (706) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (806) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (816) wifi:Total power save buffer number: 16
+I (816) wifi:Init max length of beacon: 752/752
+I (816) wifi:Init max length of beacon: 752/752
+[0;32mI (816) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (826) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (836) HTTP_SERVER: register URIs[0m
+[0;32mI (836) QUEUE: data size = 100[0m
+[0;32mI (836) QUEUE: q created success[0m
+[0;32mI (846) LED_HANDLER: led_handler created success[0m
+[0;32mI (846) PRINT_HANDLER: print_handler created success[0m
+[0;32mI (856) GARBAGE_COLLECTOR: garbage_collector created success[0m
+I (11236) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (11236) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (11246) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+[0;32mI (11256) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+W (11306) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (16606) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (16616) HTTP_SERVER: success while sending /[0m
+[0;32mI (17516) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (17526) HTTP_SERVER: success while sending /[0m
+[0;32mI (22966) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (22966) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (22966) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (22976) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (27216) HTTP_SERVER: toggle req content: str=serser[0m
+[0;32mI (27216) HTTP_SERVER: toggle req content: key = str, value = serser[0m
+[0;32mI (27216) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (27216) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (27226) PRINT_HANDLER: serser[0m
+[0;32mI (33866) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (33866) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (33866) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (33866) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (33876) PRINT_HANDLER: [0m
+[0;32mI (33996) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (33996) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (34006) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (34006) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (34026) PRINT_HANDLER: [0m
+[0;32mI (34226) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (34226) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (34226) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (34226) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (34236) PRINT_HANDLER: [0m
+[0;32mI (34366) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (34366) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (34366) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (34376) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (34386) PRINT_HANDLER: [0m
+[0;32mI (34486) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (34496) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (34496) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (34496) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (34506) PRINT_HANDLER: [0m
+[0;32mI (34626) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (34626) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (34626) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (34636) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (34656) PRINT_HANDLER: [0m
+[0;32mI (34756) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (34756) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (34756) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (34766) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (34776) PRINT_HANDLER: [0m
+[0;32mI (34896) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (34896) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (34896) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (34896) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (34906) PRINT_HANDLER: [0m
+[0;32mI (35046) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (35046) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (35046) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (35046) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (35056) PRINT_HANDLER: [0m
+[0;32mI (35206) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (35206) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (35206) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (35216) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (35226) PRINT_HANDLER: [0m
+[0;32mI (35336) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (35336) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (35336) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (35346) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (35356) PRINT_HANDLER: [0m
+[0;32mI (35676) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (35676) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (35676) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (35676) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (35686) PRINT_HANDLER: [0m
+[0;32mI (35806) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (35806) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (35806) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (35816) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (35826) PRINT_HANDLER: [0m
+[0;32mI (35986) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (35986) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (35986) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (35986) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (35996) PRINT_HANDLER: [0m
+[0;32mI (36166) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (36166) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (36166) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (36176) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (36186) PRINT_HANDLER: [0m
+[0;32mI (36316) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (36316) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (36316) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (36326) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (36336) PRINT_HANDLER: [0m
+[0;32mI (36476) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (36476) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (36476) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (36476) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (36496) PRINT_HANDLER: [0m
+[0;32mI (36616) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (36626) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (36626) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (36626) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (36636) PRINT_HANDLER: [0m
+[0;32mI (37236) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (37236) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (37236) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (37246) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (37386) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (37386) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (37386) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (37396) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (37566) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (37566) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (37566) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (37566) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (37576) GARBAGE_COLLECTOR: garbage collected[0m
+[0;32mI (37716) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (37716) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (37716) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (37726) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (37876) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (37876) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (37876) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (37886) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (38026) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (38026) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (38026) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (38036) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (38196) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (38196) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (38206) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (38206) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (38346) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (38356) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (38356) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (38356) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (38506) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (38506) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (38506) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (38516) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (38676) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (38676) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (38686) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (38686) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (38866) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (38866) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (38866) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (38866) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (39026) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (39026) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (39036) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (39036) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (39216) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (39216) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (39216) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (39216) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (39876) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (39876) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (39876) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (39886) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (40176) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (40176) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (40176) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (40186) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (40416) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (40416) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (40426) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (40426) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (40666) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (40666) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (40676) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (40676) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (40966) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (40966) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (40966) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (40976) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (41236) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (41236) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (41236) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (41246) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (41886) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (41886) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (41896) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (41896) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (41906) PRINT_HANDLER: [0m
+[0;32mI (42176) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (42176) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (42176) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (42186) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (42196) GARBAGE_COLLECTOR: garbage collected[0m
+[0;32mI (42526) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (42526) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (42526) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (42536) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (42546) PRINT_HANDLER: [0m
+[0;32mI (43626) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (43626) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (43626) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (43626) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (43636) PRINT_HANDLER: [0m
+[0;32mI (44126) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (44126) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (44126) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (44126) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (44136) PRINT_HANDLER: [0m
+[0;32mI (44536) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (44536) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (44536) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (44536) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (44546) PRINT_HANDLER: [0m
+[0;32mI (44836) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (44836) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (44836) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (44846) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (44856) PRINT_HANDLER: [0m
+[0;32mI (48726) HTTP_SERVER: toggle req content: str=sdfsdfsdf[0m
+[0;32mI (48726) HTTP_SERVER: toggle req content: key = str, value = sdfsdfsdf[0m
+[0;32mI (48736) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (48736) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (48746) PRINT_HANDLER: sdfsdfsdf[0m
+[0;32mI (51496) HTTP_SERVER: toggle req content: str=sdfsdfsdf+sdfsdf[0m
+[0;32mI (51496) HTTP_SERVER: toggle req content: key = str, value = sdfsdfsdf sdfsdf[0m
+[0;32mI (51506) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (51506) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (51516) PRINT_HANDLER: sdfsdfsdf sdfsdf[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (28) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time 16:30:09[0m
+[0;32mI (28) boot: chip revision: 1[0m
+[0;32mI (31) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15eb8h ( 89784) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00025ee0 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00029734 vaddr=40080000 size=068e4h ( 26852) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=76abch (486076) map[0m
+[0;32mI (336) esp_image: segment 4: paddr=000a6ae4 vaddr=400868e4 size=0dbb8h ( 56248) load[0m
+[0;32mI (360) esp_image: segment 5: paddr=000b46a4 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (370) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (370) boot: Disabling RNG early entropy source...[0m
+[0;32mI (382) cpu_start: Pro cpu up.[0m
+[0;32mI (382) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (396) cpu_start: Pro cpu start user code[0m
+[0;32mI (396) cpu_start: cpu freq: 160000000[0m
+[0;32mI (396) cpu_start: Application information:[0m
+[0;32mI (401) cpu_start: Project name:     lab3a[0m
+[0;32mI (406) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (411) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (417) cpu_start: ELF file SHA256:  28bf020a267f53d4...[0m
+[0;32mI (423) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (428) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (435) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFB7508 len 00028AF8 (162 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (454) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (489) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (606) wifi:wifi driver task: 3ffc028c, prio:23, stack:6656, core=0
+[0;32mI (606) system_api: Base MAC address is not set[0m
+[0;32mI (606) system_api: read default base MAC address from EFUSE[0m
+I (636) wifi:wifi firmware version: 63017e0
+I (636) wifi:wifi certification version: v7.0
+I (636) wifi:config NVS flash: enabled
+I (636) wifi:config nano formating: disabled
+I (636) wifi:Init data frame dynamic rx buffer num: 32
+I (646) wifi:Init management frame dynamic rx buffer num: 32
+I (646) wifi:Init management short buffer num: 32
+I (656) wifi:Init dynamic tx buffer num: 32
+I (656) wifi:Init static rx buffer size: 1600
+I (656) wifi:Init static rx buffer num: 10
+I (666) wifi:Init dynamic rx buffer num: 32
+[0;32mI (666) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: tcpip mbox: 32[0m
+[0;32mI (676) wifi_init: udp mbox: 6[0m
+[0;32mI (676) wifi_init: tcp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp tx win: 5744[0m
+[0;32mI (686) wifi_init: tcp rx win: 5744[0m
+[0;32mI (686) wifi_init: tcp mss: 1440[0m
+[0;32mI (696) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (696) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (706) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (816) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (816) wifi:Total power save buffer number: 16
+I (816) wifi:Init max length of beacon: 752/752
+I (816) wifi:Init max length of beacon: 752/752
+[0;32mI (826) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (826) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (836) HTTP_SERVER: register URIs[0m
+[0;32mI (836) QUEUE: data size = 100[0m
+[0;32mI (836) QUEUE: q created success[0m
+[0;32mI (846) LED_HANDLER: led_handler created success[0m
+[0;32mI (846) PRINT_HANDLER: print_handler created success[0m
+[0;32mI (856) GARBAGE_COLLECTOR: garbage_collector created success[0m
+I (1826) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (1826) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (1836) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+W (1896) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (13636) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (13646) HTTP_SERVER: success while sending /[0m
+[0;32mI (16216) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (16216) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (16226) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (16226) HTTP_SERVER: resp_buf_len = 311[0m
+
+assert failed: xEventGroupClearBits event_groups.c:533 (( uxBitsToClear & 0xff000000UL ) == 0)
+
+
+Backtrace:0x400819f6:0x3ffc8c900x400883bd:0x3ffc8cb0 0x4008f09d:0x3ffc8cd0 0x4008b4aa:0x3ffc8df0 0x400d6908:0x3ffc8e10 0x4008b6bd:0x3ffc8ea0 
+
+
+
+
+ELF file SHA256: 28bf020a267f53d4
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (29) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time 16:30:09[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15eb8h ( 89784) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=00025ee0 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00029734 vaddr=40080000 size=068e4h ( 26852) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=76abch (486076) map[0m
+[0;32mI (337) esp_image: segment 4: paddr=000a6ae4 vaddr=400868e4 size=0dbb8h ( 56248) load[0m
+[0;32mI (360) esp_image: segment 5: paddr=000b46a4 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (370) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (371) boot: Disabling RNG early entropy source...[0m
+[0;32mI (383) cpu_start: Pro cpu up.[0m
+[0;32mI (383) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (369) cpu_start: App cpu up.[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000[0m
+[0;32mI (397) cpu_start: Application information:[0m
+[0;32mI (402) cpu_start: Project name:     lab3a[0m
+[0;32mI (406) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (412) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (418) cpu_start: ELF file SHA256:  28bf020a267f53d4...[0m
+[0;32mI (424) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (429) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (436) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFB7508 len 00028AF8 (162 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (455) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (461) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (469) spi_flash: detected chip: generic[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (476) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (490) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (607) wifi:wifi driver task: 3ffc028c, prio:23, stack:6656, core=0
+[0;32mI (607) system_api: Base MAC address is not set[0m
+[0;32mI (607) system_api: read default base MAC address from EFUSE[0m
+I (637) wifi:wifi firmware version: 63017e0
+I (637) wifi:wifi certification version: v7.0
+I (637) wifi:config NVS flash: enabled
+I (637) wifi:config nano formating: disabled
+I (637) wifi:Init data frame dynamic rx buffer num: 32
+I (647) wifi:Init management frame dynamic rx buffer num: 32
+I (647) wifi:Init management short buffer num: 32
+I (657) wifi:Init dynamic tx buffer num: 32
+I (657) wifi:Init static rx buffer size: 1600
+I (657) wifi:Init static rx buffer num: 10
+I (667) wifi:Init dynamic rx buffer num: 32
+[0;32mI (667) wifi_init: rx ba win: 6[0m
+[0;32mI (677) wifi_init: tcpip mbox: 32[0m
+[0;32mI (677) wifi_init: udp mbox: 6[0m
+[0;32mI (677) wifi_init: tcp mbox: 6[0m
+[0;32mI (687) wifi_init: tcp tx win: 5744[0m
+[0;32mI (687) wifi_init: tcp rx win: 5744[0m
+[0;32mI (687) wifi_init: tcp mss: 1440[0m
+[0;32mI (697) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (697) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (707) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (807) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (817) wifi:Total power save buffer number: 16
+I (817) wifi:Init max length of beacon: 752/752
+I (817) wifi:Init max length of beacon: 752/752
+[0;32mI (817) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (827) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (837) HTTP_SERVER: register URIs[0m
+[0;32mI (837) QUEUE: data size = 100[0m
+[0;32mI (837) QUEUE: q created success[0m
+[0;32mI (847) LED_HANDLER: led_handler created success[0m
+[0;32mI (847) PRINT_HANDLER: print_handler created success[0m
+[0;32mI (857) GARBAGE_COLLECTOR: garbage_collector created success[0m
+I (12517) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (12517) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (12537) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+W (12587) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (12727) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (12727) HTTP_SERVER: success while sending /[0m
+[0;32mI (14707) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (14707) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (14707) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (14717) HTTP_SERVER: resp_buf_len = 311[0m
+
+assert failed: xEventGroupClearBits event_groups.c:533 (( uxBitsToClear & 0xff000000UL ) == 0)
+
+
+Backtrace:0x400819f6:0x3ffc8c900x400883bd:0x3ffc8cb0 0x4008f09d:0x3ffc8cd0 0x4008b4aa:0x3ffc8df0 0x400d6908:0x3ffc8e10 0x4008b6bd:0x3ffc8ea0 
+
+
+
+
+ELF file SHA256: 28bf020a267f53d4
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (29) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time 16:30:09[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15eb8h ( 89784) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=00025ee0 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00029734 vaddr=40080000 size=068e4h ( 26852) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=76abch (486076) map[0m
+[0;32mI (337) esp_image: segment 4: paddr=000a6ae4 vaddr=400868e4 size=0dbb8h ( 56248) load[0m
+[0;32mI (360) esp_image: segment 5: paddr=000b46a4 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (370) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (371) boot: Disabling RNG early entropy source...[0m
+[0;32mI (383) cpu_start: Pro cpu up.[0m
+[0;32mI (383) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (369) cpu_start: App cpu up.[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000[0m
+[0;32mI (397) cpu_start: Application information:[0m
+[0;32mI (402) cpu_start: Project name:     lab3a[0m
+[0;32mI (406) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (412) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (418) cpu_start: ELF file SHA256:  28bf020a267f53d4...[0m
+[0;32mI (424) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (429) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (436) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFB7508 len 00028AF8 (162 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (455) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (461) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (476) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (490) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (607) wifi:wifi driver task: 3ffc028c, prio:23, stack:6656, core=0
+[0;32mI (607) system_api: Base MAC address is not set[0m
+[0;32mI (607) system_api: read default base MAC address from EFUSE[0m
+I (637) wifi:wifi firmware version: 63017e0
+I (637) wifi:wifi certification version: v7.0
+I (637) wifi:config NVS flash: enabled
+I (637) wifi:config nano formating: disabled
+I (637) wifi:Init data frame dynamic rx buffer num: 32
+I (647) wifi:Init management frame dynamic rx buffer num: 32
+I (647) wifi:Init management short buffer num: 32
+I (657) wifi:Init dynamic tx buffer num: 32
+I (657) wifi:Init static rx buffer size: 1600
+I (657) wifi:Init static rx buffer num: 10
+I (667) wifi:Init dynamic rx buffer num: 32
+[0;32mI (667) wifi_init: rx ba win: 6[0m
+[0;32mI (677) wifi_init: tcpip mbox: 32[0m
+[0;32mI (677) wifi_init: udp mbox: 6[0m
+[0;32mI (677) wifi_init: tcp mbox: 6[0m
+[0;32mI (687) wifi_init: tcp tx win: 5744[0m
+[0;32mI (687) wifi_init: tcp rx win: 5744[0m
+[0;32mI (687) wifi_init: tcp mss: 1440[0m
+[0;32mI (697) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (697) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (707) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (817) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (817) wifi:Total power save buffer number: 16
+I (817) wifi:Init max length of beacon: 752/752
+I (817) wifi:Init max length of beacon: 752/752
+[0;32mI (827) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (827) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (837) HTTP_SERVER: register URIs[0m
+[0;32mI (837) QUEUE: data size = 100[0m
+[0;32mI (837) QUEUE: q created success[0m
+[0;32mI (847) LED_HANDLER: led_handler created success[0m
+[0;32mI (847) PRINT_HANDLER: print_handler created success[0m
+[0;32mI (857) GARBAGE_COLLECTOR: garbage_collector created success[0m
+I (23147) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (23147) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (23157) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+W (23197) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (24087) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (24087) HTTP_SERVER: success while sending /[0m
+[0;32mI (26067) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (26077) HTTP_SERVER: success while sending /[0m
+[0;32mI (27447) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (27447) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (27447) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (27457) HTTP_SERVER: resp_buf_len = 311[0m
+
+assert failed: xEventGroupClearBits event_groups.c:533 (( uxBitsToClear & 0xff000000UL ) == 0)
+
+
+Backtrace:0x400819f6:0x3ffc95f00x400883bd:0x3ffc9610 0x4008f09d:0x3ffc9630 0x4008b4aa:0x3ffc9750 0x400d6974:0x3ffc9770 0x4008b6bd:0x3ffc9800 
+
+
+
+
+ELF file SHA256: 28bf020a267f53d4
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (29) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time 16:30:09[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15eb8h ( 89784) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=00025ee0 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00029734 vaddr=40080000 size=068e4h ( 26852) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=76abch (486076) map[0m
+[0;32mI (337) esp_image: segment 4: paddr=000a6ae4 vaddr=400868e4 size=0dbb8h ( 56248) load[0m
+[0;32mI (360) esp_image: segment 5: paddr=000b46a4 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (370) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (371) boot: Disabling RNG early entropy source...[0m
+[0;32mI (383) cpu_start: Pro cpu up.[0m
+[0;32mI (383) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (369) cpu_start: App cpu up.[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000[0m
+[0;32mI (397) cpu_start: Application information:[0m
+[0;32mI (402) cpu_start: Project name:     lab3a[0m
+[0;32mI (406) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (412) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (418) cpu_start: ELF file SHA256:  28bf020a267f53d4...[0m
+[0;32mI (424) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (429) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (436) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFB7508 len 00028AF8 (162 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (455) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (461) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (476) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (490) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (607) wifi:wifi driver task: 3ffc028c, prio:23, stack:6656, core=0
+[0;32mI (607) system_api: Base MAC address is not set[0m
+[0;32mI (607) system_api: read default base MAC address from EFUSE[0m
+I (637) wifi:wifi firmware version: 63017e0
+I (637) wifi:wifi certification version: v7.0
+I (637) wifi:config NVS flash: enabled
+I (637) wifi:config nano formating: disabled
+I (637) wifi:Init data frame dynamic rx buffer num: 32
+I (647) wifi:Init management frame dynamic rx buffer num: 32
+I (647) wifi:Init management short buffer num: 32
+I (657) wifi:Init dynamic tx buffer num: 32
+I (657) wifi:Init static rx buffer size: 1600
+I (657) wifi:Init static rx buffer num: 10
+I (667) wifi:Init dynamic rx buffer num: 32
+[0;32mI (667) wifi_init: rx ba win: 6[0m
+[0;32mI (677) wifi_init: tcpip mbox: 32[0m
+[0;32mI (677) wifi_init: udp mbox: 6[0m
+[0;32mI (677) wifi_init: tcp mbox: 6[0m
+[0;32mI (687) wifi_init: tcp tx win: 5744[0m
+[0;32mI (687) wifi_init: tcp rx win: 5744[0m
+[0;32mI (687) wifi_init: tcp mss: 1440[0m
+[0;32mI (697) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (697) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (707) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (817) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (817) wifi:Total power save buffer number: 16
+I (817) wifi:Init max length of beacon: 752/752
+I (817) wifi:Init max length of beacon: 752/752
+[0;32mI (827) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (827) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (837) HTTP_SERVER: register URIs[0m
+[0;32mI (837) QUEUE: data size = 100[0m
+[0;32mI (847) QUEUE: q created success[0m
+[0;32mI (847) LED_HANDLER: led_handler created success[0m
+[0;32mI (847) PRINT_HANDLER: print_handler created success[0m
+[0;32mI (857) GARBAGE_COLLECTOR: garbage_collector created success[0m
+I (2746) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (2746) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (2766) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+W (2796) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (2806) esp_netif_lwip: DHCP server assigned IP to a station, IP is: 192.168.4.2[0m
+[0;32mI (8036) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (8046) HTTP_SERVER: success while sending /[0m
+[0;32mI (9396) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (9396) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (9406) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (9406) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (9946) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (9946) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (9946) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (9956) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (10316) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (10316) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (10326) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (10326) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (10706) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (10706) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (10716) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (10716) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (11156) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (11156) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (11156) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (11166) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (11556) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (11556) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (11556) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (11566) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (12646) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (12656) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (12656) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (12656) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (12996) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (12996) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (12996) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (13006) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (18326) HTTP_SERVER: toggle req content: str=erewr[0m
+[0;32mI (18326) HTTP_SERVER: toggle req content: key = str, value = erewr[0m
+[0;32mI (18326) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (18336) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (18346) PRINT_HANDLER: erewr[0m
+[0;32mI (19556) HTTP_SERVER: toggle req content: str=werwerwer[0m
+[0;32mI (19556) HTTP_SERVER: toggle req content: key = str, value = werwerwer[0m
+[0;32mI (19566) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (19566) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (19576) PRINT_HANDLER: werwerwer[0m
+[0;32mI (21226) HTTP_SERVER: toggle req content: str=tgrthgrty[0m
+[0;32mI (21226) HTTP_SERVER: toggle req content: key = str, value = tgrthgrty[0m
+[0;32mI (21236) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (21236) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (21246) GARBAGE_COLLECTOR: garbage collected[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6608
+load:0x40078000,len:14788
+ho 0 tail 12 room 4
+load:0x40080400,len:3792
+entry 0x40080694
+[0;32mI (28) boot: ESP-IDF v4.4.1 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time 16:30:09[0m
+[0;32mI (29) boot: chip revision: 1[0m
+[0;32mI (31) boot_comm: chip revision: 1, min. bootloader chip revision: 0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) boot_comm: chip revision: 1, min. application chip revision: 0[0m
+[0;32mI (102) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=15ee0h ( 89824) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00025f08 vaddr=3ffb0000 size=0384ch ( 14412) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=0002975c vaddr=40080000 size=068bch ( 26812) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=76af4h (486132) map[0m
+[0;32mI (336) esp_image: segment 4: paddr=000a6b1c vaddr=400868bc size=0dbe0h ( 56288) load[0m
+[0;32mI (360) esp_image: segment 5: paddr=000b4704 vaddr=50000000 size=00010h (    16) load[0m
+[0;32mI (370) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (370) boot: Disabling RNG early entropy source...[0m
+[0;32mI (382) cpu_start: Pro cpu up.[0m
+[0;32mI (383) cpu_start: Starting app cpu, entry point is 0x40081188[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (396) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000[0m
+[0;32mI (397) cpu_start: Application information:[0m
+[0;32mI (401) cpu_start: Project name:     lab3a[0m
+[0;32mI (406) cpu_start: App version:      d9019f2-dirty[0m
+[0;32mI (411) cpu_start: Compile time:     Jun  6 2022 16:30:04[0m
+[0;32mI (417) cpu_start: ELF file SHA256:  f1c590353a9486dd...[0m
+[0;32mI (423) cpu_start: ESP-IDF:          v4.4.1[0m
+[0;32mI (429) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (436) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFB7508 len 00028AF8 (162 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (454) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (461) heap_init: At 4009449C len 0000BB64 (46 KiB): IRAM[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (490) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+I (606) wifi:wifi driver task: 3ffc028c, prio:23, stack:6656, core=0
+[0;32mI (606) system_api: Base MAC address is not set[0m
+[0;32mI (606) system_api: read default base MAC address from EFUSE[0m
+I (636) wifi:wifi firmware version: 63017e0
+I (636) wifi:wifi certification version: v7.0
+I (636) wifi:config NVS flash: enabled
+I (636) wifi:config nano formating: disabled
+I (636) wifi:Init data frame dynamic rx buffer num: 32
+I (646) wifi:Init management frame dynamic rx buffer num: 32
+I (646) wifi:Init management short buffer num: 32
+I (656) wifi:Init dynamic tx buffer num: 32
+I (656) wifi:Init static rx buffer size: 1600
+I (656) wifi:Init static rx buffer num: 10
+I (666) wifi:Init dynamic rx buffer num: 32
+[0;32mI (666) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: tcpip mbox: 32[0m
+[0;32mI (676) wifi_init: udp mbox: 6[0m
+[0;32mI (676) wifi_init: tcp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp tx win: 5744[0m
+[0;32mI (686) wifi_init: tcp rx win: 5744[0m
+[0;32mI (686) wifi_init: tcp mss: 1440[0m
+[0;32mI (696) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (696) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (706) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (806) wifi:mode : softAP (24:6f:28:24:da:bd)
+I (816) wifi:Total power save buffer number: 16
+I (816) wifi:Init max length of beacon: 752/752
+I (816) wifi:Init max length of beacon: 752/752
+[0;32mI (816) WIFI_AP: wifi_init_softap finished. SSID:esp32 password:12345678 channel:2[0m
+[0;32mI (826) HTTP_SERVER: starting server on 192.168.4.1:80[0m
+[0;32mI (836) HTTP_SERVER: register URIs[0m
+[0;32mI (836) QUEUE: data size = 100[0m
+[0;32mI (836) QUEUE: q created success[0m
+[0;32mI (846) LED_HANDLER: led_handler created success[0m
+[0;32mI (846) PRINT_HANDLER: print_handler created success[0m
+[0;32mI (856) GARBAGE_COLLECTOR: garbage_collector created success[0m
+I (14326) wifi:new:<2,1>, old:<2,1>, ap:<2,1>, sta:<255,255>, prof:2
+I (14326) wifi:station: c8:ff:28:d7:91:c5 join, AID=1, bgn, 40U
+[0;32mI (14336) WIFI_AP: station c8:ff:28:d7:91:c5 join, AID = 1[0m
+W (14386) wifi:<ba-add>idx:2 (ifx:1, c8:ff:28:d7:91:c5), tid:0, ssn:1, winSize:64
+[0;32mI (14706) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (14706) HTTP_SERVER: success while sending /[0m
+[0;32mI (16376) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (16376) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (16376) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (16376) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (16386) LED_HANDLER: LED state ON[0m
+[0;32mI (17976) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (17976) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (17976) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (17986) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (17996) LED_HANDLER: LED state OFF[0m
+[0;32mI (18616) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (18616) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (18616) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (18626) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (18636) LED_HANDLER: LED state ON[0m
+[0;32mI (19096) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (19096) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (19106) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (19106) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (19126) LED_HANDLER: LED state OFF[0m
+[0;32mI (19506) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (19506) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (19506) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (19516) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (19526) LED_HANDLER: LED state ON[0m
+[0;32mI (19916) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (19916) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (19916) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (19926) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (19936) LED_HANDLER: LED state OFF[0m
+[0;32mI (20246) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (20246) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (20246) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (20256) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (20266) LED_HANDLER: LED state ON[0m
+[0;32mI (20586) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (20586) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (20586) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (20596) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (20606) LED_HANDLER: LED state OFF[0m
+[0;32mI (21216) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (21216) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (21216) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (21216) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (21226) PRINT_HANDLER: [0m
+[0;32mI (22236) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (22236) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (22236) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (22246) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (22256) PRINT_HANDLER: [0m
+[0;32mI (22936) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (22936) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (22936) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (22936) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (22946) PRINT_HANDLER: [0m
+[0;32mI (23246) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (23246) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (23246) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (23256) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (23276) PRINT_HANDLER: [0m
+[0;32mI (25176) HTTP_SERVER: toggle req content: str=abc[0m
+[0;32mI (25176) HTTP_SERVER: toggle req content: key = str, value = abc[0m
+[0;32mI (25176) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (25186) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (25196) PRINT_HANDLER: abc[0m
+[0;32mI (26786) HTTP_SERVER: toggle req content: str=asd+[0m
+[0;32mI (26786) HTTP_SERVER: toggle req content: key = str, value = asd [0m
+[0;32mI (26786) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (26786) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (26796) PRINT_HANDLER: asd [0m
+[0;32mI (27906) HTTP_SERVER: toggle req content: str=asd+[0m
+[0;32mI (27906) HTTP_SERVER: toggle req content: key = str, value = asd [0m
+[0;32mI (27906) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (27906) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (27926) PRINT_HANDLER: asd [0m
+[0;32mI (28806) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (28806) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (28806) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (28816) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (28826) PRINT_HANDLER: [0m
+[0;32mI (29076) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (29076) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (29076) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (29076) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (29086) PRINT_HANDLER: [0m
+[0;32mI (29236) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (29236) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (29236) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (29246) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (29266) PRINT_HANDLER: [0m
+[0;32mI (29386) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (29396) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (29396) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (29396) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (29406) PRINT_HANDLER: [0m
+[0;32mI (29516) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (29516) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (29516) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (29516) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (29536) PRINT_HANDLER: [0m
+[0;32mI (29646) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (29646) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (29646) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (29646) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (29676) PRINT_HANDLER: [0m
+[0;32mI (29776) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (29776) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (29776) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (29786) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (29796) PRINT_HANDLER: [0m
+[0;32mI (29926) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (29926) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (29926) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (29926) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (29936) PRINT_HANDLER: [0m
+[0;32mI (30066) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (30066) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (30066) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (30076) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (30096) PRINT_HANDLER: [0m
+[0;32mI (30446) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (30446) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (30446) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (30456) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (30466) PRINT_HANDLER: [0m
+[0;32mI (30756) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (30756) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (30756) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (30756) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (30766) PRINT_HANDLER: [0m
+[0;32mI (30916) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (30916) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (30916) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (30926) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (30936) PRINT_HANDLER: [0m
+[0;32mI (31086) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (31086) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (31086) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (31086) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (31096) PRINT_HANDLER: [0m
+[0;32mI (31226) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (31226) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (31226) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (31236) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (31236) PRINT_HANDLER: [0m
+[0;32mI (31386) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (31386) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (31386) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (31386) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (31396) PRINT_HANDLER: [0m
+[0;32mI (31536) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (31536) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (31536) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (31546) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (31556) PRINT_HANDLER: [0m
+[0;32mI (31676) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (31676) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (31686) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (31686) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (31696) PRINT_HANDLER: [0m
+[0;32mI (31816) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (31816) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (31816) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (31826) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (31836) PRINT_HANDLER: [0m
+[0;32mI (31966) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (31966) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (31966) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (31976) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (31986) PRINT_HANDLER: [0m
+[0;32mI (32106) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (32106) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (32106) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (32116) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (32126) PRINT_HANDLER: [0m
+[0;32mI (32266) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (32266) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (32266) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (32276) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (32286) PRINT_HANDLER: [0m
+[0;32mI (32416) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (32416) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (32416) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (32416) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (32426) PRINT_HANDLER: [0m
+[0;32mI (32576) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (32576) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (32576) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (32576) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (32586) PRINT_HANDLER: [0m
+[0;32mI (32706) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (32706) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (32706) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (32716) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (32726) PRINT_HANDLER: [0m
+[0;32mI (32966) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (32966) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (32966) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (32966) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (32976) PRINT_HANDLER: [0m
+[0;32mI (33136) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (33136) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (33136) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (33146) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (33156) PRINT_HANDLER: [0m
+[0;32mI (33296) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (33296) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (33306) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (33306) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (33316) PRINT_HANDLER: [0m
+[0;32mI (33436) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (33436) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (33436) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (33446) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (33466) PRINT_HANDLER: [0m
+[0;32mI (35196) HTTP_SERVER: toggle req content: str=adasd+asd+asd++[0m
+[0;32mI (35196) HTTP_SERVER: toggle req content: key = str, value = adasd asd asd  [0m
+[0;32mI (35196) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (35206) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (35216) PRINT_HANDLER: adasd asd asd  [0m
+[0;32mI (36616) HTTP_SERVER: toggle req content: str=asdasdadsdaDD+[0m
+[0;32mI (36616) HTTP_SERVER: toggle req content: key = str, value = asdasdadsdaDD [0m
+[0;32mI (36616) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (36626) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (36636) PRINT_HANDLER: asdasdadsdaDD [0m
+[0;32mI (39246) HTTP_SERVER: toggle req content: str=sfdsgdfg++dfg+df+g+++[0m
+[0;32mI (39246) HTTP_SERVER: toggle req content: key = str, value = sfdsgdfg  dfg df g   [0m
+[0;32mI (39246) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (39256) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (39266) PRINT_HANDLER: sfdsgdfg  dfg df g   [0m
+[0;32mI (40246) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (40246) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (40256) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (40256) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (40266) LED_HANDLER: LED state ON[0m
+[0;32mI (41186) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (41186) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (41186) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (41186) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (41196) LED_HANDLER: LED state OFF[0m
+[0;32mI (41466) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (41466) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (41466) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (41466) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (41476) LED_HANDLER: LED state ON[0m
+[0;32mI (41646) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (41646) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (41646) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (41646) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (41666) LED_HANDLER: LED state OFF[0m
+[0;32mI (41806) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (41806) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (41806) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (41816) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (41826) LED_HANDLER: LED state ON[0m
+[0;32mI (41956) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (41956) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (41956) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (41966) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (41966) LED_HANDLER: LED state OFF[0m
+[0;32mI (42286) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (42286) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (42286) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (42286) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (42296) LED_HANDLER: LED state ON[0m
+[0;32mI (42456) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (42456) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (42466) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (42466) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (42476) LED_HANDLER: LED state OFF[0m
+[0;32mI (42896) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (42896) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (42896) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (42896) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (42916) LED_HANDLER: LED state ON[0m
+[0;32mI (43206) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (43206) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (43216) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (43216) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (43226) LED_HANDLER: LED state OFF[0m
+[0;32mI (43436) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (43436) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (43446) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (43446) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (43456) LED_HANDLER: LED state ON[0m
+[0;32mI (43586) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (43586) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (43586) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (43596) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (43606) LED_HANDLER: LED state OFF[0m
+[0;32mI (43756) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (43756) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (43756) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (43766) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (43776) LED_HANDLER: LED state ON[0m
+[0;32mI (43896) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (43896) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (43896) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (43906) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (43916) LED_HANDLER: LED state OFF[0m
+[0;32mI (44056) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (44056) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (44066) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (44066) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (44076) LED_HANDLER: LED state ON[0m
+[0;32mI (44206) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (44216) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (44216) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (44216) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (44226) LED_HANDLER: LED state OFF[0m
+[0;32mI (44346) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (44346) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (44356) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (44356) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (44376) LED_HANDLER: LED state ON[0m
+[0;32mI (44506) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (44506) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (44506) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (44506) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (44516) LED_HANDLER: LED state OFF[0m
+[0;32mI (46756) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (46756) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (46756) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (46756) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (46766) LED_HANDLER: LED state ON[0m
+[0;32mI (48526) HTTP_SERVER: toggle req content: str=szdfgdzfg+sgs+dfsrd+[0m
+[0;32mI (48526) HTTP_SERVER: toggle req content: key = str, value = szdfgdzfg sgs dfsrd [0m
+[0;32mI (48526) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (48536) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (48556) PRINT_HANDLER: szdfgdzfg sgs dfsrd [0m
+[0;32mI (49056) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (49056) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (49056) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (49066) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (49076) PRINT_HANDLER: [0m
+[0;32mI (49466) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (49466) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (49466) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (49476) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (49486) PRINT_HANDLER: [0m
+[0;32mI (49656) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (49656) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (49656) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (49656) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (49666) PRINT_HANDLER: [0m
+[0;32mI (49786) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (49786) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (49786) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (49796) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (49806) PRINT_HANDLER: [0m
+[0;32mI (49926) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (49926) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (49926) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (49926) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (49936) PRINT_HANDLER: [0m
+[0;32mI (50066) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (50066) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (50066) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (50066) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (50086) PRINT_HANDLER: [0m
+[0;32mI (50186) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (50186) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (50186) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (50196) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (50206) PRINT_HANDLER: [0m
+[0;32mI (50326) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (50326) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (50326) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (50336) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (50346) PRINT_HANDLER: [0m
+[0;32mI (50476) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (50476) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (50476) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (50486) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (50496) PRINT_HANDLER: [0m
+[0;32mI (50586) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (50586) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (50596) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (50596) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (50606) PRINT_HANDLER: [0m
+[0;32mI (50736) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (50736) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (50736) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (50736) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (50746) PRINT_HANDLER: [0m
+[0;32mI (50886) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (50886) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (50886) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (50886) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (50896) PRINT_HANDLER: [0m
+[0;32mI (51056) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (51056) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (51056) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (51056) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (51066) PRINT_HANDLER: [0m
+[0;32mI (51986) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (51986) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (51986) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (51996) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (52006) LED_HANDLER: LED state OFF[0m
+[0;32mI (52226) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (52226) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (52236) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (52236) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (52246) LED_HANDLER: LED state ON[0m
+[0;32mI (52436) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (52436) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (52436) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (52446) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (52456) LED_HANDLER: LED state OFF[0m
+[0;32mI (52586) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (52586) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (52586) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (52596) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (52596) LED_HANDLER: LED state ON[0m
+[0;32mI (52736) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (52736) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (52736) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (52736) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (52746) LED_HANDLER: LED state OFF[0m
+[0;32mI (52886) HTTP_SERVER: toggle req content: toggle=toggleled[0m
+[0;32mI (52886) HTTP_SERVER: toggle req content: key = toggle, value = toggleled[0m
+[0;32mI (52886) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (52896) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (52896) LED_HANDLER: LED state ON[0m
+[0;32mI (55366) HTTP_SERVER: toggle req content: str=[0m
+[0;32mI (55366) HTTP_SERVER: toggle req content: key = str, value = [0m
+[0;32mI (55366) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (55366) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (55376) PRINT_HANDLER: [0m
+[0;32mI (56786) HTTP_SERVER: toggle req content: str=seefsf+df+gfgx+b[0m
+[0;32mI (56786) HTTP_SERVER: toggle req content: key = str, value = seefsf df gfgx b[0m
+[0;32mI (56796) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (56796) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (56806) GARBAGE_COLLECTOR: garbage collected[0m
+[0;32mI (60746) HTTP_SERVER: toggle req content: str=heelo+ESP[0m
+[0;32mI (60746) HTTP_SERVER: toggle req content: key = str, value = heelo ESP[0m
+[0;32mI (60746) HTTP_SERVER: send pkt to queue success[0m
+[0;32mI (60756) HTTP_SERVER: resp_buf_len = 311[0m
+[0;32mI (60766) PRINT_HANDLER: heelo ESP[0m
