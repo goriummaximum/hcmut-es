@@ -68,7 +68,7 @@ void tasks_init() {
         ESP_LOGI(LOG_TAG_MAIN, "print_student_id created successfully");
     }
 
-    if (xTaskCreate(&poll_button, "poll_button", 2048, NULL, 9, NULL) == pdPASS) {
+    if (xTaskCreate(&poll_button, "poll_button", 2048, NULL, 11, NULL) == pdPASS) {
         ESP_LOGI(LOG_TAG_MAIN, "poll_button created successfully");
     }
 }
